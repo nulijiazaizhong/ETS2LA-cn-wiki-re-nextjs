@@ -80,7 +80,7 @@ export default function Home() {
               快速开始
             </Button>
           </AlertDialogTrigger>
-          <AlertDialogContent>
+          <AlertDialogContent className="max-w-6xl">
             <AlertDialogHeader>
               <AlertDialogTitle>许可协议</AlertDialogTitle>
               <AlertDialogDescription asChild>
@@ -163,7 +163,7 @@ export default function Home() {
                       https://wili.ets2la.cn
                     </p>
                   </div>
-                  <div className="p-2 mt-2 border rounded bg-gray-100 dark:bg-gray-800">
+                  <div className="p-2 mt-2 border rounded bg-red-100 dark:bg-red-900/30 text-red-900 dark:text-red-200">
                     <p>
                       <strong>不允许的</strong>
                     </p>
