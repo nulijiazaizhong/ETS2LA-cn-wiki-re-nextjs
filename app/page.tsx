@@ -1,103 +1,200 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Typewriter from "typewriter-effect";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [line1] = useState("Euro Truck Simulator 2 Lane Assist");
+  const [line2] = useState("中文维基");
+  const [delays, setDelays] = useState({ delay1: 40, delay2: 40 });
+  const router = useRouter();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  useEffect(() => {
+    const totalDuration = 3000; // Target duration in ms
+    const len1 = line1.length;
+    const len2 = line2.length;
+
+    if (len1 > 0 && len2 > 0) {
+      setDelays({
+        delay1: totalDuration / len1,
+        delay2: totalDuration / len2,
+      });
+    }
+  }, [line1, line2]);
+
+  const handleConfirm = () => {
+    router.push("/docs");
+  };
+
+  return (
+    <main className="relative min-h-screen">
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-75 -z-10" />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover -z-20"
+        poster="/images/poster.webp"
+      >
+        <source src="/videos/background.webm" type="video/webm" />
+        <source src="/videos/background.mp4" type="video/mp4" />
+      </video>
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white">
+        <div className="text-4xl font-bold">
+          <Typewriter
+            options={{
+              strings: [line1],
+              autoStart: true,
+              loop: true,
+              delay: delays.delay1,
+            }}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="mt-4 text-lg">
+          <Typewriter
+            options={{
+              strings: [line2],
+              autoStart: true,
+              loop: true,
+              delay: delays.delay2,
+            }}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="outline" className="mt-8">
+              快速开始
+            </Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>许可协议</AlertDialogTitle>
+              <AlertDialogDescription asChild>
+                <div className="max-h-[60vh] overflow-y-auto pr-4">
+                  <p>
+                    本教程名为：
+                    <strong>ETS2LA 中国区安装与使用指南</strong>
+                    <br />
+                    由{" "}
+                    <a
+                      href="https://space.bilibili.com/525984002"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      晚安
+                    </a>
+                    , Srlily, 及{" "}
+                    <a
+                      href="https://space.bilibili.com/357816575"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      MR-UIAW
+                    </a>{" "}
+                    共同创作。
+                  </p>
+                  <p className="mt-4">
+                    本作品采用{" "}
+                    <a
+                      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
+                      (CC BY-NC-SA 4.0)
+                    </a>{" "}
+                    进行许可。
+                  </p>
+                  <hr className="my-4" />
+                  <h3 className="font-bold text-lg">分享</h3>
+                  <p>只要您遵守以下许可协议条款：</p>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>
+                      <strong>署名 (BY)</strong> —
+                      您必须给出适当的署名，提供指向本许可协议的链接，并指出是否对原始内容进行了更改。您可以用任何合理的方式来署名，但不得以任何方式表明许可人为您或您的使用背书。
+                    </li>
+                    <li className="mt-2">
+                      <strong>非商业性使用 (NC)</strong> —
+                      您不得将本作品用于商业目的。
+                    </li>
+                    <li className="mt-2">
+                      <strong>相同方式共享 (SA)</strong> —
+                      如果您修改、转换或基于本作品进行创作，您必须基于与原先许可协议相同的许可协议分发您的贡献。
+                    </li>
+                  </ul>
+                  <p className="mt-4">您可以自由地：</p>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>
+                      <strong>分享</strong> —
+                      在任何媒介或格式下复制和分发本作品。
+                    </li>
+                    <li className="mt-2">
+                      <strong>演绎</strong> —
+                      修改、转换或基于本作品进行二次创作。
+                    </li>
+                  </ul>
+                  <p className="mt-4">示例：</p>
+                  <div className="p-2 mt-2 border rounded bg-gray-100 dark:bg-gray-800">
+                    <p>
+                      <strong>允许的</strong>
+                    </p>
+                    <p className="mt-1">
+                      您可以将将网页教程完整复制到一份腾讯文档中。他在文档开头写上：“本文内容来源于
+                      ETS2LA 中国区安装与使用指南 by
+                      ETS2LA中国区管理团队,采用CC BY-NC-SA
+                      4.0许可。任何人可在相同条款下自由分享和修改本文档。”
+                      https://wili.ets2la.cn
+                    </p>
+                  </div>
+                  <div className="p-2 mt-2 border rounded bg-gray-100 dark:bg-gray-800">
+                    <p>
+                      <strong>不允许的</strong>
+                    </p>
+                    <p className="mt-1">
+                      您直接将网页教程完整复制到一份腾讯文档中并在文档中打上你自己的水印或者要求别人需要花钱购买才能获得教程
+                      违反：你们侵犯了我们原创者的版权！（您未履行协议中的
+                      署名 要求，如果您进行了商业活动，那么您违背了协议中的
+                      非商业性使用 要求）
+                    </p>
+                  </div>
+                  <hr className="my-4" />
+                  <h3 className="font-bold text-lg">权利声明与法律责任</h3>
+                  <p className="mt-2">
+                    请注意，上述“知识共享许可协议”是我们在法律允许范围内，预先授权您使用本作品的方式。
+                  </p>
+                  <p className="mt-2">
+                    任何超出本许可协议授权范围的使用行为，例如：在转载或使用中未进行适当署名、将本作品用于商业目的、或在修改本作品后采用更严格的许可协议发布，均构成对我们著作权的直接侵犯。
+                  </p>
+                  <p className="mt-2">
+                    对此，我们保留采取一切法律手段追究侵权方法律责任的权利，包括但不限于要求停止侵权、消除影响、公开道歉以及赔偿损失等。
+                  </p>
+                </div>
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>否</AlertDialogCancel>
+              <AlertDialogAction onClick={handleConfirm}>是</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </div>
+    </main>
   );
 }
