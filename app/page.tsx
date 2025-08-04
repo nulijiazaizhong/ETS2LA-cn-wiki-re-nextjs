@@ -83,7 +83,10 @@ export default function Home() {
         </div>
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button variant="outline" className="mt-8">
+            <Button
+              variant="outline"
+              className="mt-8 text-neutral-900 dark:text-white"
+            >
               快速开始
             </Button>
           </AlertDialogTrigger>
