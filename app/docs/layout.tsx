@@ -66,18 +66,6 @@ function SidebarNav() {
         },
       ],
     },
-    {
-      id: '2',
-      name: '功能',
-      icon: Folder,
-      children: [
-        {
-          id: '2-1',
-          name: '插件',
-          icon: File,
-        },
-      ],
-    },
   ]
 
   return <TreeView data={treeData} initialSelectedItemId="0" />

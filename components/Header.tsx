@@ -8,12 +8,15 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { MountainIcon, GitForkIcon } from "lucide-react"
+import Image from "next/image"
+import { MountainIcon } from "lucide-react"
 import { ThemeToggle } from "./ThemeToggle"
+import GitHubStar from "./GitHubStar"
+import { useTheme } from "next-themes"
 
 export default function Header() {
+  const { theme } = useTheme()
   return (
     <header className="flex h-16 w-full items-center justify-between px-4 md:px-6 border-b shadow-sm">
       <NavigationMenu>
@@ -45,14 +48,21 @@ export default function Header() {
       </NavigationMenu>
       <div className="flex items-center gap-4">
         <ThemeToggle />
+        <GitHubStar />
         <Link
-          href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist"
+          href="https://ets2la.com/discord"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sm font-medium hover:underline"
         >
-          <GitForkIcon className="h-5 w-5" />
-          <span>GitHub</span>
+          <Image
+            src="/discord.svg"
+            alt="Discord"
+            width={20}
+            height={20}
+            className={`h-5 w-5 ${
+              theme === 'dark' ? 'dark:invert' : ''
+            }`}
+          />
         </Link>
       </div>
     </header>

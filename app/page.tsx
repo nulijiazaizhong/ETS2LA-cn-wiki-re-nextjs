@@ -23,6 +23,13 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
+    document.body.classList.add('no-scroll')
+    return () => {
+      document.body.classList.remove('no-scroll')
+    }
+  }, []);
+
+  useEffect(() => {
     const totalDuration = 3000; // Target duration in ms
     const len1 = line1.length;
     const len2 = line2.length;
