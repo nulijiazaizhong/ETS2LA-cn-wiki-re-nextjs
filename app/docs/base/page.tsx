@@ -8,19 +8,19 @@ import Link from 'next/link'
 const articles = [
   {
     title: '准备工作',
-    href: '/docs',
+    href: '/docs/base/prepare',
     description: '1.下载并安装C++ runtime',
     icon: <FileText className="w-6 h-6" />,
   },
   {
     title: '安装',
-    href: '/docs/install',
+    href: '/docs/base/install',
     description: '1.运行安装程序',
     icon: <FileText className="w-6 h-6" />,
   },
   {
     title: '使用',
-    href: '/docs/usage',
+    href: '/docs/base/usage',
     description: '3 个项目',
     icon: <Folder className="w-6 h-6" />,
   },

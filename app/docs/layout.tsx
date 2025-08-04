@@ -1,19 +1,14 @@
 'use client'
 
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from '@/components/ui/resizable'
 import { TreeView, type TreeDataItem } from '@/components/tree-view'
 import { File, Folder } from 'lucide-react'
 import { Typography } from '@/components/Typography'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 import {
   TableOfContentsProvider,
   useTableOfContents,
 } from '@/contexts/TableOfContentsContext'
+import { ScrollArea } from '@/components/ui/scroll-area'
 
 function SidebarNav() {
   const router = useRouter()
@@ -35,7 +30,7 @@ function SidebarNav() {
           id: '1-1',
           name: '准备工作',
           icon: File,
-          onClick: () => router.push('/docs'),
+          onClick: () => router.push('/docs/base/prepare'),
         },
         {
           id: '1-2',
@@ -88,7 +83,20 @@ function SidebarNav() {
   return <TreeView data={treeData} initialSelectedItemId="0" />
 }
 
-function DynamicTableOfContents() {
+function LeftSidebar() {
+  return (
+    <ScrollArea className="h-full">
+      <div className="p-4">
+        <Typography variant="h4" className="mb-4">
+          文档导航
+        </Typography>
+        <SidebarNav />
+      </div>
+    </ScrollArea>
+  )
+}
+
+function RightSidebar() {
   const { toc } = useTableOfContents()
 
   if (toc.length === 0) {
@@ -96,21 +104,28 @@ function DynamicTableOfContents() {
   }
 
   return (
-    <div className="p-4">
-      <Typography variant="h4">本页目录</Typography>
-      <ul className="mt-4 space-y-2">
-        {toc.map((item) => (
-          <li key={item.id} style={{ marginLeft: `${(item.level - 2) * 1}rem` }}>
-            <a
-              href={`#${item.id}`}
-              className="text-sm text-muted-foreground hover:text-foreground"
+    <ScrollArea className="h-full">
+      <div className="p-4">
+        <Typography variant="h4" className="mb-4">
+          本页目录
+        </Typography>
+        <ul className="space-y-2 text-sm">
+          {toc.map((item) => (
+            <li
+              key={item.id}
+              style={{ marginLeft: `${(item.level - 2) * 1}rem` }}
             >
-              {item.text}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+              <a
+                href={`#${item.id}`}
+                className="text-muted-foreground hover:text-foreground"
+              >
+                {item.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </ScrollArea>
   )
 }
 
@@ -121,19 +136,33 @@ export default function DocsLayout({
 }) {
   return (
     <TableOfContentsProvider>
-      <ResizablePanelGroup direction="horizontal" className="h-full w-full">
-        <ResizablePanel defaultSize={20}>
-          <SidebarNav />
-        </ResizablePanel>
-        <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={60}>
-          <div className="p-6 h-full overflow-y-auto">{children}</div>
-        </ResizablePanel>
-        <ResizableHandle withHandle />
-        <ResizablePanel defaultSize={20}>
-          <DynamicTableOfContents />
-        </ResizablePanel>
-      </ResizablePanelGroup>
+      <div className="relative flex flex-row min-h-screen">
+        <aside
+          className="
+        w-64 flex-shrink-0
+        sticky top-0
+        h-screen
+        border-r
+        hidden lg:block
+      "
+        >
+          <LeftSidebar />
+        </aside>
+
+        <main className="flex-grow">{children}</main>
+
+        <aside
+          className="
+        w-64 flex-shrink-0
+        sticky top-0
+        h-screen
+        border-l
+        hidden xl:block
+      "
+        >
+          <RightSidebar />
+        </aside>
+      </div>
     </TableOfContentsProvider>
   )
 }

@@ -8,19 +8,19 @@ import Link from 'next/link'
 const articles = [
   {
     title: '基础使用',
-    href: '/docs/usage/basic',
+    href: '/docs/base/usage/basic',
     description: '前面的文章我们已经成功的完成了ETS2LA的安装，接下来我们就来...',
     icon: <FileText className="w-6 h-6" />,
   },
   {
     title: '插件介绍',
-    href: '/docs/usage/plugins',
+    href: '/docs/base/usage/plugins',
     description: '这篇文章会以表格的形式来介绍ETS2LA插件管理页面中的所有插件...',
     icon: <FileText className="w-6 h-6" />,
   },
   {
     title: '页面介绍',
-    href: '/docs/usage/pages',
+    href: '/docs/base/usage/pages',
     description: '',
     icon: <FileText className="w-6 h-6" />,
   },

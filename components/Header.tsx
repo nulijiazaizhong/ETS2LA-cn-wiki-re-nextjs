@@ -28,7 +28,7 @@ export default function Header() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="/docs">文档</Link>
+              <Link href="/docs/Introduction">文档</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>

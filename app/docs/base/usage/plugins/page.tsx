@@ -25,7 +25,7 @@ export default function PluginsPage() {
   }, [setToc])
 
   return (
-    <div className="max-w-none">
+    <div className="prose dark:prose-invert max-w-none p-8">
       <Typography variant="h1">插件介绍</Typography>
       <Typography variant="p">
         这篇文章会以<strong>表格</strong>

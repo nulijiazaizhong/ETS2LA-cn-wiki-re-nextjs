@@ -25,7 +25,7 @@ export default function PagesPage() {
   }, [setToc])
 
   return (
-    <div className="prose dark:prose-invert max-w-none">
+    <div className="prose dark:prose-invert max-w-none p-8">
       <Typography variant="h1">页面介绍</Typography>
 
       <Typography variant="h2" id="overview">1.概览</Typography>
