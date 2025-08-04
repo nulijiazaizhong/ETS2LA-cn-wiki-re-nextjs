@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 
 import {
@@ -17,6 +18,12 @@ import { useTheme } from "next-themes"
 
 export default function Header() {
   const { theme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <header className="flex h-16 w-full items-center justify-between px-4 md:px-6 border-b shadow-sm">
       <NavigationMenu>
@@ -47,23 +54,27 @@ export default function Header() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex items-center gap-4">
-        <ThemeToggle />
-        <GitHubStar />
-        <Link
-          href="https://ets2la.com/discord"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/discord.svg"
-            alt="Discord"
-            width={20}
-            height={20}
-            className={`h-5 w-5 ${
-              theme === 'dark' ? 'dark:invert' : ''
-            }`}
-          />
-        </Link>
+        {mounted && (
+          <>
+            <ThemeToggle />
+            <GitHubStar />
+            <Link
+              href="https://ets2la.com/discord"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/discord.svg"
+                alt="Discord"
+                width={20}
+                height={20}
+                className={`h-5 w-5 ${
+                  theme === "dark" ? "dark:invert" : ""
+                }`}
+              />
+            </Link>
+          </>
+        )}
       </div>
     </header>
   )
