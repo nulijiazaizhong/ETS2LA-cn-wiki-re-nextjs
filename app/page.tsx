@@ -36,11 +36,11 @@ export default function Home() {
   }, [line1, line2]);
 
   const handleConfirm = () => {
-    router.push("/docs");
+    router.push("/docs/Introduction");
   };
 
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-75 -z-10" />
       <video
         autoPlay
