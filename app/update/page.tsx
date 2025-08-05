@@ -201,14 +201,14 @@ export default function UpdatePage() {
           03:25
         </Typography>
         <p className="mt-4">
-          <strong>Title</strong>： Remove "connection open" log
+          <strong>Title</strong>： Remove {"\"connection open\""} log
         </p>
         <div className="mt-2">
           <p>
             <strong>Description</strong>：
           </p>
           <ul className="list-disc list-inside">
-            <li>The websockets module would log "connection open" on startup</li>
+            <li>The websockets module would log {"\"connection open\""} on startup</li>
           </ul>
         </div>
         <Typography variant="p" className="mt-2">

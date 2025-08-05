@@ -17,7 +17,7 @@ import GitHubStar from "./GitHubStar"
 import { useTheme } from "next-themes"
 
 export default function Header() {
-  const { theme, resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
