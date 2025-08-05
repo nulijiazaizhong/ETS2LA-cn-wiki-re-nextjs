@@ -2,7 +2,7 @@
 
 import { Typography } from '@/components/Typography'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Image from 'next/image'
+import ImageZoom from '@/components/ImageZoom'
 import { useEffect } from 'react'
 import { useTableOfContents } from '@/contexts/TableOfContentsContext'
 
@@ -32,7 +32,7 @@ export default function PagesPage() {
       <Typography variant="p">
         ETS2LA的概览页面也就是ETS2LA的首页，这里会显示ETS2LA的介绍（红框内）、数据统计（黄框内）、开发者/贡献者（绿框内）、支持语言以及一些实用程序
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250801211503.png"
         alt="Overview"
         width={800}
@@ -79,7 +79,7 @@ export default function PagesPage() {
           </tr>
         </tbody>
       </table>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250802091353.png"
         alt="Environment Visualization"
         width={800}
@@ -93,7 +93,7 @@ export default function PagesPage() {
           </TabsList>
           <TabsContent value="plugin">
             <p>如果出现下图所显示的情况，请前往插件管理开启`可视化`插件</p>
-            <Image
+            <ImageZoom
               src="https://tc.ets2la.cn/d/img/7/20250802091955.png"
               alt="Plugin disabled"
               width={800}
@@ -105,7 +105,7 @@ export default function PagesPage() {
               如果出现了下图所示的任何一种情况，你需要检查你的网络问题，如果你使用的是`Goodnight
               Mirror`，那么你需要检查你是否开启了VPN或者软路由的规则是否有问题，如果你使用的是`offical`那么你应该检查你是否开启了VPN
             </p>
-            <Image
+            <ImageZoom
               src="https://tc.ets2la.cn/d/img/7/20250802120628.png"
               alt="Network issue"
               width={800}
@@ -129,7 +129,7 @@ export default function PagesPage() {
       <Typography variant="p">
         例如：我们看下面这张图片，这张图片就表示`转向控制、环境可视化、文本转语音`插件是选择上的，`速度控制、HUD`则是没有选择上的，这是如果点启用插件，下方就会显示除了基础插件之外我们勾选上的插件
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250802122325.png"
         alt="Basic Mode Logic"
         width={800}
@@ -140,7 +140,7 @@ export default function PagesPage() {
       <Typography variant="p">
         反观高级模式的逻辑就很清晰，点击哪个插件就启用哪个插件，根本没有选择一说，这里简单举个例子，`自适应巡航控制系统、HUD`两个插件是勾选上的，现在再随机点击一个插件他就会在上方的运行插件中显示（我这里点了`下一代HUD`）
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250802122939.png"
         alt="Advanced Mode Logic"
         width={800}
@@ -155,7 +155,7 @@ export default function PagesPage() {
         </a>
         上的文件来加载这个列表，点击最上方的刷新可以手动刷新`可用插件`的列表
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250802123233.png"
         alt="Catalogue"
         width={800}
@@ -187,7 +187,7 @@ export default function PagesPage() {
           <TabsTrigger value="plugins">插件</TabsTrigger>
         </TabsList>
         <TabsContent value="system">
-          <Image
+          <ImageZoom
             src="https://tc.ets2la.cn/d/img/7/20250803075607.png"
             alt="System Performance"
             width={800}
@@ -195,7 +195,7 @@ export default function PagesPage() {
           />
         </TabsContent>
         <TabsContent value="plugins">
-          <Image
+          <ImageZoom
             src="https://tc.ets2la.cn/d/img/7/20250803075702.png"
             alt="Plugin Performance"
             width={800}
@@ -212,7 +212,7 @@ export default function PagesPage() {
         </a>
         上的内容，但是其不支持多语言，英语强大的可以看看
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803081720.png"
         alt="Wiki"
         width={800}
@@ -223,7 +223,7 @@ export default function PagesPage() {
       <Typography variant="p">
         该页面是ETS2LA项目位于GitHub上面的计划/代办，点击之后会跳转只GitHub页面，无法访问请各位自行解决
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803081748.png"
         alt="Roadmap"
         width={800}
@@ -240,7 +240,7 @@ export default function PagesPage() {
       <Typography variant="p">
         该位置的设置主要用来调整页面的大小、透明度的多少以及修改语言，ETS2LA无法通过拖动软件边框来实现大小的调整，只能通过设置里面进行调整
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803090822.png"
         alt="UI Settings"
         width={800}
@@ -250,7 +250,7 @@ export default function PagesPage() {
       <Typography variant="p">
         在这里主要就是调整声音的大小以及软件启动声音的开关
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803090921.png"
         alt="Audio Settings"
         width={800}
@@ -260,7 +260,7 @@ export default function PagesPage() {
       <Typography variant="p">
         这里主要就是一些插件问题的解决办法，比如加速缓慢可以将`回退到旧的加速方式`勾选上，在比如插件无法显示，就可以将`缓慢加载`勾选上
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803091019.png"
         alt="Variable Settings"
         width={800}
@@ -274,7 +274,7 @@ export default function PagesPage() {
       <Typography variant="p">
         这里就是一些修改项，各位可以自行查看每个修改项的作用
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803091043.png"
         alt="Misc Settings"
         width={800}
@@ -287,7 +287,7 @@ export default function PagesPage() {
         <a href="/docs/usage/basic#1按键更改">基础使用</a>
         里面有将，可以看看这里只放个图片
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803091101.png"
         alt="Controls"
         width={800}
@@ -300,7 +300,7 @@ export default function PagesPage() {
         <a href="/docs/usage/basic#4sdk安装">新手引导</a>
         里面已经有过了；如果你想要卸载ETS2LA你需要先卸载SDK然后再运行卸载程序
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803091126.png"
         alt="SDK"
         width={800}
@@ -309,7 +309,7 @@ export default function PagesPage() {
       <Typography variant="p">
         接下来就到了一些插件设置，修改插件设置要求插件在启动的状态下才能进行修改，否则不能进行修改
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803091200.png"
         alt="Plugin Settings"
         width={800}
@@ -321,7 +321,7 @@ export default function PagesPage() {
       <Typography variant="p">
         通过自行调整修改X、Y、Z轴的偏移值来修改NGHUD在AR上的位置，同时也可以通过修改L、C、R值的信息来修改单个组件的大小；当然也可以设置NGHUD的背景
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803091300.png"
         alt="NGHUD Position"
         width={800}
@@ -347,7 +347,7 @@ export default function PagesPage() {
       <Typography variant="p">
         这里的所有选项都建议开启（如果你只有一个屏幕的话），其余按个人需求开启
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803091338.png"
         alt="NGHUD Renderer"
         width={800}
@@ -382,7 +382,7 @@ export default function PagesPage() {
       <Typography variant="p">
         点击设置下方的匿名皆可进行登录，目前ETS2LA仅支持通过Discord登录，其余不支持
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803083713.png"
         alt="Login"
         width={800}

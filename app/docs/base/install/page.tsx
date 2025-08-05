@@ -1,7 +1,7 @@
 'use client'
 
 import { Typography } from '@/components/Typography'
-import Image from 'next/image'
+import ImageZoom from '@/components/ImageZoom'
 import { useEffect } from 'react'
 import { useTableOfContents } from '@/contexts/TableOfContentsContext'
 
@@ -33,7 +33,7 @@ export default function InstallPage() {
       <Typography variant="p">
         双击运行刚才下载的安装程序，期间会跳出以下提示，直接点击`更多信息`，展开之后选择`仍要运行`即可
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084016.png"
         alt="Run installer"
         width={800}
@@ -44,7 +44,7 @@ export default function InstallPage() {
       <Typography variant="p">
         在完成上一步之后会来到选择语言的界面，选择`Simplified Chinese`并点击OK即可
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084028.png"
         alt="Select language"
         width={800}
@@ -53,7 +53,7 @@ export default function InstallPage() {
 
       <Typography variant="h2" id="start-install">3.开始安装</Typography>
       <Typography variant="p">在安装程序引导页面点击下一步</Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084056.png"
         alt="Start installation"
         width={800}
@@ -62,7 +62,7 @@ export default function InstallPage() {
 
       <Typography variant="h2" id="accept-license">4.接受许可证协议</Typography>
       <Typography variant="p">在许可证协议页面点击`我接受`</Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084122.png"
         alt="Accept license"
         width={800}
@@ -73,7 +73,7 @@ export default function InstallPage() {
       <Typography variant="p">
         在防诈骗页面勾选`我已知晓，如果我为本安装程序付费，那就是被骗了`，然后点击下一步
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084136.png"
         alt="Anti-fraud notice"
         width={800}
@@ -84,7 +84,7 @@ export default function InstallPage() {
       <Typography variant="p">
         在安装位置页面点击`浏览`，选择你要安装的位置，然后点击下一步
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084151.png"
         alt="Choose install location"
         width={800}
@@ -104,7 +104,7 @@ export default function InstallPage() {
       <Typography variant="p">
         国内用户选择`GitLab`并勾选`Aliyun PyPi Mirror`，然后点击下一步
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084211.png"
         alt="Select download source"
         width={800}
@@ -121,7 +121,7 @@ export default function InstallPage() {
       <Typography variant="p">
         根据自己的需要选择创建对应的快捷方式，然后点击安装
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084226.png"
         alt="Create shortcuts"
         width={800}
@@ -132,7 +132,7 @@ export default function InstallPage() {
       <Typography variant="p">
         在正在安装页面，安装程序会下载python依赖，下载源码，安装依赖，该过程需要一段时间，请耐心等待
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084245.png"
         alt="Installing"
         width={800}
@@ -149,7 +149,7 @@ export default function InstallPage() {
       <Typography variant="p">
         根据自身需要选择是否启用ETS2LA或打开ETS2LA官网，然后点击完成
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084258.png"
         alt="Installation complete"
         width={800}

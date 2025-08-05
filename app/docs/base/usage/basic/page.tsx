@@ -2,7 +2,7 @@
 
 import { Typography } from '@/components/Typography'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Image from 'next/image'
+import ImageZoom from '@/components/ImageZoom'
 import { useEffect } from 'react'
 import { useTableOfContents } from '@/contexts/TableOfContentsContext'
 
@@ -36,7 +36,7 @@ export default function BasicUsagePage() {
         <strong>控制台</strong>
         中看到下面这张图中的内容，这时不要紧张和害怕，有解决办法的
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084316.png"
         alt="Error message"
         width={800}
@@ -80,7 +80,7 @@ export default function BasicUsagePage() {
         </a>
         ,只支持外币卡(visa)
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/c6180860-d5bc-4989-9099-9fce3e5a9986.png"
         alt="Disclaimer"
         width={800}
@@ -89,7 +89,7 @@ export default function BasicUsagePage() {
 
       <Typography variant="h3">2.欢迎</Typography>
       <Typography variant="p">上一步完成之后会进入欢迎页面，点击`Continue`即可</Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084532.png"
         alt="Welcome"
         width={800}
@@ -100,7 +100,7 @@ export default function BasicUsagePage() {
       <Typography variant="p">
         点击左右侧的`Englisj`，鼠标滚轮往下，找到`Chinese(simplified)`，点击`Chinese(simplified)`即可使用简体中文，然后点击`继续`
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721084750.png"
         alt="Language selection"
         width={800}
@@ -117,7 +117,7 @@ export default function BasicUsagePage() {
         <p className="font-bold">警告</p>
         <p>安装SDK时不要启用游戏，会提示安装失败并且让你关闭游戏的</p>
       </div>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721085547.png"
         alt="SDK Installation"
         width={800}
@@ -132,7 +132,7 @@ export default function BasicUsagePage() {
           <TabsContent value="tip">
             <p>本步骤不安装SDK无法进行下一步骤</p>
             <p>鼠标放置到🟦框上可以看到SDK文件名以及安装情况</p>
-            <Image
+            <ImageZoom
               src="https://tc.ets2la.cn/d/img/7/20250721085857.png"
               alt="SDK Info"
               width={600}
@@ -153,14 +153,14 @@ export default function BasicUsagePage() {
               `F:\Game\steam\steamapps\common\Euro Truck Simulator 2`\（可在steam中右键选择`管理-浏览本地文件`）然后我只需要在后面加上`bin\win_x64\plugins`即是我需要粘贴到的文件路径，完整路径就是`F:\Game\steam\steamapps\common\Euro Truck Simulator 2\bin\win_x64\plugins`
             </p>
             <p><strong>复制路径</strong></p>
-            <Image
+            <ImageZoom
               src="https://tc.ets2la.cn/d/img/7/20250721091739.png"
               alt="Copy Path"
               width={800}
               height={400}
             />
             <p><strong>粘贴路径</strong></p>
-            <Image
+            <ImageZoom
               src="https://tc.ets2la.cn/d/img/7/20250721091849.png"
               alt="Paste Path"
               width={800}
@@ -174,7 +174,7 @@ export default function BasicUsagePage() {
       <Typography variant="p">
         插件推荐使用`高级插件模式`，基础模式容易出现无法启动插件的问题
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721092028.png"
         alt="Plugin Mode"
         width={800}
@@ -184,7 +184,7 @@ export default function BasicUsagePage() {
 
       <Typography variant="h3">6.高优先级模式</Typography>
       <Typography variant="p">勾选上，然后点击`继续`即可</Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250730121254.png"
         alt="High Priority Mode"
         width={800}
@@ -197,7 +197,7 @@ export default function BasicUsagePage() {
 
       <Typography variant="h3">7.数据加载</Typography>
       <Typography variant="p">上一步完成之后你会看到这样的界面，稍作等待即可</Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721135229.png"
         alt="Data Loading"
         width={800}
@@ -208,7 +208,7 @@ export default function BasicUsagePage() {
       <Typography variant="p">
         点击`Select option...`，在弹出的下拉框中选择你需要的地图，然后点击`继续`即可
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721135524.png"
         alt="Map Data"
         width={800}
@@ -219,7 +219,7 @@ export default function BasicUsagePage() {
       <Typography variant="p">
         ETS2LA不支持通过拖动边缘来调整窗口大小，只能通过设置中的串口大小来调整
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721135643.png"
         alt="Window Adjustment"
         width={800}
@@ -234,7 +234,7 @@ export default function BasicUsagePage() {
       <Typography variant="p">
         红色🟥按钮的为关闭；黄色🟨按钮的为最小化；绿色🟩按钮左键为指定，右键为设置透明度
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/d0fc5e3f-f88d-4bea-93d4-bb30fd029ca0.png"
         alt="Window Controls"
         width={800}
@@ -245,7 +245,7 @@ export default function BasicUsagePage() {
       <Typography variant="p">
         看到此页面说明你完成了新手引导，点击`完成`现在可以开始使用ETS2LA了
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721140831.png"
         alt="Setup Complete"
         width={800}
@@ -257,14 +257,14 @@ export default function BasicUsagePage() {
         完成新手引导后你会看到这样的页面（图1），将鼠标放置到靠近左侧边框的位置鼠标样式会改变，点击即可打开ETS2LA的侧边栏，打开侧边栏之后应该是这样的（图2）
       </Typography>
       <Typography variant="p">图1</Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721141043.png"
         alt="Page Usage 1"
         width={800}
         height={400}
       />
       <Typography variant="p">图2</Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721141256.png"
         alt="Page Usage 2"
         width={800}
@@ -283,13 +283,13 @@ export default function BasicUsagePage() {
         <strong>切换速度控制</strong>和<strong>切换转向</strong>
         中的选择任意一个，点击后面的铅笔✏️按钮，然后按键盘上你想要的按键即可，
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721181730.png"
         alt="Keybinds 1"
         width={800}
         height={400}
       />
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721182124.png"
         alt="Keybinds 2"
         width={800}
@@ -304,7 +304,7 @@ export default function BasicUsagePage() {
         <p>
           当然，如过你非常希望使用相同的按键来控制加减速和转向的话也是有解决办法的，勾选`设置-全局设置-变量`中的回退到旧的加速方法，这在一定程度上可以解决使用相同按键带来的bug，但是并不保证每个人都有效，所以最简单直接的方法还是修改按键
         </p>
-        <Image
+        <ImageZoom
           src="https://tc.ets2la.cn/d/img/7/20250722133325.png"
           alt="Old throttle method"
           width={800}
@@ -321,7 +321,7 @@ export default function BasicUsagePage() {
         <strong>控制台</strong>
         无输出即可完成插件的启用；下图所示的三个插件是必须要启用的，否则ETS2LA的基础功能会收到影响
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721235159.png"
         alt="Plugin Management"
         width={800}
@@ -356,7 +356,7 @@ export default function BasicUsagePage() {
         <strong>自动加减速</strong>，按键`-`控制的是<strong>自动转向</strong>
         ，如果想关闭ETS2LA，只需要再次按下这两个按键即可
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250722005007.png"
         alt="My Keybinds"
         width={800}
@@ -379,7 +379,7 @@ export default function BasicUsagePage() {
               <p>
                 点击软件左上角的`可用更新`，然后在加载出来的页面点击`重启并应用更新`
               </p>
-              <Image
+              <ImageZoom
                 src="https://tc.ets2la.cn/d/img/7/20250731110219.png"
                 alt="Update available"
                 width={800}
@@ -390,7 +390,7 @@ export default function BasicUsagePage() {
               <p>
                 在概览处下滑至页面最下方，你可以看见一个`强制更新`的选项，点击`强制更新`选项后面的`更新`即可触发更新进程
               </p>
-              <Image
+              <ImageZoom
                 src="https://tc.ets2la.cn/d/img/7/20250731110532.png"
                 alt="Force update"
                 width={800}

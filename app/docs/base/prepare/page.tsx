@@ -1,7 +1,7 @@
 'use client'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Image from 'next/image'
+import ImageZoom from '@/components/ImageZoom'
 import { Typography } from '@/components/Typography'
 import { useEffect } from 'react'
 import { useTableOfContents } from '@/contexts/TableOfContentsContext'
@@ -42,7 +42,7 @@ export default function PreparePage() {
         </a>
         下载C++ runtime
       </Typography>
-      <Image
+      <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250721083818.png"
         alt="Download C++ runtime"
         width={800}
@@ -62,7 +62,7 @@ export default function PreparePage() {
         </TabsList>
         <TabsContent value="not-installed">
           <p>勾选`我同意许可条款和条件`，点击`安装`即可。</p>
-          <Image
+          <ImageZoom
             src="https://tc.ets2la.cn/d/img/7/20250721083842.png"
             alt="Install C++ runtime"
             width={600}
@@ -71,7 +71,7 @@ export default function PreparePage() {
         </TabsContent>
         <TabsContent value="installed">
           <p>如果安装了则会出现以下页面，直接点击`关闭`即可</p>
-          <Image
+          <ImageZoom
             src="https://tc.ets2la.cn/d/img/7/20250721083908.png"
             alt="C++ runtime already installed"
             width={600}
@@ -100,7 +100,7 @@ export default function PreparePage() {
             </a>
             下载安装包，安装时一路NEXT即可；
           </p>
-          <Image
+          <ImageZoom
             src="https://tc.ets2la.cn/d/img/7/20250721083921.png"
             alt="Node.js website"
             width={800}
@@ -125,7 +125,7 @@ export default function PreparePage() {
             </a>
             下载安装包
           </p>
-          <Image
+          <ImageZoom
             src="https://tc.ets2la.cn/d/img/7/20250721083940.png"
             alt="Node.js China mirror"
             width={800}

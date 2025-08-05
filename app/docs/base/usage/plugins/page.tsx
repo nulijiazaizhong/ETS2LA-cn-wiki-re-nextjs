@@ -1,7 +1,7 @@
 'use client'
 
 import { Typography } from '@/components/Typography'
-import Image from 'next/image'
+import ImageZoom from '@/components/ImageZoom'
 import { useEffect } from 'react'
 import { useTableOfContents } from '@/contexts/TableOfContentsContext'
 import {
@@ -81,13 +81,14 @@ export default function PluginsPage() {
           </TableRow>
         </TableBody>
       </Table>
-      <Image
-        src="https://tc.ets2la.cn/d/img/7/20250730100942.png"
-        alt="Basic Mode Plugins"
-        width={800}
-        height={400}
-        className="my-6"
-      />
+      <div className="my-6">
+        <ImageZoom
+          src="https://tc.ets2la.cn/d/img/7/20250730100942.png"
+          alt="Basic Mode Plugins"
+          width={800}
+          height={400}
+        />
+      </div>
 
       <Typography variant="h2" id="advanced-mode">高级模式</Typography>
       <Table>
@@ -159,13 +160,14 @@ export default function PluginsPage() {
           </TableRow>
         </TableBody>
       </Table>
-      <Image
-        src="https://tc.ets2la.cn/d/img/7/20250730101016.png"
-        alt="Advanced Mode Plugins"
-        width={800}
-        height={400}
-        className="my-6"
-      />
+      <div className="my-6">
+        <ImageZoom
+          src="https://tc.ets2la.cn/d/img/7/20250730101016.png"
+          alt="Advanced Mode Plugins"
+          width={800}
+          height={400}
+        />
+      </div>
 
       <div className="not-prose my-4 rounded-lg border border-l-4 border-blue-500 bg-blue-500/10 p-4 text-blue-700 dark:text-blue-300">
         <p className="font-bold">信息</p>
