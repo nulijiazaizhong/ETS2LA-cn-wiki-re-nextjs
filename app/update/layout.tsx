@@ -11,6 +11,31 @@ import { Typography } from '@/components/Typography'
 
 function LeftSidebar() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
+  const updateDates = ['2025-08-04']
+
+  const formatDate = (date: Date) => {
+    const year = date.getFullYear()
+    const month = (date.getMonth() + 1).toString().padStart(2, '0')
+    const day = date.getDate().toString().padStart(2, '0')
+    return `${year}-${month}-${day}`
+  }
+
+  const isDisabled = (day: Date) => {
+    return !updateDates.includes(formatDate(day))
+  }
+
+  const handleSelect = (selectedDate: Date | undefined) => {
+    if (selectedDate) {
+      const dateString = formatDate(selectedDate)
+      if (updateDates.includes(dateString)) {
+        setDate(selectedDate)
+        const element = document.getElementById(dateString)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    }
+  }
 
   return (
     <ScrollArea className="h-full">
@@ -21,7 +46,8 @@ function LeftSidebar() {
         <Calendar
           mode="single"
           selected={date}
-          onSelect={setDate}
+          onSelect={handleSelect}
+          disabled={isDisabled}
           className="rounded-md border"
         />
       </div>
@@ -69,28 +95,14 @@ export default function UpdateLayout({
 }) {
   return (
     <TableOfContentsProvider>
-      <div className="relative flex flex-row flex-grow">
-        <aside
-          className="
-        w-80 flex-shrink-0
-        sticky top-0
-        border-r
-        hidden lg:block
-      "
-        >
+      <div className="relative flex flex-row min-h-screen">
+        <aside className="w-80 flex-shrink-0 border-r hidden lg:block sticky top-16 h-[calc(100vh-4rem)]">
           <LeftSidebar />
         </aside>
 
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow overflow-y-auto">{children}</main>
 
-        <aside
-          className="
-        w-64 flex-shrink-0
-        sticky top-0
-        border-l
-        hidden xl:block
-      "
-        >
+        <aside className="w-64 flex-shrink-0 border-l hidden xl:block sticky top-16 h-[calc(100vh-4rem)]">
           <RightSidebar />
         </aside>
       </div>

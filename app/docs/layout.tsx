@@ -128,7 +128,7 @@ export default function DocsLayout({
         <aside
           className="
         w-64 flex-shrink-0
-        sticky top-0
+        sticky top-0 h-screen
         border-r
         hidden lg:block
       "
@@ -141,7 +141,7 @@ export default function DocsLayout({
         <aside
           className="
         w-64 flex-shrink-0
-        sticky top-0
+        sticky top-0 h-screen
         border-l
         hidden xl:block
       "

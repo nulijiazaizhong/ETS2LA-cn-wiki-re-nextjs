@@ -1,7 +1,23 @@
+'use client'
+
 import { Typography } from '@/components/Typography'
 import { UpdateCodeBlock } from '@/components/UpdateCodeBlock'
+import { useTableOfContents } from '@/contexts/TableOfContentsContext'
+import { useEffect } from 'react'
 
 export default function UpdatePage() {
+  const { setToc } = useTableOfContents()
+
+  useEffect(() => {
+    const headings = document.querySelectorAll('h1, h2')
+    const tocItems = Array.from(headings).map((heading) => ({
+      id: heading.id,
+      level: parseInt(heading.tagName.substring(1), 10),
+      text: heading.textContent || '',
+    }))
+    setToc(tocItems)
+  }, [setToc])
+
   return (
     <div className="p-8">
       <Typography variant="h1" id="2025-08-04">
@@ -9,7 +25,9 @@ export default function UpdatePage() {
       </Typography>
 
       <div id="2025-08-04-14-54" className="mt-8">
-        <Typography variant="h2">14:54</Typography>
+        <Typography variant="h2" id="title-2025-08-04-14-54">
+          14:54
+        </Typography>
         <p className="mt-4">
           <strong>Title</strong>： Implemented custom ads to replace
           automatic the Google ones.
@@ -70,7 +88,9 @@ export default function UpdatePage() {
       </div>
 
       <div id="2025-08-04-03-46" className="mt-8">
-        <Typography variant="h2">03:46</Typography>
+        <Typography variant="h2" id="title-2025-08-04-03-46">
+          03:46
+        </Typography>
         <p className="mt-4">
           <strong>Title</strong>： Increase git timeout
         </p>
@@ -120,7 +140,9 @@ export default function UpdatePage() {
       </div>
 
       <div id="2025-08-04-03-39" className="mt-8">
-        <Typography variant="h2">03:39</Typography>
+        <Typography variant="h2" id="title-2025-08-04-03-39">
+          03:39
+        </Typography>
         <p className="mt-4">
           <strong>Title</strong>： Add window timeout setting
         </p>
@@ -175,7 +197,9 @@ export default function UpdatePage() {
       </div>
 
       <div id="2025-08-04-03-25" className="mt-8">
-        <Typography variant="h2">03:25</Typography>
+        <Typography variant="h2" id="title-2025-08-04-03-25">
+          03:25
+        </Typography>
         <p className="mt-4">
           <strong>Title</strong>： Remove "connection open" log
         </p>
@@ -223,7 +247,9 @@ export default function UpdatePage() {
       </div>
 
       <div id="2025-08-04-03-11" className="mt-8">
-        <Typography variant="h2">03:11</Typography>
+        <Typography variant="h2" id="title-2025-08-04-03-11">
+          03:11
+        </Typography>
         <p className="mt-4">
           <strong>Title</strong>： Add frontend mirror default setting
         </p>
@@ -285,7 +311,9 @@ export default function UpdatePage() {
       </div>
 
       <div id="2025-08-04-02-39" className="mt-8">
-        <Typography variant="h2">02:39</Typography>
+        <Typography variant="h2" id="title-2025-08-04-02-39">
+          02:39
+        </Typography>
         <p className="mt-4">
           <strong>Title</strong>： Move frontend mirrors list to variables
         </p>
