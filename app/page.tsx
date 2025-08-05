@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { ArrowRightIcon } from "lucide-react";
 import Typewriter from "typewriter-effect";
 import {
   AlertDialog,
@@ -85,9 +86,14 @@ export default function Home() {
           <AlertDialogTrigger asChild>
             <Button
               variant="outline"
-              className="mt-8 text-neutral-900 dark:text-white"
+              className="mt-8 group text-neutral-900 dark:text-white"
             >
               快速开始
+              <ArrowRightIcon
+                className="ml-2 -mr-1 opacity-60 transition-transform group-hover:translate-x-0.5"
+                size={16}
+                aria-hidden="true"
+              />
             </Button>
           </AlertDialogTrigger>
           <AlertDialogContent className="max-w-6xl">
