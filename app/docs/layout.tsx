@@ -124,12 +124,11 @@ export default function DocsLayout({
 }) {
   return (
     <TableOfContentsProvider>
-      <div className="relative flex flex-row min-h-screen">
+      <div className="relative flex flex-row flex-grow">
         <aside
           className="
         w-64 flex-shrink-0
         sticky top-0
-        h-screen
         border-r
         hidden lg:block
       "
@@ -143,7 +142,6 @@ export default function DocsLayout({
           className="
         w-64 flex-shrink-0
         sticky top-0
-        h-screen
         border-l
         hidden xl:block
       "

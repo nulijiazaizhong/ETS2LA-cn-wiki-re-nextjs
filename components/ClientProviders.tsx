@@ -11,8 +11,10 @@ export function ClientProviders({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      <Header />
-      {children}
+      <div className="flex flex-col flex-grow">
+        <Header />
+        {children}
+      </div>
     </ThemeProvider>
   );
 }
