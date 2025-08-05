@@ -18,7 +18,7 @@ const AuthorPage = () => {
         <Card>
           <CardHeader>
             <div className="flex items-center space-x-4">
-              <Avatar>
+              <Avatar className="transition-transform hover:scale-110">
                 <AvatarImage src="https://github.com/nulijiazaizhong.png" />
                 <AvatarFallback>NZ</AvatarFallback>
               </Avatar>

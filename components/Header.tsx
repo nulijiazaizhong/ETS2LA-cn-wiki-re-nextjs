@@ -17,7 +17,7 @@ import GitHubStar from "./GitHubStar"
 import { useTheme } from "next-themes"
 
 export default function Header() {
-  const { theme } = useTheme()
+  const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function Header() {
                 width={20}
                 height={20}
                 className={`h-5 w-5 ${
-                  theme === "dark" ? "dark:invert" : ""
+                  resolvedTheme === "dark" ? "invert" : ""
                 }`}
               />
             </Link>
