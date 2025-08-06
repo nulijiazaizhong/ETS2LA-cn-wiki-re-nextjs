@@ -1,12 +1,6 @@
-'use client'
+"use client"
 
-import {
-  TableOfContentsProvider,
-  useTableOfContents,
-} from '@/contexts/TableOfContentsContext'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { Typography } from '@/components/Typography'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from "react"
 import {
   expandAllFeature,
   hotkeysCoreFeature,
@@ -15,79 +9,88 @@ import {
   selectionFeature,
   syncDataLoaderFeature,
   TreeState,
-} from '@headless-tree/core'
-import { useTree } from '@headless-tree/react'
+} from "@headless-tree/core"
+import { useTree } from "@headless-tree/react"
 import {
   CircleXIcon,
   FileIcon,
   FilterIcon,
   FolderIcon,
   FolderOpenIcon,
-} from 'lucide-react'
-import { Input } from '@/components/ui/input'
-import { Tree, TreeItem, TreeItemLabel } from '@/components/tree'
-import { useRouter } from 'next/navigation'
+} from "lucide-react"
 
-interface NavItem {
+import { Input } from "@/components/ui/input"
+import { Tree, TreeItem, TreeItemLabel } from "@/components/tree"
+
+interface Item {
   name: string
   children?: string[]
   path?: string
 }
 
-const navItems: Record<string, NavItem> = {
-  root: { name: 'Documentation', children: ['intro', 'base'] },
-  intro: {
-    name: '简介',
-    path: '/docs/Introduction',
+const defaultItems: Record<string, Item> = {
+  company: {
+    name: "Company",
+    children: ["engineering", "marketing", "operations"],
   },
-  base: {
-    name: '基础',
-    path: '/docs/base',
-    children: ['prepare', 'install', 'usage'],
+  engineering: {
+    name: "Engineering",
+    children: ["frontend", "backend", "platform-team"],
   },
-  prepare: { name: '准备工作', path: '/docs/base/prepare' },
-  install: { name: '安装', path: '/docs/base/install' },
-  usage: {
-    name: '使用',
-    path: '/docs/base/usage',
-    children: ['usage-basic', 'usage-plugins', 'usage-pages'],
+  frontend: { name: "Frontend", children: ["design-system", "web-platform"] },
+  "design-system": {
+    name: "Design System",
+    children: ["components", "tokens", "guidelines"],
   },
-  'usage-basic': {
-    name: '基础使用',
-    path: '/docs/base/usage/basic',
-  },
-  'usage-plugins': {
-    name: '插件介绍',
-    path: '/docs/base/usage/plugins',
-  },
-  'usage-pages': {
-    name: '页面介绍',
-    path: '/docs/base/usage/pages',
-  },
+  components: { name: "Components" },
+  tokens: { name: "Tokens" },
+  guidelines: { name: "Guidelines" },
+  "web-platform": { name: "Web Platform" },
+  backend: { name: "Backend", children: ["apis", "infrastructure"] },
+  apis: { name: "APIs" },
+  infrastructure: { name: "Infrastructure" },
+  "platform-team": { name: "Platform Team" },
+  marketing: { name: "Marketing", children: ["content", "seo"] },
+  content: { name: "Content" },
+  seo: { name: "SEO" },
+  operations: { name: "Operations", children: ["hr", "finance"] },
+  hr: { name: "HR" },
+  finance: { name: "Finance" },
 }
 
 const indent = 20
 
-function SidebarNav() {
-  const router = useRouter()
-  const initialExpandedItems = ['base', 'usage']
-  const [state, setState] = useState<Partial<TreeState<NavItem>>>({})
-  const [searchValue, setSearchValue] = useState('')
+interface ComponentProps {
+  items?: Record<string, Item>
+  rootItemId?: string
+  onSelect?: (item: ItemInstance<Item>) => void
+}
+
+export default function Component({
+  items = defaultItems,
+  rootItemId = "company",
+  onSelect,
+}: ComponentProps) {
+  // Store the initial expanded items to reset when search is cleared
+  const initialExpandedItems =
+    rootItemId === "company" ? ["engineering", "frontend", "design-system"] : []
+  const [state, setState] = useState<Partial<TreeState<Item>>>({})
+  const [searchValue, setSearchValue] = useState("")
   const inputRef = useRef<HTMLInputElement>(null)
 
-  const tree = useTree<NavItem>({
+  const tree = useTree<Item>({
     state,
     setState,
     initialState: {
       expandedItems: initialExpandedItems,
     },
     indent,
-    rootItemId: 'root',
+    rootItemId: rootItemId,
     getItemName: (item) => item.getItemData().name,
     isItemFolder: (item) => (item.getItemData()?.children?.length ?? 0) > 0,
     dataLoader: {
-      getItem: (itemId) => navItems[itemId],
-      getChildren: (itemId) => navItems[itemId].children ?? [],
+      getItem: (itemId) => items[itemId],
+      getChildren: (itemId) => items[itemId].children ?? [],
     },
     features: [
       syncDataLoaderFeature,
@@ -99,53 +102,75 @@ function SidebarNav() {
   })
 
   useEffect(() => {
-    if (state.selectedItems && state.selectedItems.length > 0) {
-      const selectedId = state.selectedItems[0]
-      const itemData = navItems[selectedId]
-      if (itemData && itemData.path) {
-        router.push(itemData.path)
-      }
+    if (!onSelect || !state.selectedItems) {
+      return
     }
-  }, [state.selectedItems, router])
+    const selectedItem = tree
+      .getItems()
+      .find((item) => item.getId() === state.selectedItems?.[0])
+    if (selectedItem) {
+      onSelect(selectedItem)
+    }
+  }, [state.selectedItems, tree, onSelect])
 
+  // Handle clearing the search
   const handleClearSearch = () => {
-    setSearchValue('')
+    setSearchValue("")
+
+    // Manually trigger the tree's search onChange with an empty value
+    // to ensure item.isMatchingSearch() is correctly updated.
     const searchProps = tree.getSearchInputElementProps()
     if (searchProps.onChange) {
       const syntheticEvent = {
-        target: { value: '' },
-      } as React.ChangeEvent<HTMLInputElement>
+        target: { value: "" },
+      } as React.ChangeEvent<HTMLInputElement> // Cast to the expected event type
       searchProps.onChange(syntheticEvent)
     }
+
+    // Reset tree state to initial expanded items
     setState((prevState) => ({
       ...prevState,
       expandedItems: initialExpandedItems,
     }))
+
+    // Clear custom filtered items
     setFilteredItems([])
+
     if (inputRef.current) {
       inputRef.current.focus()
-      inputRef.current.value = ''
+      // Also clear the internal search input
+      inputRef.current.value = ""
     }
   }
 
+  // Keep track of filtered items separately from the tree's internal search state
   const [filteredItems, setFilteredItems] = useState<string[]>([])
 
+  // This function determines if an item should be visible based on our custom filtering
   const shouldShowItem = (itemId: string) => {
     if (!searchValue || searchValue.length === 0) return true
     return filteredItems.includes(itemId)
   }
 
+  // Update filtered items when search value changes
   useEffect(() => {
     if (!searchValue || searchValue.length === 0) {
       setFilteredItems([])
       return
     }
+
+    // Get all items
     const allItems = tree.getItems()
+
+    // First, find direct matches
     const directMatches = allItems
-      .filter((item) =>
-        item.getItemName().toLowerCase().includes(searchValue.toLowerCase())
-      )
+      .filter((item) => {
+        const name = item.getItemName().toLowerCase()
+        return name.includes(searchValue.toLowerCase())
+      })
       .map((item) => item.getId())
+
+    // Then, find all parent IDs of matching items
     const parentIds = new Set<string>()
     directMatches.forEach((matchId) => {
       let item = tree.getItems().find((i) => i.getId() === matchId)
@@ -159,31 +184,44 @@ function SidebarNav() {
         }
       }
     })
+
+    // Find all children of matching items
     const childrenIds = new Set<string>()
     directMatches.forEach((matchId) => {
       const item = tree.getItems().find((i) => i.getId() === matchId)
       if (item && item.isFolder()) {
+        // Get all descendants recursively
         const getDescendants = (itemId: string) => {
-          const children = navItems[itemId]?.children || []
+          const children = items[itemId]?.children || []
           children.forEach((childId) => {
             childrenIds.add(childId)
-            if (navItems[childId]?.children?.length) {
+            if (items[childId]?.children?.length) {
               getDescendants(childId)
             }
           })
         }
+
         getDescendants(item.getId())
       }
     })
+
+    // Combine direct matches, parents, and children
     setFilteredItems([
       ...directMatches,
       ...Array.from(parentIds),
       ...Array.from(childrenIds),
     ])
+
+    // Keep all folders expanded during search to ensure all matches are visible
+    // Store current expanded state first
     const currentExpandedItems = tree.getState().expandedItems || []
+
+    // Get all folder IDs that need to be expanded to show matches
     const folderIdsToExpand = allItems
       .filter((item) => item.isFolder())
       .map((item) => item.getId())
+
+    // Update expanded items in the tree state
     setState((prevState) => ({
       ...prevState,
       expandedItems: [
@@ -202,13 +240,18 @@ function SidebarNav() {
           onChange={(e) => {
             const value = e.target.value
             setSearchValue(value)
+
+            // Apply the search to the tree's internal state as well
             const searchProps = tree.getSearchInputElementProps()
             if (searchProps.onChange) {
               searchProps.onChange(e)
             }
+
             if (value.length > 0) {
+              // If input has at least one character, expand all items
               tree.expandAll()
             } else {
+              // If input is cleared, reset to initial expanded state
               setState((prevState) => ({
                 ...prevState,
                 expandedItems: initialExpandedItems,
@@ -216,8 +259,12 @@ function SidebarNav() {
               setFilteredItems([])
             }
           }}
+          // Prevent the internal search from being cleared on blur
           onBlur={(e) => {
+            // Prevent default blur behavior
             e.preventDefault()
+
+            // Re-apply the search to ensure it stays active
             if (searchValue && searchValue.length > 0) {
               const searchProps = tree.getSearchInputElementProps()
               if (searchProps.onChange) {
@@ -253,11 +300,12 @@ function SidebarNav() {
         ) : (
           tree.getItems().map((item) => {
             const isVisible = shouldShowItem(item.getId())
-            if (!isVisible) return null
+
             return (
               <TreeItem
                 key={item.getId()}
                 item={item}
+                data-visible={isVisible || !searchValue}
                 className="data-[visible=false]:hidden"
               >
                 <TreeItemLabel>
@@ -279,88 +327,22 @@ function SidebarNav() {
           })
         )}
       </Tree>
+
+      <p
+        aria-live="polite"
+        role="region"
+        className="text-muted-foreground mt-2 text-xs"
+      >
+        Tree with filtering ∙{" "}
+        <a
+          href="https://headless-tree.lukasbach.com"
+          className="hover:text-foreground underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          API
+        </a>
+      </p>
     </div>
-  )
-}
-
-function LeftSidebar() {
-  return (
-    <ScrollArea className="h-full">
-      <div className="p-4">
-        <Typography variant="h4" className="mb-4">
-          文档导航
-        </Typography>
-        <SidebarNav />
-      </div>
-    </ScrollArea>
-  )
-}
-
-function RightSidebar() {
-  const { toc } = useTableOfContents()
-
-  if (toc.length === 0) {
-    return null
-  }
-
-  return (
-    <ScrollArea className="h-full">
-      <div className="p-4">
-        <Typography variant="h4" className="mb-4">
-          本页目录
-        </Typography>
-        <ul className="space-y-2 text-sm">
-          {toc.map((item) => (
-            <li
-              key={item.id}
-              style={{ marginLeft: `${(item.level - 2) * 1}rem` }}
-            >
-              <a
-                href={`#${item.id}`}
-                className="text-muted-foreground hover:text-foreground"
-              >
-                {item.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </ScrollArea>
-  )
-}
-
-export default function DocsLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <TableOfContentsProvider>
-      <div className="relative flex flex-row flex-grow">
-        <aside
-          className="
-        w-64 flex-shrink-0
-        sticky top-0 h-screen
-        border-r
-        lg:block
-      "
-        >
-          <LeftSidebar />
-        </aside>
-
-        <main className="flex-grow">{children}</main>
-
-        <aside
-          className="
-        w-64 flex-shrink-0
-        sticky top-0 h-screen
-        border-l
-        hidden xl:block
-      "
-        >
-          <RightSidebar />
-        </aside>
-      </div>
-    </TableOfContentsProvider>
   )
 }
