@@ -10,8 +10,8 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-import Image from "next/image"
 import { MountainIcon } from "lucide-react"
+import Image from "next/image"
 import { ThemeToggle } from "./ThemeToggle"
 import GitHubStar from "./GitHubStar"
 import { useTheme } from "next-themes"
