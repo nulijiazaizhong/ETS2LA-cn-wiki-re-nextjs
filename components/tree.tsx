@@ -1,34 +1,35 @@
 "use client"
 
 import * as React from "react"
-import { ItemInstance } from "@headless-tree/core"
+import { ItemInstance, TreeInstance } from "@headless-tree/core"
 import { ChevronDownIcon } from "lucide-react"
 import { Slot } from "radix-ui"
 
 import { cn } from "@/lib/utils"
 
-interface TreeContextValue<T = any> {
+interface TreeContextValue<T> {
   indent: number
   currentItem?: ItemInstance<T>
-  tree?: any
+  tree?: TreeInstance<T>
 }
 
-const TreeContext = React.createContext<TreeContextValue>({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const TreeContext = React.createContext<TreeContextValue<any>>({
   indent: 20,
   currentItem: undefined,
   tree: undefined,
 })
 
-function useTreeContext<T = any>() {
+function useTreeContext<T>() {
   return React.useContext(TreeContext) as TreeContextValue<T>
 }
 
-interface TreeProps extends React.HTMLAttributes<HTMLDivElement> {
+interface TreeProps<T> extends React.HTMLAttributes<HTMLDivElement> {
   indent?: number
-  tree?: any
+  tree?: TreeInstance<T>
 }
 
-function Tree({ indent = 20, tree, className, ...props }: TreeProps) {
+function Tree<T>({ indent = 20, tree, className, ...props }: TreeProps<T>) {
   const containerProps =
     tree && typeof tree.getContainerProps === "function"
       ? tree.getContainerProps()
@@ -56,14 +57,13 @@ function Tree({ indent = 20, tree, className, ...props }: TreeProps) {
   )
 }
 
-interface TreeItemProps<T = any>
-  extends React.HTMLAttributes<HTMLButtonElement> {
+interface TreeItemProps<T> extends React.HTMLAttributes<HTMLButtonElement> {
   item: ItemInstance<T>
   indent?: number
   asChild?: boolean
 }
 
-function TreeItem<T = any>({
+function TreeItem<T>({
   item,
   className,
   asChild,
@@ -129,12 +129,11 @@ function TreeItem<T = any>({
   )
 }
 
-interface TreeItemLabelProps<T = any>
-  extends React.HTMLAttributes<HTMLSpanElement> {
+interface TreeItemLabelProps<T> extends React.HTMLAttributes<HTMLSpanElement> {
   item?: ItemInstance<T>
 }
 
-function TreeItemLabel<T = any>({
+function TreeItemLabel<T>({
   item: propItem,
   children,
   className,

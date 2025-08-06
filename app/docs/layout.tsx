@@ -10,7 +10,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import {
   expandAllFeature,
   hotkeysCoreFeature,
-  ItemInstance,
   searchFeature,
   selectionFeature,
   syncDataLoaderFeature,
@@ -248,7 +247,7 @@ function SidebarNav() {
       <Tree indent={indent} tree={tree}>
         {searchValue && filteredItems.length === 0 ? (
           <p className="px-3 py-4 text-center text-sm">
-            No items found for "{searchValue}"
+            No items found for ”{searchValue}“
           </p>
         ) : (
           tree.getItems().map((item) => {

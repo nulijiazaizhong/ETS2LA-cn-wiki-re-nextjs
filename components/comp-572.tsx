@@ -228,7 +228,7 @@ export default function Component({
         ...new Set([...currentExpandedItems, ...folderIdsToExpand]),
       ],
     }))
-  }, [searchValue, tree])
+  }, [searchValue, tree, items])
 
   return (
     <div className="flex h-full flex-col gap-2 *:nth-2:grow">
@@ -295,7 +295,7 @@ export default function Component({
       <Tree indent={indent} tree={tree}>
         {searchValue && filteredItems.length === 0 ? (
           <p className="px-3 py-4 text-center text-sm">
-            No items found for "{searchValue}"
+            No items found for ”{searchValue}“
           </p>
         ) : (
           tree.getItems().map((item) => {
