@@ -68,7 +68,7 @@ function SidebarNav() {
     },
   ]
 
-  return <TreeView data={treeData} initialSelectedItemId="0" />
+  return <TreeView data={treeData} initialSelectedItemId="0" expandAll />
 }
 
 function LeftSidebar() {
@@ -130,7 +130,7 @@ export default function DocsLayout({
         w-64 flex-shrink-0
         sticky top-0 h-screen
         border-r
-        hidden lg:block
+        lg:block
       "
         >
           <LeftSidebar />
