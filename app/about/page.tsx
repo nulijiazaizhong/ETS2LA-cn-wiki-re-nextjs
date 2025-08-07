@@ -41,7 +41,7 @@ export default function AboutPage() {
 
         <h2 className="mt-8 text-3xl font-semibold">我们的团队</h2>
         <blockquote className="border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic my-4">
-          “我们是ETS2LA的开发者，很高兴认识你。"
+          “我们是ETS2LA的开发者，很高兴认识你。”
         </blockquote>
         <p>
           我们不是一家公司，而是一群由充满热情的程序员、卡车模拟爱好者和技术宅组成的全球性开源社区。<sup>6</sup> 我们在GitHub上协作，利用业余时间贡献代码和创意，共同推动这个项目的成长。我们相信，开放和协作是创造卓越产品的最佳方式。
