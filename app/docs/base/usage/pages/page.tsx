@@ -261,7 +261,7 @@ export default function PagesPage() {
         这里主要就是一些插件问题的解决办法，比如加速缓慢可以将`回退到旧的加速方式`勾选上，在比如插件无法显示，就可以将`缓慢加载`勾选上
       </Typography>
       <ImageZoom
-        src="https://tc.ets2la.cn/d/img/7/20250803091019.png"
+        src="https://tc.ets2la.cn/d/img/7/20250807101155.png"
         alt="Variable Settings"
         width={800}
         height={400}
@@ -275,7 +275,7 @@ export default function PagesPage() {
         这里就是一些修改项，各位可以自行查看每个修改项的作用
       </Typography>
       <ImageZoom
-        src="https://tc.ets2la.cn/d/img/7/20250803091043.png"
+        src="https://tc.ets2la.cn/d/img/7/20250807101518.png"
         alt="Misc Settings"
         width={800}
         height={400}
