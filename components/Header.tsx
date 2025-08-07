@@ -13,6 +13,12 @@ import {
 import { MountainIcon } from "lucide-react"
 import Image from "next/image"
 import { ThemeToggle } from "./ThemeToggle"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+import { Button } from "./ui/button"
 import GitHubStar from "./GitHubStar"
 import { useTheme } from "next-themes"
 
@@ -62,6 +68,19 @@ export default function Header() {
         {mounted && (
           <>
             <ThemeToggle />
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Button variant="link">赞助镜像</Button>
+              </HoverCardTrigger>
+              <HoverCardContent>
+                <Image
+                  src="/imgs/support.png"
+                  alt="Support"
+                  width={200}
+                  height={200}
+                />
+              </HoverCardContent>
+            </HoverCard>
             <GitHubStar />
             <Link
               href="https://ets2la.com/discord"
@@ -77,6 +96,23 @@ export default function Header() {
                   resolvedTheme === "dark" ? "invert" : ""
                 }`}
               />
+            </Link>
+            <Link
+              href="https://ko-fi.com/Tumppi066"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <Image
+                src="/ko-fi.svg"
+                alt="Ko-fi"
+                width={24}
+                height={24}
+                className={`h-6 w-6 ${
+                  resolvedTheme === "dark" ? "invert" : ""
+                }`}
+              />
+              <span className="ml-2">赞助</span>
             </Link>
           </>
         )}
