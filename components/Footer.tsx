@@ -62,7 +62,7 @@ export default function Footer() {
               Communication
             </Link>
             <Link
-              href="mailto:goodnight@ets2la.cn"
+              href="mailto:goodnightan@ets2la.cn"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               Email

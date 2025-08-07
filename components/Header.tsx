@@ -112,7 +112,7 @@ export default function Header() {
                   resolvedTheme === "dark" ? "invert" : ""
                 }`}
               />
-              <span className="ml-2">赞助</span>
+              <span className="ml-2">赞助项目</span>
             </Link>
           </>
         )}
