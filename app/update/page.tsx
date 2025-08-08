@@ -24,6 +24,291 @@ export default function UpdatePage() {
         2025.08.08
       </Typography>
 
+      <div id="2025-08-08-18-14" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-08-18-14">
+          18:14
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Fix traditional chinese translation
+          generation.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>Fix traditional chinese translation generation.</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/fc9cca7ee9fb57b4f3c62a1e7d5e880bfddcd7da"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1110 additions\n- 672 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： 修复繁体中文翻译生成。
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>修复繁体中文翻译生成。</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/fc9cca7ee9fb57b4f3c62a1e7d5e880bfddcd7da"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1110 additions\n- 672 deletions'} />
+      </div>
+
+      <div id="2025-08-08-18-13" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-08-18-13">
+          18:13
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Translation update from Weblate (Finnish)
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              Updates by Weblate Admin tumppi066@ets2la.com (thank you!),
+            </li>
+            <li>
+              Language is currently translated at 100.0% (576 of 576 strings),
+            </li>
+            <li>
+              You can help us translate ETS2LA at https://weblate.ets2la.com/
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/fc9cca7ee9fb57b4f3c62a1e7d5e880bfddcd7da"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： Weblate 的翻译更新（芬兰语）
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>Weblate 管理员 tumppi066@ets2la.com 的更新（谢谢！</li>
+            <li>语言目前翻译率为 100.0%（576 个字符串中的 576 个）</li>
+            <li>
+              您可以通过以下方式帮助我们翻译 ETS2LA
+              https://weblate.ets2la.com/
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/fc9cca7ee9fb57b4f3c62a1e7d5e880bfddcd7da"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+      </div>
+
+      <div id="2025-08-08-18-02" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-08-18-02">
+          18:02
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Update translation files to follow new
+          changes.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>Update translation files to follow new changes.</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/c05f2abb37b8500ec53572c9a6cffc479d6d6e81"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： 更新翻译文件以跟随新的更改。
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>更新翻译文件以跟随新的更改。</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/c05f2abb37b8500ec53572c9a6cffc479d6d6e81"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+      </div>
+
+      <div id="2025-08-08-18-01" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-08-18-01">
+          18:01
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Replace HUD plugin with NGHUD.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              This update also includes initial support for changing the scaling
+              of the new HUD elements. Please note however that it will cause
+              layout issues.
+            </li>
+            <li>
+              For everyone that's not been using NGHUD, you can find extensive
+              customization options in the settings.
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/12ebb2aec5e6e2ed3dd4f24270976af1eaf53144"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： 将 HUD 插件替换为 NGHUD。
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              此更新还包括对更改新 HUD
+              元素缩放的初始支持。但请注意，这会导致布局问题。
+            </li>
+            <li>
+              对于没有使用 NGHUD 的每个人，您可以在设置中找到广泛的自定义选项。
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/12ebb2aec5e6e2ed3dd4f24270976af1eaf53144"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+      </div>
+
+      <div id="2025-08-08-17-35" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-08-17-35">
+          17:35
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Acceleration fallback is now enabled by
+          default.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              Won't affect existing installations, but new ones will default to
+              fallback first.
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/c654a1d04e914123f93053f6a46adddf1ab2aa36"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 3 additions\n- 3 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： 现在默认启用加速回退。
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              不会影响现有安装，但新安装将默认为首先回退。
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/c654a1d04e914123f93053f6a46adddf1ab2aa36"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 3 additions\n- 3 deletions'} />
+      </div>
+
       <div id="2025-08-08-01-26" className="mt-8">
         <Typography variant="h2" id="title-2025-08-08-01-26">
           01:26
