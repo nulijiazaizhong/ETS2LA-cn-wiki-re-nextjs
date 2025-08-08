@@ -45,7 +45,7 @@ export default function GitHubStar() {
       className="flex items-center gap-2 text-sm font-medium"
     >
       <Image
-        src="/github.svg"
+        src="/svg/github.svg"
         alt="GitHub"
         width={20}
         height={20}
