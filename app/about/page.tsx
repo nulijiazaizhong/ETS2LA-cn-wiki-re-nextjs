@@ -53,7 +53,7 @@ export default function AboutPage() {
         </p>
         <div className="flex items-center gap-4 my-4">
           <Link href="https://ets2la.com/discord" target="_blank" rel="noopener noreferrer" className="inline-block">
-            <Image src="/discord.svg" alt="Discord" width={128} height={40} className="rounded-md" />
+            <Image src="/imgs/discord.png" alt="Discord" width={128} height={40} className="rounded-md" />
           </Link>
         </div>
         <p>
