@@ -1,13 +1,23 @@
 'use client'
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import ImageZoom from '@/components/ImageZoom'
 import { Typography } from '@/components/Typography'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useTableOfContents } from '@/contexts/TableOfContentsContext'
 
 export default function PreparePage() {
   const { setToc } = useTableOfContents()
+  const [isAlertOpen, setIsAlertOpen] = useState(true)
 
   useEffect(() => {
     const toc = [
@@ -20,6 +30,29 @@ export default function PreparePage() {
 
   return (
     <div className="prose dark:prose-invert max-w-none p-8">
+      <AlertDialog open={isAlertOpen} onOpenChange={setIsAlertOpen}>
+        <AlertDialogContent className="max-w-md">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-red-500">声明</AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div>
+                <p className="my-2">
+                  如果你正在 使用Trucksbook，请不要使用ETS2LA，建议删除；目前TrucksBook官方已发表声明不允许使用ETS2LA，使用者会被封禁账号，所以不要使用
+                </p>
+                <p className="my-2">
+                  如果你正在使用TruckersMP，你仍让可以继续使用ETS2LA，但在TruckersMP服务器中因为使用ETS2LA而发生碰撞导致的后果（如账号封禁），ETS2LA不对此负任何责任
+                </p>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setIsAlertOpen(false)}>
+              我已了解
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+
       <Typography variant="h1">准备工作</Typography>
       <Typography variant="p">
         本章节将教您如何完成安装ETS2LA之前的准备工作。
