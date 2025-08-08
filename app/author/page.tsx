@@ -78,7 +78,7 @@ const AuthorPage = () => {
             </div>
           </CardHeader>
           <CardContent>
-            <p>导航检测、交通信号灯检测、ETS2LA Lite、"共同拥有者"</p>
+            <p>导航检测、交通信号灯检测、ETS2LA Lite、“共同拥有者”</p>
             <div className="mt-4 flex space-x-2">
               <a href="https://github.com/OleFranz" target="_blank" rel="noopener noreferrer"><Badge>GitHub</Badge></a>
             </div>

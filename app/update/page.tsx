@@ -207,7 +207,7 @@ export default function UpdatePage() {
               layout issues.
             </li>
             <li>
-              For everyone that's not been using NGHUD, you can find extensive
+              For everyone that is not been using NGHUD, you can find extensive
               customization options in the settings.
             </li>
           </ul>
@@ -267,7 +267,7 @@ export default function UpdatePage() {
           </p>
           <ul className="list-disc list-inside">
             <li>
-              Won't affect existing installations, but new ones will default to
+              will not affect existing installations, but new ones will default to
               fallback first.
             </li>
           </ul>
