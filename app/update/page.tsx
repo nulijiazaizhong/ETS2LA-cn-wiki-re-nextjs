@@ -20,7 +20,67 @@ export default function UpdatePage() {
 
   return (
     <div className="p-8">
-      <Typography variant="h1" id="2025-08-04">
+      <Typography variant="h1" id="2025-08-08">
+        2025.08.08
+      </Typography>
+
+      <div id="2025-08-08-01-26" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-08-01-26">
+          01:26
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Fix ACC not resuming from traffic lights.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              Clutch check will now make sure you are moving at more than 10kph
+              before activating itself.
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/424d6752649c1654c42117e73a2a2cab9910be3b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 3 additions\n- 1 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： 修复 ACC 无法从红绿灯恢复的问题。
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              离合器检查现在将确保您在启动之前以超过 10
+              公里/小时的速度行驶。
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/5fcb555eb9d8ea30d207192c7f521833a13b20d7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 3 additions\n- 1 deletions'} />
+      </div>
+
+      <Typography variant="h1" id="2025-08-04" className="mt-8">
         2025.08.04
       </Typography>
 

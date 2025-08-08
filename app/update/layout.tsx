@@ -11,17 +11,14 @@ import { Typography } from '@/components/Typography'
 
 function LeftSidebar() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
-  const updateDates = ['2025-08-04']
+  //有更新的日期
+  const updateDates = ['2025-08-08', '2025-08-04']
 
   const formatDate = (date: Date) => {
     const year = date.getFullYear()
     const month = (date.getMonth() + 1).toString().padStart(2, '0')
     const day = date.getDate().toString().padStart(2, '0')
     return `${year}-${month}-${day}`
-  }
-
-  const isDisabled = (day: Date) => {
-    return !updateDates.includes(formatDate(day))
   }
 
   const handleSelect = (selectedDate: Date | undefined) => {
@@ -47,7 +44,6 @@ function LeftSidebar() {
           mode="single"
           selected={date}
           onSelect={handleSelect}
-          disabled={isDisabled}
           className="rounded-md border"
         />
       </div>
