@@ -20,6 +20,70 @@ export default function UpdatePage() {
 
   return (
     <div className="p-8">
+      <Typography variant="h1" id="2025-08-09">
+        2025.08.09
+      </Typography>
+
+      <div id="2025-08-09-12-38" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-09-12-38">
+          12:38
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Translation update from Weblate (Spanish)
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>Updates by erjulixn erjulixn@ets2la.com (thank you!)</li>
+            <li>
+              Language is currently translated at 11.9% (69 of 576 strings)
+            </li>
+            <li>
+              You can help us translate ETS2LA at https://weblate.ets2la.com/
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/8bf48c16959c7107c52a20ac46b4ce7389a06694"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 5 additions\n- 4 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： Weblate 的翻译更新（西班牙语）
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>erjulixn erjulixn@ets2la.com 的更新（谢谢！</li>
+            <li>语言目前翻译率为 11.9%（69 个字符串中的 576 个）</li>
+            <li>
+              您可以通过 https://weblate.ets2la.com/ 帮助我们翻译 ETS2LA
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/8bf48c16959c7107c52a20ac46b4ce7389a06694"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 5 additions\n- 4 deletions'} />
+      </div>
+
       <Typography variant="h1" id="2025-08-08">
         2025.08.08
       </Typography>
