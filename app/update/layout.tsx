@@ -12,7 +12,7 @@ import { Typography } from '@/components/Typography'
 function LeftSidebar() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
   //有更新的日期
-  const updateDates = ['2025-08-04', '2025-08-08','2025-08-09']
+  const updateDates = ['2025-08-04', '2025-08-08','2025-08-09', '2025-08-10']
 
   const formatDate = (date: Date) => {
     const year = date.getFullYear()

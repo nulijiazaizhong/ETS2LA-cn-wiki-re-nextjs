@@ -20,6 +20,240 @@ export default function UpdatePage() {
 
   return (
     <div className="p-8">
+      <Typography variant="h1" id="2025-08-10">
+        2025.08.10
+      </Typography>
+
+      <div id="2025-08-10-17-35" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-10-17-35">
+          17:35
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Try to fix turn signals lagging the steering
+          in some edge cases.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              Try to fix turn signals lagging the steering in some edge cases.
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/6d38bd4b0015290e9efba6c7f49dc5132f68c6be"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1 additions\n- 4 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： 尝试修复在某些极端情况下滞后转向的转向灯。
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>尝试修复在某些极端情况下滞后转向的转向灯。</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/6d38bd4b0015290e9efba6c7f49dc5132f68c6be"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1 additions\n- 4 deletions'} />
+      </div>
+
+      <div id="2025-08-10-16-37" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-10-16-37">
+          16:37
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Fix ACC not slowing down for vehicles at all.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>Fix ACC not slowing down for vehicles at all.</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/4ff93a09921503d94acff81d504784a1a83944b9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 9 additions\n- 5 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： 修复车辆不减速的 ACC 问题。
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>修复车辆根本不减速的 ACC 问题。</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/4ff93a09921503d94acff81d504784a1a83944b9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 9 additions\n- 5 deletions'} />
+      </div>
+
+      <div id="2025-08-10-16-20" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-10-16-20">
+          16:20
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： TruckersMP Updates
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              Support for multiple trailers on the visualization. We now extract
+              all trailers from all players, this should hopefully fix ETS2LA
+              not braking in time.
+            </li>
+            <li>
+              Use dedicated booleans for is_tmp and is_trailer to alleviate
+              issues with accidentally classifying some singleplayer vehicles as
+              TMP.
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/712eda26b0c92b6c1101b40a07049e7264c13a7f"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 18 additions\n- 23 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： TruckersMP 更新
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              支持可视化中的多个预告片。我们现在从所有玩家那里提取所有预告片，这有望解决
+              ETS2LA 无法及时制动的问题。
+            </li>
+            <li>
+              使用专用的布尔值进行is_tmp和is_trailer，以缓解意外将某些单人战车归类为
+              TMP 的问题。
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/712eda26b0c92b6c1101b40a07049e7264c13a7f"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 18 additions\n- 23 deletions'} />
+      </div>
+
+      <div id="2025-08-10-15-07" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-10-15-07">
+          15:07
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Translation update from Weblate (Estonian)
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>Updates by Roke roke@ets2la.com (thank you!)</li>
+            <li>
+              Language is currently translated at 100.0% (576 of 576 strings)
+            </li>
+            <li>
+              You can help us translate ETS2LA at https://weblate.ets2la.com/
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/b9ef45ad4670e20b74beaa95899663b0c99642d1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 39 additions\n- 21 deletions'} />
+        <p className="mt-4">
+          <strong>标题</strong>： Weblate 的翻译更新（爱沙尼亚语）
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>Roke roke@ets2la.com 的更新（谢谢！)</li>
+            <li>语言目前翻译率为 100.0%（576 个字符串中的 576 个）</li>
+            <li>
+              您可以通过以下方式帮助我们翻译 ETS2LA
+              https://weblate.ets2la.com/
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/b9ef45ad4670e20b74beaa95899663b0c99642d1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 39 additions\n- 21 deletions'} />
+      </div>
+
       <Typography variant="h1" id="2025-08-09">
         2025.08.09
       </Typography>
