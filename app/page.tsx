@@ -49,6 +49,14 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden">
+      <style jsx>{`
+        .custom-link {
+          color:rgb(238, 138, 188);
+        }
+        .dark .custom-link {
+          color: #f9a8d4;
+        }
+      `}</style>
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-75 -z-10" />
       <video
         autoPlay
@@ -110,7 +118,7 @@ export default function Home() {
                       href="https://space.bilibili.com/525984002"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline"
+                      className="underline custom-link"
                     >
                       晚安
                     </a>
@@ -119,7 +127,7 @@ export default function Home() {
                       href="https://space.bilibili.com/357816575"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline"
+                      className="underline custom-link"
                     >
                       MR-UIAW
                     </a>{" "}
@@ -131,7 +139,7 @@ export default function Home() {
                       href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline"
+                      className="underline custom-link"
                     >
                       知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
                       (CC BY-NC-SA 4.0)
