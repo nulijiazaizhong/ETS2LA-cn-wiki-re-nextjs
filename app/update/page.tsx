@@ -20,6 +20,138 @@ export default function UpdatePage() {
 
   return (
     <div className="p-8">
+      <Typography variant="h1" id="2025-08-11">
+        2025.08.11
+      </Typography>
+
+      <div id="2025-08-11-20-14" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-11-20-14">
+          20:14
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Implement fullscreen mode.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              You can now make ETS2LA fullscreen on a monitor by middle clicking
+              on the green button in the top right of the window.
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/13c4c9fb42037deeea1d91b04aac5bd669a9ef31"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 17 additions\n- 1 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 13c4c9fb4
+        </p>
+        <p className="mt-4">
+          <strong>标题</strong>： 实现全屏模式。
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              您现在可以通过中键单击窗口右上角的绿色按钮在显示器上使
+              ETS2LA 全屏显示。
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/13c4c9fb42037deeea1d91b04aac5bd669a9ef31"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 17 additions\n- 1 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 13c4c9fb4
+        </p>
+      </div>
+
+      <div id="2025-08-11-20-02" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-11-20-02">
+          20:02
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Slight UI tweak
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              The visualization page will now automatically close the sidebar.
+              You can open it again like in the onboarding.
+            </li>
+            <li>
+              The window controls are now less visible when the sidebar is not
+              open.
+            </li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/8d8e998f2292ef8f19df19f62d347852068121a4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 3 additions\n- 0 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 8d8e998f2
+        </p>
+        <p className="mt-4">
+          <strong>标题</strong>： 轻微的 UI 调整
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              可视化页面现在将自动关闭侧边栏。您可以像在入职时一样再次打开它。
+            </li>
+            <li>现在，当侧边栏未打开时，窗口控件不太可见。</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/8d8e998f2292ef8f19df19f62d347852068121a4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 3 additions\n- 0 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 8d8e998f2
+        </p>
+      </div>
+
       <Typography variant="h1" id="2025-08-10">
         2025.08.10
       </Typography>
@@ -53,6 +185,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1 additions\n- 4 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 6d38bd4b0
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 尝试修复在某些极端情况下滞后转向的转向灯。
         </p>
@@ -75,6 +210,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1 additions\n- 4 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 6d38bd4b0
+        </p>
       </div>
 
       <div id="2025-08-10-16-37" className="mt-8">
@@ -103,6 +241,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 9 additions\n- 5 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 4ff93a099
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 修复车辆不减速的 ACC 问题。
         </p>
@@ -125,6 +266,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 9 additions\n- 5 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 4ff93a099
+        </p>
       </div>
 
       <div id="2025-08-10-16-20" className="mt-8">
@@ -162,6 +306,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 18 additions\n- 23 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 712eda26b
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： TruckersMP 更新
         </p>
@@ -191,6 +338,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 18 additions\n- 23 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 712eda26b
+        </p>
       </div>
 
       <div id="2025-08-10-15-07" className="mt-8">
@@ -225,6 +375,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 39 additions\n- 21 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: b9ef45ad4
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： Weblate 的翻译更新（爱沙尼亚语）
         </p>
@@ -252,6 +405,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 39 additions\n- 21 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: b9ef45ad4
+        </p>
       </div>
 
       <Typography variant="h1" id="2025-08-09">
@@ -290,6 +446,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 5 additions\n- 4 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 8bf48c169
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： Weblate 的翻译更新（西班牙语）
         </p>
@@ -316,6 +475,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 5 additions\n- 4 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 8bf48c169
+        </p>
       </div>
 
       <Typography variant="h1" id="2025-08-08">
@@ -349,6 +511,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1110 additions\n- 672 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: fc9cca7ee
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 修复繁体中文翻译生成。
         </p>
@@ -371,6 +536,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1110 additions\n- 672 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: fc9cca7ee
+        </p>
       </div>
 
       <div id="2025-08-08-18-13" className="mt-8">
@@ -408,6 +576,9 @@ export default function UpdatePage() {
         </Typography>
         <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
         <p className="mt-4">
+          <strong>version</strong>: fc9cca7ee
+        </p>
+        <p className="mt-4">
           <strong>标题</strong>： Weblate 的翻译更新（芬兰语）
         </p>
         <div className="mt-2">
@@ -434,6 +605,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+        <p className="mt-4">
+          <strong>版本号</strong>: fc9cca7ee
+        </p>
       </div>
 
       <div id="2025-08-08-18-02" className="mt-8">
@@ -463,6 +637,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: c05f2abb3
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 更新翻译文件以跟随新的更改。
         </p>
@@ -485,6 +662,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: c05f2abb3
+        </p>
       </div>
 
       <div id="2025-08-08-18-01" className="mt-8">
@@ -521,6 +701,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 12ebb2aec
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 将 HUD 插件替换为 NGHUD。
         </p>
@@ -549,6 +732,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 1814 additions\n- 2729 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 12ebb2aec
+        </p>
       </div>
 
       <div id="2025-08-08-17-35" className="mt-8">
@@ -581,6 +767,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 3 additions\n- 3 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: c654a1d04
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 现在默认启用加速回退。
         </p>
@@ -605,6 +794,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 3 additions\n- 3 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: c654a1d04
+        </p>
       </div>
 
       <div id="2025-08-08-01-26" className="mt-8">
@@ -636,6 +828,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 3 additions\n- 1 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 424d67526
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 修复 ACC 无法从红绿灯恢复的问题。
         </p>
@@ -661,6 +856,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={'+ 3 additions\n- 1 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 5fcb555eb
+        </p>
       </div>
 
       <Typography variant="h1" id="2025-08-04" className="mt-8">
@@ -701,6 +899,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 145 additions\n- 5 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 5fcb555eb
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 实施了自定义广告以取代自动 Google 广告。
         </p>
@@ -728,6 +929,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 145 additions\n- 5 deletions`} />
+        <p className="mt-4">
+          <strong>版本号</strong>: 5fcb555eb
+        </p>
       </div>
 
       <div id="2025-08-04-03-46" className="mt-8">
@@ -757,6 +961,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 1 additions\n- 1 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 8a5e5a25d
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 增加 git 超时
         </p>
@@ -780,6 +987,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 1 additions\n- 1 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 8a5e5a25d
+        </p>
       </div>
 
       <div id="2025-08-04-03-39" className="mt-8">
@@ -812,6 +1022,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 17 additions\n- 3 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: eba2d28aa
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 添加窗口超时设置
         </p>
@@ -837,6 +1050,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 17 additions\n- 3 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: eba2d28aa
+        </p>
       </div>
 
       <div id="2025-08-04-03-25" className="mt-8">
@@ -865,6 +1081,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 3 additions\n- 0 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 0ee5ea51e
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 删除“连接打开”日志
         </p>
@@ -887,6 +1106,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 3 additions\n- 0 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 0ee5ea51e
+        </p>
       </div>
 
       <div id="2025-08-04-03-11" className="mt-8">
@@ -923,6 +1145,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 35 additions\n- 18 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 1fb99585c
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 添加前端镜像默认设置
         </p>
@@ -951,6 +1176,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 35 additions\n- 18 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 1fb99585c
+        </p>
       </div>
 
       <div id="2025-08-04-02-39" className="mt-8">
@@ -979,6 +1207,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 8 additions\n- 5 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 0093b214f
+        </p>
         <p className="mt-4">
           <strong>标题</strong>： 将前端镜像列表移动到变量
         </p>
@@ -1001,6 +1232,9 @@ export default function UpdatePage() {
           </a>
         </Typography>
         <UpdateCodeBlock code={`+ 8 additions\n- 5 deletions`} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 0093b214f
+        </p>
       </div>
     </div>
   )
