@@ -11,8 +11,13 @@ import { Typography } from '@/components/Typography'
 
 function LeftSidebar() {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
-  //有更新的日期
-  const updateDates = ['2025-08-04', '2025-08-08','2025-08-09', '2025-08-10']
+  const [updateDates, setUpdateDates] = React.useState<string[]>([])
+
+  React.useEffect(() => {
+    const headings = document.querySelectorAll('h1[id]')
+    const dates = Array.from(headings).map((heading) => heading.id)
+    setUpdateDates(dates)
+  }, [])
 
   const formatDate = (date: Date) => {
     const year = date.getFullYear()
@@ -34,6 +39,14 @@ function LeftSidebar() {
     }
   }
 
+  const disabledDays = (day: Date) => {
+    if (updateDates.length === 0) {
+      // 在 dates 加载完成前，禁用所有日期
+      return true
+    }
+    return !updateDates.includes(formatDate(day))
+  }
+
   return (
     <ScrollArea className="h-full">
       <div className="p-4">
@@ -45,6 +58,7 @@ function LeftSidebar() {
           selected={date}
           onSelect={handleSelect}
           className="rounded-md border"
+          disabled={disabledDays}
         />
       </div>
     </ScrollArea>
