@@ -44,6 +44,18 @@ export default function PagesPage() {
           由于滚动截图会导致左侧的侧边栏显示问题，所以这里不演示其他的内容了，各位在这个页面可以使用鼠标滚轮向下滚动即可查看剩余内容
         </p>
       </div>
+      <div className="not-prose my-4 rounded-lg border border-l-4 border-yellow-500 bg-yellow-500/10 p-4 text-yellow-700 dark:text-yellow-300">
+        <p className="font-bold">警告</p>
+        <p>
+          如果你看到了下面图片所显示的内容，请前往设置-SDK中重新安装一遍SDK
+        </p>
+        <ImageZoom
+          src="https://tc.ets2la.cn/d/img/7/20250812110734.png"
+          alt="SDK Warning"
+          width={800}
+          height={400}
+        />
+      </div>
 
       <Typography variant="h2" id="visualization">2.环境可视化</Typography>
       <Typography variant="p">
