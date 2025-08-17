@@ -60,6 +60,11 @@ export default function Header() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
+              <Link href="/status">服务器状态</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
               <Link href="/author">作者</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
