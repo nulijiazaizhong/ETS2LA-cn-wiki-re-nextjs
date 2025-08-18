@@ -20,6 +20,81 @@ export default function UpdatePage() {
 
   return (
     <div className="p-8">
+      <Typography variant="h1" id="2025-08-18">
+        2025.08.18
+      </Typography>
+
+      <div id="2025-08-18-22-39" className="mt-8">
+        <Typography variant="h2" id="title-2025-08-18-22-39">
+          22:39
+        </Typography>
+        <p className="mt-4">
+          <strong>Title</strong>： Frontend updates.
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>Description</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>
+              Fix visualization page sometimes not filling up the entire screen.
+            </li>
+            <li>
+              Fix visualization page corners not having the right rounding.
+            </li>
+            <li>
+              Notifications will now always show up in the bottom center, they
+              won't move to the bottom right automatically.
+            </li>
+            <li>Fix sidebar not always having full height.</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/0df029ba20107e2e67c690a5dc0804142ad0b927"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Changes: View detailed information
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1 additions\n- 1 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>version</strong>: 1eb32ae4e
+        </p>
+        <p className="mt-4">
+          <strong>标题</strong>： 前端更新
+        </p>
+        <div className="mt-2">
+          <p>
+            <strong>描述</strong>：
+          </p>
+          <ul className="list-disc list-inside">
+            <li>修复可视化页面有时不会填满整个屏幕的问题。</li>
+            <li>修复可视化页面角没有正确的舍入。</li>
+            <li>
+              通知现在将始终显示在底部中心，它们不会自动移动到右下角。
+            </li>
+            <li>修复侧边栏并不总是具有全高的问题。。</li>
+          </ul>
+        </div>
+        <Typography variant="p" className="mt-2">
+          <a
+            href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/0df029ba20107e2e67c690a5dc0804142ad0b927"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            修改：查看详细信息
+          </a>
+        </Typography>
+        <UpdateCodeBlock code={'+ 1 additions\n- 1 deletions'} />
+        <p className="mt-4 text-green-600 dark:text-green-400">
+          <strong>版本号</strong>: 1eb32ae4e
+        </p>
+      </div>
+
       <Typography variant="h1" id="2025-08-12">
         2025.08.12
       </Typography>
