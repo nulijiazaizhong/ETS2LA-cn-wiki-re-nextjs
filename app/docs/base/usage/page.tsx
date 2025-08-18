@@ -21,7 +21,7 @@ const articles = [
   {
     title: '页面介绍',
     href: '/docs/base/usage/pages',
-    description: '',
+    description: '尽可能详细的介绍每个页面/每个按钮的作用',
     icon: <FileText className="w-6 h-6" />,
   },
 ]

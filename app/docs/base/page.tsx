@@ -9,20 +9,26 @@ const articles = [
   {
     title: '准备工作',
     href: '/docs/base/prepare',
-    description: '1.下载并安装C++ runtime',
+    description: '完成安装ETS2LA之前的准备工作',
     icon: <FileText className="w-6 h-6" />,
   },
   {
     title: '安装',
     href: '/docs/base/install',
-    description: '1.运行安装程序',
+    description: '手把手教你安装ETS2LA',
     icon: <FileText className="w-6 h-6" />,
   },
   {
     title: '使用',
     href: '/docs/base/usage',
-    description: '3 个项目',
+    description: '3 个项目 | 介绍如何使用ETS2LA',
     icon: <Folder className="w-6 h-6" />,
+  },
+  {
+    title: '问题总结',
+    href: '/docs/base/bug',
+    description: '总结了可能遇到的问题以及解决方案',
+    icon: <FileText className="w-6 h-6" />,
   },
 ]
 

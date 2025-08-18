@@ -34,7 +34,7 @@ interface NavItem {
 }
 
 const navItems: Record<string, NavItem> = {
-  root: { name: 'Documentation', children: ['intro', 'base'] },
+  root: { name: 'Documentation', children: ['intro', 'base', 'advanced'] },
   intro: {
     name: '简介',
     path: '/docs/Introduction',
@@ -42,7 +42,7 @@ const navItems: Record<string, NavItem> = {
   base: {
     name: '基础',
     path: '/docs/base',
-    children: ['prepare', 'install', 'usage'],
+    children: ['prepare', 'install', 'usage', 'bug'],
   },
   prepare: { name: '准备工作', path: '/docs/base/prepare' },
   install: { name: '安装', path: '/docs/base/install' },
@@ -62,6 +62,23 @@ const navItems: Record<string, NavItem> = {
   'usage-pages': {
     name: '页面介绍',
     path: '/docs/base/usage/pages',
+  },
+  advanced: {
+    name: '进阶',
+    path: '/docs/advanced',
+    children: ['map-data-extraction', 'plugins-development'],
+  },
+  'map-data-extraction': {
+    name: '地图数据提取',
+    path: '/docs/advanced/map-data-extraction',
+  },
+  'plugins-development': {
+    name: '插件开发',
+    path: '/docs/advanced/plugins-development',
+  },
+  bug: {
+    name: '问题总结',
+    path: '/docs/base/bug',
   },
 }
 

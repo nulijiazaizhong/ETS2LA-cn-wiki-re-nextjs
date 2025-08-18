@@ -34,6 +34,8 @@ export default function BasicUsagePage() {
 
       <Typography variant="h2" id="error-fixing">1.消除错误提示</Typography>
 
+      <Typography variant="h3">1.ffmpeg下载失败</Typography>
+
       <Typography variant="p">
         如果你在安装完成之后勾选了打开ETS2LA的话你有很大概率会在
         <strong>控制台</strong>
@@ -75,6 +77,19 @@ export default function BasicUsagePage() {
           </p>
         </TabsContent>
       </Tabs>
+
+      <Typography variant="h3">2.插件无法加载</Typography>
+
+      <Typography variant="p">
+        如果你遇到了图片显示的问题，可以前往设置-全局设置-变量，将缓慢加载勾选上
+      </Typography>
+
+      <ImageZoom
+        src="https://tc.ets2la.cn/d/img/7/186c815e84e60793a4bc1b89a4010a74.png"
+        alt="Slow loading"
+        width={800}
+        height={400}
+      />
 
       <Typography variant="h2" id="onboarding">2.新手引导</Typography>
 
