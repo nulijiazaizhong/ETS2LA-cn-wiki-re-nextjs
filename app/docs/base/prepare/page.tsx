@@ -238,7 +238,7 @@ nvm use 版本号        #切换nodejs版本`}
           <p>
             前往
             <a
-              href="https://downloads.ets2la.cn/installer"
+              href="https://files.ets2la.cn/#/?code=NUE74"
               target="_blank"
               rel="noopener noreferrer"
             >
