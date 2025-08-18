@@ -1,12 +1,22 @@
 'use client'
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog'
 import { Typography } from '@/components/Typography'
 import { UpdateCodeBlock } from '@/components/UpdateCodeBlock'
 import { useTableOfContents } from '@/contexts/TableOfContentsContext'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function UpdatePage() {
   const { setToc } = useTableOfContents()
+  const [isAlertOpen, setIsAlertOpen] = useState(true)
 
   useEffect(() => {
     const headings = document.querySelectorAll('h1, h2')
@@ -19,10 +29,38 @@ export default function UpdatePage() {
   }, [setToc])
 
   return (
-    <div className="p-8">
-      <Typography variant="h1" id="2025-08-18">
-        2025.08.18
-      </Typography>
+    <>
+      <AlertDialog open={isAlertOpen} onOpenChange={setIsAlertOpen}>
+        <AlertDialogContent className="max-w-md">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-red-500">提示</AlertDialogTitle>
+            <AlertDialogDescription asChild>
+              <div>
+                <p className="text-yellow-500">
+                  本页面所有更新内容均来自
+                  <a
+                    href="https://discord.com/channels/1120719484982939790/1120734880133820537"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    discord社区updates频道
+                  </a>
+                </p>
+              </div>
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setIsAlertOpen(false)}>
+              我已了解
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+      <div className="p-8">
+        <Typography variant="h1" id="2025-08-18">
+          2025.08.18
+        </Typography>
 
       <div id="2025-08-18-22-39" className="mt-8">
         <Typography variant="h2" id="title-2025-08-18-22-39">
@@ -1505,6 +1543,7 @@ export default function UpdatePage() {
           <strong>版本号</strong>: 0093b214f
         </p>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
