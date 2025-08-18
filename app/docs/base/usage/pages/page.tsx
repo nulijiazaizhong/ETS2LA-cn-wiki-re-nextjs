@@ -1,6 +1,15 @@
 'use client'
 
 import { Typography } from '@/components/Typography'
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import ImageZoom from '@/components/ImageZoom'
 import { useEffect } from 'react'
@@ -61,36 +70,36 @@ export default function PagesPage() {
       <Typography variant="p">
         环境可视化用于显示当前导航和路线信息；环境可视化分为左右两侧，左侧以车辆视角显示导航信息，右侧以地图视角显示导航信息。
       </Typography>
-      <table>
-        <thead>
-          <tr>
-            <th>位置</th>
-            <th>视角</th>
-            <th>显示内容</th>
-            <th>性能消耗</th>
-            <th>mod地图</th>
-            <th>镜像</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>左侧</td>
-            <td>车辆</td>
-            <td>导航路线</td>
-            <td>约400MB内存占用</td>
-            <td>支持</td>
-            <td>仅限中国大陆`非VPN/软路由`用户使用</td>
-          </tr>
-          <tr>
-            <td>右侧</td>
-            <td>地图</td>
-            <td>导航路线</td>
-            <td>约200MB内存占用</td>
-            <td>仅promods</td>
-            <td>仅限中国大陆`非VPN/软路由`用户使用</td>
-          </tr>
-        </tbody>
-      </table>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>位置</TableHead>
+            <TableHead>视角</TableHead>
+            <TableHead>显示内容</TableHead>
+            <TableHead>性能消耗</TableHead>
+            <TableHead>mod地图</TableHead>
+            <TableHead>镜像</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableCell>左侧</TableCell>
+            <TableCell>车辆</TableCell>
+            <TableCell>导航路线</TableCell>
+            <TableCell>约400MB内存占用</TableCell>
+            <TableCell>支持</TableCell>
+            <TableCell>仅限中国大陆`非VPN/软路由`用户使用</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>右侧</TableCell>
+            <TableCell>地图</TableCell>
+            <TableCell>导航路线</TableCell>
+            <TableCell>约200MB内存占用</TableCell>
+            <TableCell>仅promods</TableCell>
+            <TableCell>仅限中国大陆`非VPN/软路由`用户使用</TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
       <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250802091353.png"
         alt="Environment Visualization"
