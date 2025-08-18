@@ -63,7 +63,7 @@ export default function BasicUsagePage() {
         <TabsContent value="way">
           <p>
             从
-            <a href="https://ets2la.cn" target="_blank" rel="noopener noreferrer">
+            <a href="http://files.ets2la.cn/#/?code=L09E9" target="_blank" rel="noopener noreferrer">
               国内镜像站
             </a>
             下载ffmpeg，然后放到ETS2LA的安装目录下，然后重启ETS2LA即可
