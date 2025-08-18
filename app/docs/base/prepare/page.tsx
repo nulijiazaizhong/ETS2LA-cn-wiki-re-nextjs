@@ -29,7 +29,7 @@ export default function PreparePage() {
   }, [setToc])
 
   return (
-    <div className="prose dark:prose-invert max-w-none p-8">
+    <>
       <AlertDialog open={isAlertOpen} onOpenChange={setIsAlertOpen}>
         <AlertDialogContent className="max-w-md">
           <AlertDialogHeader>
@@ -248,6 +248,6 @@ nvm use 版本号        #切换nodejs版本`}
           </p>
         </TabsContent>
       </Tabs>
-    </div>
+    </>
   )
 }

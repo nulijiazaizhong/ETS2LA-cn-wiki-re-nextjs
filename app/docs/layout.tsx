@@ -364,7 +364,11 @@ export default function DocsLayout({
           <LeftSidebar />
         </aside>
 
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow">
+          <div className="prose dark:prose-invert max-w-none p-8">
+            {children}
+          </div>
+        </main>
 
         <aside
           className="

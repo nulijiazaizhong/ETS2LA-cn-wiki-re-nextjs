@@ -21,7 +21,7 @@ export default function IntroductionPage() {
   }, [setToc])
 
   return (
-    <div className="prose dark:prose-invert max-w-none p-8">
+    <>
       <Typography variant="h1">简介</Typography>
       <Typography variant="p">
         <a
@@ -97,6 +97,6 @@ export default function IntroductionPage() {
       <Typography variant="p">
         基于 NextJS 和 shadcn，我们制作了一个易于使用且美观的界面，该界面受到现实世界自动驾驶解决方案的启发。
       </Typography>
-    </div>
+    </>
   )
 }
