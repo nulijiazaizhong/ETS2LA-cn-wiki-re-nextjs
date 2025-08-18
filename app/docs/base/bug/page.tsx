@@ -79,9 +79,7 @@ export default function BugPage() {
           </p>
         </TabsContent>
       </Tabs>
-
-      <Typography variant="h2" id="plugin-failed">2.插件无法加载</Typography>
-
+      
       <Typography variant="p">
         该问题同样主要出现在
         <a href="/docs/base/usage/basic#error-fixing">基础使用</a>
