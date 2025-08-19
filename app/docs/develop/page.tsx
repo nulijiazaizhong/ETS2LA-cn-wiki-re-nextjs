@@ -7,15 +7,15 @@ import Link from 'next/link'
 
 const articles = [
   {
-    title: '浏览器',
-    href: '/docs/advanced/firefox',
-    description: '使用自带方案在其他设备查看环境可视化',
+    title: '地图数据提取',
+    href: '/docs/advanced/map-data-extraction',
+    description: '提取自己喜欢的地图数据',
     icon: <FileText className="w-6 h-6" />,
   },
   {
-    title: '第三方',
-    href: '/docs/advanced/third',
-    description: '通过安装第三方软件在其他设备查看环境可视化',
+    title: '插件开发',
+    href: '/docs/advanced/plugins-development',
+    description: '手把手教你开发ETS2LA插件',
     icon: <FileText className="w-6 h-6" />,
   },
 ]
