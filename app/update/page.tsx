@@ -82,7 +82,7 @@ export default function UpdatePage() {
             </li>
             <li>
               Notifications will now always show up in the bottom center, they
-              won't move to the bottom right automatically.
+              will not move to the bottom right automatically.
             </li>
             <li>Fix sidebar not always having full height.</li>
           </ul>

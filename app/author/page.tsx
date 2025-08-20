@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/table"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
-import Link from "next/link"
 import ImageZoom from "@/components/ImageZoom"
 
 const AuthorPage = () => {

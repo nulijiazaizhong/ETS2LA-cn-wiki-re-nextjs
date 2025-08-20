@@ -4,7 +4,6 @@ import { Typography } from '@/components/Typography'
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,

@@ -323,9 +323,9 @@ export default function ThirdPartyPage() {
         height={450}
       />
       <Typography variant="p">
-        然后我们将 搜索到的 "5" 上面那一行{' '}
+        然后我们将 搜索到的 “5” 上面那一行{' '}
         <code>
-          "device_id": &#123;2bb2012d-f11f-5f14-9f7c-7b8561770d7d&#125;
+          “device_id”: &#123;2bb2012d-f11f-5f14-9f7c-7b8561770d7d&#125;
         </code>{' '}
         中的冒号后面的引号中间的内容复制下来，我这里就是{' '}
         <code>{deviceId}</code>
