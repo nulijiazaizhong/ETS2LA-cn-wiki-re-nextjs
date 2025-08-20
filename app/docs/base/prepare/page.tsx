@@ -36,18 +36,20 @@ export default function PreparePage() {
             <AlertDialogTitle className="text-red-500">声明</AlertDialogTitle>
             <AlertDialogDescription asChild>
               <div>
-                <p className="my-2 text-yellow-500">
-                  1、如果您是电脑小白，为了确保您能完整/顺利的安装ETS2LA，请确保你的电脑中没有虚拟组网/虚拟局域网软件正在运行
+                <p className="my-2 text-blue-500">
+                  1、如果你想要安装ETS2LA，请确保你使用的是由微软提供的原版系统，而非第三方修改过的系统，如：魔改版Windows等；笔记本用户如未重装过系统均为微软原版系统，台式机用户需自行分辨是否为原版系统；
                 </p>
                 <p className="my-2 text-yellow-500">
-                  2、为了确保您能够正常流畅的使用ETS2LA，请确保你的电脑在使用过程中不会出现CPU撞/顶到温度墙/功耗墙的情况发生，否则你可能会出现`跑得好好的突然开始画龙、突然之间方向失效等问题
-                  
+                  2、如果您是电脑小白，为了确保您能完整/顺利的安装ETS2LA，请确保你的电脑中没有虚拟组网/虚拟局域网软件正在运行
                 </p>
                 <p className="my-2 text-yellow-500">
-                  3、如果你正在 使用Trucksbook，请不要使用ETS2LA，建议删除；目前TrucksBook官方已发表声明不允许使用ETS2LA，使用者会被封禁账号，所以不要使用
+                  3、为了确保您能够正常流畅的使用ETS2LA，请确保你的电脑在使用过程中不会出现CPU撞/顶到温度墙/功耗墙的情况发生，否则你可能会出现`跑得好好的突然开始画龙、突然之间方向失效等问题
                 </p>
                 <p className="my-2 text-yellow-500">
-                  4、如果你正在使用TruckersMP，你仍然可以继续使用ETS2LA，但在TruckersMP服务器中因为使用ETS2LA而发生碰撞导致的后果（如账号封禁），ETS2LA不对此负任何责任
+                  4、如果你正在 使用 Trucksbook ，请不要使用ETS2LA，建议删除；目前TrucksBook官方已发表声明不允许使用ETS2LA，使用者会被封禁账号，所以不要使用
+                </p>
+                <p className="my-2 text-yellow-500">
+                  5、如果你正在使用 TruckersMP ，你仍然可以继续使用ETS2LA，但在TruckersMP服务器中因为使用ETS2LA而发生碰撞导致的后果（如账号封禁），ETS2LA不对此负任何责任
                 </p>
               </div>
             </AlertDialogDescription>
