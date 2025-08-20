@@ -1,7 +1,29 @@
+'use client';
+
 import { Typography } from '@/components/Typography';
 import ImageZoom from '@/components/ImageZoom';
+import { useTableOfContents } from '@/contexts/TableOfContentsContext';
+import { useEffect } from 'react';
 
 export default function FirefoxPage() {
+  const { setToc } = useTableOfContents();
+
+  useEffect(() => {
+    const headings = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4')
+    );
+    const toc = headings.map((heading) => {
+      const id = heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-') || '';
+      heading.id = id;
+      return {
+        id,
+        level: parseInt(heading.tagName.substring(1)),
+        text: heading.textContent || '',
+      };
+    });
+    setToc(toc);
+  }, [setToc]);
+
   return (
     <div className="prose dark:prose-invert max-w-none">
       <Typography variant="h1">浏览器查看</Typography>
