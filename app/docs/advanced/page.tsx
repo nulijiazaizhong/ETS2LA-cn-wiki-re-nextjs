@@ -25,7 +25,7 @@ export default function AdvancedPage() {
     <div className="prose dark:prose-invert max-w-none">
       <Typography variant="h1">进阶</Typography>
       <Typography variant="p">
-        该章节将会教你如何提取自己想到的地图数据以及如何开发自己的插件来扩展ETS2LA的功能。
+        该章节将会教你如何如何使用手机/平板查看ETS2LA的页面。
       </Typography>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
