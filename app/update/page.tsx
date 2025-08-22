@@ -58,6 +58,195 @@ export default function UpdatePage() {
         </AlertDialogContent>
       </AlertDialog>
       <div className="p-8">
+        <Typography variant="h1" id="2025-08-23">
+          2025.08.23
+        </Typography>
+
+        <div id="2025-08-23-03-28" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-23-03-28">
+            03:28
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Merge pull request #411 from motionzlol/main
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Merge pull request #411 from motionzlol/main</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/7642a19997c3a6832454d6af556063a8126fac54"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 2 additions\n- 2 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: b760885a5
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 合并来自 motionzlol/main 的拉取请求 #411
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>合并来自 motionzlol/main 的拉取请求 #411</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/7642a19997c3a6832454d6af556063a8126fac54"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 2 additions\n- 2 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: b760885a5
+          </p>
+        </div>
+
+        <div id="2025-08-23-02-28" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-23-02-28">
+            02:28
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Map Updates
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                User initiated lane changes now skip the initial indicate state.
+                (they happen instantly)
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/7642a19997c3a6832454d6af556063a8126fac54"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 7 additions\n- 2 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 7642a1999
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 地图更新
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                用户发起的车道变更现在会跳过初始指示状态。（它们立即发生）
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/7642a19997c3a6832454d6af556063a8126fac54"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 7 additions\n- 2 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 7642a1999
+          </p>
+        </div>
+
+        <div id="2025-08-23-01-34" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-23-01-34">
+            01:34
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Visualization Update
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Visualization will automatically zoom out as the window
+                resolution increases.
+              </li>
+              <li>
+                Users can now zoom the visualization using the scroll wheel.
+              </li>
+              <li>
+                Users can now pan the visualization (temporarily) using the left
+                mouse button.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/165becf97d777ab712a75b5174ab4db94bc45264"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 1 additions\n- 1 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 165becf97
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 可视化更新
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>可视化效果将随着窗口分辨率的增加而自动缩小。</li>
+              <li>用户现在可以使用滚轮缩放可视化效果。</li>
+              <li>用户现在可以使用鼠标左键（临时）平移可视化效果。</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/165becf97d777ab712a75b5174ab4db94bc45264"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 1 additions\n- 1 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 165becf97
+          </p>
+        </div>
+
         <Typography variant="h1" id="2025-08-18">
           2025.08.18
         </Typography>
