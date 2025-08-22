@@ -102,7 +102,7 @@ export default function InstallPage() {
 
       <Typography variant="h2" id="download-source">7.选择下载源</Typography>
       <Typography variant="p">
-        国内用户选择`GitLab`并勾选`Aliyun PyPi Mirror`，然后点击下一步
+        国内用户推荐选择`CNB`并勾选`Aliyun PyPi Mirror`，然后点击下一步
       </Typography>
       <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250822257415.png"
