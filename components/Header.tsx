@@ -43,7 +43,13 @@ export default function Header() {
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href="/">
-                <MountainIcon className="h-6 w-6" />
+                <Image
+                  src="/imgs/ets2la-cn.ico"
+                  alt="Home"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6"
+                />
                 <span className="sr-only">Home</span>
               </Link>
             </NavigationMenuLink>
