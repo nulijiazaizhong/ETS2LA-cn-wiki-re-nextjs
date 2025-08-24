@@ -76,6 +76,11 @@ export default function Header() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
+              <Link href="/sponsors">赞助名单</Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
               <Link href="/about">关于</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>

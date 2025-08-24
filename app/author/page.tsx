@@ -18,10 +18,10 @@ const AuthorPage = () => {
     { name: "Roccovax", contribution: "ETS2LA 游戏端 SDK 开发者。实现了直接获取游戏内的车辆数据、交通信号灯数据、摄像头数据等实时信息", links: ["https://github.com/DarioWouters"], avatar: "/imgs/author/Roccovax.png" },
     { name: "truckermudgeon", contribution: "游戏数据提取与处理", links: [], avatar: "/imgs/author/truckermudgeonjpg.jpg" },
     { name: "Cloud", contribution: "Linux 和 Unix 适配,各种改进和错误修复", links: [], avatar: "/imgs/author/Cloud.png" },
-    { name: "ziakhan4505", contribution: "ETS2LA SDK C ++ 开发者、 linux与UNIX 移植、修复错误", links: [], avatar: "" },
-    { name: "WhyTrevorWhy", contribution: "协助开发地图插件与导航功能", links: [], avatar: "" },
-    { name: "mimi89999", contribution: "scs-sdk-controller 开发人员", links: [], avatar: "" },
-    { name: "zhaoyj", contribution: "环境可视化的 3D 模型", links: [], avatar: "" },
+    { name: "ziakhan4505", contribution: "ETS2LA SDK C ++ 开发者、 linux与UNIX 移植、修复错误", links: [], avatar: null },
+    { name: "WhyTrevorWhy", contribution: "协助开发地图插件与导航功能", links: [], avatar: null },
+    { name: "mimi89999", contribution: "scs-sdk-controller 开发人员", links: [], avatar: null },
+    { name: "zhaoyj", contribution: "环境可视化的 3D 模型", links: [], avatar: null },
     { name: "JimJokes", contribution: "地图数据提取器开发、支持模块地图。", links: [], avatar: "/imgs/author/JimJokes.jpg" },
     { name: "playzzero97", contribution: "Discord rich presence plugin developer, slight backend updates.", links: [], avatar: "/imgs/author/playzzero97.png" },
     { name: "Lun", contribution: "中文翻译,错误修复", links: ["https://discordapp.com/users/832636302402256898"], avatar: "/imgs/author/Lun.png" },
@@ -47,7 +47,7 @@ const AuthorPage = () => {
           <CardHeader>
             <div className="flex items-center space-x-4">
               <Avatar className="transition-transform hover:scale-110 w-24 h-24">
-                <AvatarImage src="/imgs/author/Tumppi066.png" />
+                <AvatarImage src="/imgs/author/Tumppi066.png" alt="Tumppi066的头像" />
                 <AvatarFallback>T</AvatarFallback>
               </Avatar>
               <div>
@@ -68,7 +68,7 @@ const AuthorPage = () => {
           <CardHeader>
             <div className="flex items-center space-x-4">
               <Avatar className="transition-transform hover:scale-110 w-24 h-24">
-                <AvatarImage src="/imgs/author/Glas42.png" />
+                <AvatarImage src="/imgs/author/Glas42.png" alt="Glas42的头像" />
                 <AvatarFallback>G</AvatarFallback>
               </Avatar>
               <div>
@@ -91,7 +91,7 @@ const AuthorPage = () => {
           <CardHeader>
             <div className="flex items-center space-x-4">
               <Avatar className="transition-transform hover:scale-110 w-24 h-24">
-                <AvatarImage src="/imgs/author/goodnightan.png" />
+                <AvatarImage src="/imgs/author/goodnightan.png" alt="晚安的头像" />
                 <AvatarFallback>G</AvatarFallback>
               </Avatar>
               <div>
@@ -136,7 +136,7 @@ const AuthorPage = () => {
                   <TableCell className="flex items-center justify-center space-x-4">
                     {contributor.avatar ? (
                       <Avatar className="transition-transform hover:scale-110">
-                        <AvatarImage src={contributor.avatar} />
+                        <AvatarImage src={contributor.avatar} alt={`${contributor.name}的头像`} />
                         <AvatarFallback>{contributor.name.charAt(0)}</AvatarFallback>
                       </Avatar>
                     ) : null}
