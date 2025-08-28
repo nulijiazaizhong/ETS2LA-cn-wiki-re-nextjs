@@ -58,6 +58,126 @@ export default function UpdatePage() {
         </AlertDialogContent>
       </AlertDialog>
       <div className="p-8">
+        <Typography variant="h1" id="2025-08-28">
+          2025.08.28
+        </Typography>
+
+        <div id="2025-08-28-01-53" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-28-01-53">
+            01:53
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Fix frontend crash
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Fix crash when selected language does not have the required key.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/a996a6f496ce07c777890900ee14a2f34b66b794"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 0 additions\n- 3 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: a996a6f49
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 修复前端崩溃
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>修复了当所选语言没有所需键时崩溃的问题。</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/a996a6f496ce07c777890900ee14a2f34b66b794"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 0 additions\n- 3 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: a996a6f49
+          </p>
+        </div>
+
+        <div id="2025-08-28-01-49" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-28-01-49">
+            01:49
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Fix translator issues
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Languages with territory codes will now be parsed properly.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/d789c9757dcf643ee112dc2a03c6d4a01f954288"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 24 additions\n- 7 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: d789c9757
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 解决翻译器问题
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>现在将正确解析具有区域代码的语言。</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/d789c9757dcf643ee112dc2a03c6d4a01f954288"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'+ 24 additions\n- 7 deletions'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: d789c9757
+          </p>
+        </div>
+
         <Typography variant="h1" id="2025-08-23">
           2025.08.23
         </Typography>
