@@ -12,8 +12,9 @@ export default function BasicUsagePage() {
   useEffect(() => {
     const toc = [
       { id: 'error-fixing', level: 2, text: '1. 消除错误提示' },
-      { id: 'ffmpeg-download-failed', level: 3, text: '1.ffmpeg下载失败' },
-      { id: 'plugin-load-failed', level: 3, text: '2.插件无法加载' },
+      { id: 'WebView2', level: 3, text: '1. WebView2 丢失' },
+      { id: 'ffmpeg-download-failed', level: 3, text: '2. ffmpeg下载失败' },
+      { id: 'plugin-load-failed', level: 3, text: '3. 插件无法加载' },
       { id: 'onboarding', level: 2, text: '2. 新手引导' },
       { id: 'disclaimer', level: 3, text: '1.免责声明' },
       { id: 'welcome', level: 3, text: '2.欢迎' },
@@ -51,13 +52,60 @@ export default function BasicUsagePage() {
       </div>
 
       <Typography variant="h2" id="error-fixing">1.消除错误提示</Typography>
+      <Typography variant="h3" id="WebView2">1.WebView2 丢失败</Typography>
 
-      <Typography variant="h3" id="ffmpeg-download-failed">1.ffmpeg下载失败</Typography>
+      <Typography variant="p">
+        如果你在出现了下面这张图中的内容，
+      </Typography>
+
+      <ImageZoom
+        src="https://tc.ets2la.cn/d/img/7/9c1f13f62c16eabef0dc002a30777943.png"
+        alt="Error message"
+        width={800}
+        height={400}
+      />
+
+      <Tabs defaultValue="reason" className="not-prose">
+        <TabsList>
+          <TabsTrigger value="reason">原因</TabsTrigger>
+          <TabsTrigger value="way">办法</TabsTrigger>
+        </TabsList>
+        <TabsContent value="reason">
+          <p>
+            因为系统缺少Microsoft Edge WebView2 Runtime组件导致的，ETS2LA使用WebView2来渲染界面，如果没有这个组件的话就会出现上图中的内容
+          </p>
+        </TabsContent>
+        <TabsContent value="way">
+          <p>
+            从
+            <a href="https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download" target="_blank" rel="noopener noreferrer">
+              Microsoft Edge WebView2下载页面
+            </a>
+            下载并安装WebView2 Runtime组件，然后重启ETS2LA即可
+            <ImageZoom
+              src="https://tc.ets2la.cn/d/img/7/20250828165606.png"
+              alt="WebView2 download page"
+              width={800}
+              height={400}
+            />
+          </p>
+        </TabsContent>
+      </Tabs>
+      
+      <div className="not-prose my-4 rounded-lg border border-l-4 border-blue-500 bg-blue-500/10 p-4 text-blue-700 dark:text-blue-300">
+        <p>
+          同样，该问题也可在
+          <a href="/docs/base/bug#WebView2">问题总结-WebView2</a>
+          中找到。
+        </p>
+      </div>
+
+      <Typography variant="h3" id="ffmpeg-download-failed">2.ffmpeg下载失败</Typography>
 
       <Typography variant="p">
         如果你在安装完成之后勾选了打开ETS2LA的话你有很大概率会在
         <strong>控制台</strong>
-        中看到下面这张图中的内容，这时不要紧张和害怕，有解决办法的
+        中看到下面这张图中的内容
       </Typography>
 
       <ImageZoom
@@ -103,7 +151,7 @@ export default function BasicUsagePage() {
           中找到。
         </p>
       </div>
-      <Typography variant="h3" id="plugin-load-failed">2.插件无法加载</Typography>
+      <Typography variant="h3" id="plugin-load-failed">3.插件无法加载</Typography>
 
       <Typography variant="p">
         如果你遇到了图片显示的问题，可以前往设置-全局设置-变量，将缓慢加载勾选上
