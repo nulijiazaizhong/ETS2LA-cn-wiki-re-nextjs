@@ -58,10 +58,586 @@ export default function UpdatePage() {
         </AlertDialogContent>
       </AlertDialog>
       <div className="p-8">
+        <Typography variant="h1" id="2025-08-31">
+          2025.08.31
+        </Typography>
+
+        <div id="2025-08-31-23-15" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-31-23-15">
+            23:15
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Improve traffic light detection.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Especially ATS will receive large improvements from this PR.
+              </li>
+              <li>
+                I fixed a lot of issues regarding the selection and filtering of
+                lights. I've also made lights wait at the start of their
+                intersection, instead of at the light itself. This means that
+                lights on the other side of intersections will work as expected.
+              </li>
+              <li>
+                This update also provides some offset changes to the ATS
+                projections on the map. You should see that the line and arrow
+                are much closer than they were before.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/d111a50e7ecbc03ab8bfd24df9dc1a4f26a74e94"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/AdaptiveCruiseControl/main.py ===\n+ 94 lines\n- 30 lines\n\n=== Plugins/Map/navigation/navigation.py ===\n+ 1 lines\n- 1 lines\n\n=== Plugins/NavigationSockets/projections.py ===\n+ 3 lines\n- 9 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: d111a50e7
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 改进交通灯检测。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>尤其是 ATS 将从这个 PR 中得到很大的改进。</li>
+              <li>
+                我修复了很多关于灯光选择和过滤的问题。我还让灯在交叉点的起点等待，而不是在灯本身等待。这意味着十字路口另一侧的灯将按预期工作。
+              </li>
+              <li>
+                此更新还对地图上的 ATS 投影进行了一些偏移更改。您应该看到线条和箭头比以前更近。
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/d111a50e7ecbc03ab8bfd24df9dc1a4f26a74e94"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/AdaptiveCruiseControl/main.py ===\n+ 94 lines\n- 30 lines\n\n=== Plugins/Map/navigation/navigation.py ===\n+ 1 lines\n- 1 lines\n\n=== Plugins/NavigationSockets/projections.py ===\n+ 3 lines\n- 9 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: d111a50e7
+          </p>
+        </div>
+
+        <div id="2025-08-31-01-14" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-31-01-14">
+            01:14
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Slight UI tweaks.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Window will no longer be resizable when running with --local.
+                This was left as a debug mode when we were still trying to get
+                it to work.
+              </li>
+              <li>
+                Plugins page advanced mode now has bottom padding.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/0fedda14676989c4756d8563f32ac92a3bbe2a63"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== ETS2LA/Window/window.py ===\n- 1 lines\n\n=== Pages/plugins.py ===\n+ 1 lines\n- 3 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 0fedda146
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 轻微的 UI 调整。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                使用 --local 运行时，窗口将不再可调整大小。当我们仍在尝试让它工作时，这被保留为调试模式。
+              </li>
+              <li>插件页面高级模式现在有底部填充。</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/0fedda14676989c4756d8563f32ac92a3bbe2a63"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== ETS2LA/Window/window.py ===\n- 1 lines\n\n=== Pages/plugins.py ===\n+ 1 lines\n- 3 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 0fedda146
+          </p>
+        </div>
+
+        <Typography variant="h1" id="2025-08-30">
+          2025.08.30
+        </Typography>
+
+        <div id="2025-08-30-17-34" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-30-17-34">
+            17:34
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Fix manager page crash.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Page now correctly filters out plugins that don't have descriptions for whatever reason.
+              </li>
+              <li>
+                Backend will now send a crash report for failed builds of pages.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/7811bd593fc2cb46aeee8bbadf26c3b2522dad57"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== ETS2LA/Utils/Console/logs.py ===\n+ 6 lines\n- 2 lines\n\n=== main.py ===\n+ 5 lines\n- 2 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 7811bd593
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 修复管理器页面崩溃。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                许多人似乎都明白了这一点，所以我更清楚地表明，由于现有的 ETS2LA 实例，这种情况的发生。
+              </li>
+              <li>
+                如果您在任何地方都找不到它，那么它可能在后台打开。从任务管理器关闭 python 通常有效，或者您可以重新启动 PC。
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/7811bd593fc2cb46aeee8bbadf26c3b2522dad57"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== ETS2LA/Utils/Console/logs.py ===\n+ 6 lines\n- 2 lines\n\n=== main.py ===\n+ 5 lines\n- 2 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 7811bd593
+          </p>
+        </div>
+
+        <div id="2025-08-30-02-58" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-30-02-58">
+            02:58
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Add more information about an error on startup.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Many people seem to be getting it, so I'm making it more clear it's happening because of an existing ETS2LA instance.
+              </li>
+              <li>
+                If you can't find it anywhere then it's probably open in the background. Closing python from the task manager usually works, or you could just restart your PC.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/98f2066f270cbde5916dc94694656bfe18d25f9a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== ETS2LA/Utils/Console/logs.py ===\n+ 6 lines\n- 2 lines\n\n=== main.py ===\n+ 5 lines\n- 2 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 98f2066f2
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 添加有关启动时错误的更多信息。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                许多人似乎都明白了这一点，所以我更清楚地表明，由于现有的 ETS2LA 实例，这种情况的发生。
+              </li>
+              <li>
+                如果您在任何地方都找不到它，那么它可能在后台打开。从任务管理器关闭 python 通常有效，或者您可以重新启动 PC。
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/98f2066f270cbde5916dc94694656bfe18d25f9a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== ETS2LA/Utils/Console/logs.py ===\n+ 6 lines\n- 2 lines\n\n=== main.py ===\n+ 5 lines\n- 2 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 98f2066f2
+          </p>
+        </div>
+
+        <div id="2025-08-30-02-47" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-30-02-47">
+            02:47
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Remove umami as we've moved over to google analytics.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Originally we used umami since it doesn't need cookies, now analytics is fine as we have google cookies on the site anyway.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/2f5c9bc7b27b4343b239f5c2afd6c1ea92808427"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== ETS2LA/Utils/umami.py ===\n- 31 lines\n\n=== Pages/about.py ===\n- 5 lines\n\n=== Pages/updater.py ===\n- 5 lines\n\n=== requirements.txt ===\n- 1 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 2f5c9bc7b
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 删除umami，因为我们已经转移到谷歌分析。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                最初我们使用umami，因为它不需要 cookie，现在分析很好，因为我们在网站上有谷歌 cookie。
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/2f5c9bc7b27b4343b239f5c2afd6c1ea92808427"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== ETS2LA/Utils/umami.py ===\n- 31 lines\n\n=== Pages/about.py ===\n- 5 lines\n\n=== Pages/updater.py ===\n- 5 lines\n\n=== requirements.txt ===\n- 1 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 2f5c9bc7b
+          </p>
+        </div>
+
+        <div id="2025-08-30-02-21" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-30-02-21">
+            02:21
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Renove crash reports disabled comment
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Renove crash reports disabled comment
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/4ecc2832a4eabae9726ac2cf4e5546646b56af1f"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== main.py ===\n- 1 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 4ecc2832a
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： Renove崩溃报告禁用评论
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Renove 崩溃报告禁用评论
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/4ecc2832a4eabae9726ac2cf4e5546646b56af1f"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== main.py ===\n- 1 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 4ecc2832a
+          </p>
+        </div>
+
+        <div id="2025-08-30-01-52" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-30-01-52">
+            01:52
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Tweak feedback page wording.
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/16cf0278853d06ee1855698048801cd9ff350162"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== Pages/feedback.py ===\n+ 1 lines\n- 1 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 16cf02788
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 调整反馈页面措辞。
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/16cf0278853d06ee1855698048801cd9ff350162"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== Pages/feedback.py ===\n+ 1 lines\n- 1 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 16cf02788
+          </p>
+        </div>
+
+        <div id="2025-08-30-00-22" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-30-00-22">
+            00:22
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Add crash reporting and feedback page.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Crash reports are automatically enabled. You can disable them in Settings - Global - Miscellaneous
+              </li>
+              <li>
+                Runtime errors for plugins do not create crash reports as many plugins are programmed in a way where they expect to keep running after a crash.
+              </li>
+              <li>
+                The feedback page can send a request for comment, as well as your current location. We recommend using the location toggle when sending road issues, as this helps us debug them way faster.
+              </li>
+              <li>
+                This update also implements some UI changes as well as updates to the Discord bot and our API.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/8f19c72baf5a16cc9e5fbe0291cba3711469fa8f"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== ETS2LA/Handlers/plugins.py ===\n+ 31 lines\n\n=== ETS2LA/Networking/cloud.py ===\n+ 81 lines\n- 39 lines\n\n=== ETS2LA/Plugin/process.py ===\n+ 4 lines\n- 4 lines\n\n=== Pages/about.py ===\n+ 1 lines\n- 1 lines\n\n=== Pages/feedback.py ===\n+ 97 lines\n\n=== main.py ===\n+ 4 lines\n- 3 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 8f19c72ba
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 添加崩溃报告和反馈页面。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                崩溃报告会自动启用。您可以在设置 - 全局 - 杂项中禁用它们- 插件的运行时错误不会创建崩溃报告，因为许多插件的编程方式是它们期望在崩溃后继续运行。
+              </li>
+              <li>
+                反馈页面可以发送评论请求，以及您当前的位置。我们建议在发送道路问题时使用位置切换，因为这有助于我们更快地调试它们。
+              </li>
+              <li>
+                此更新还实现了一些 UI 更改以及对 Discord 机器人和我们的 API 的更新。
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/8f19c72baf5a16cc9e5fbe0291cba3711469fa8f"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== ETS2LA/Handlers/plugins.py ===\n+ 31 lines\n\n=== ETS2LA/Networking/cloud.py ===\n+ 81 lines\n- 39 lines\n\n=== ETS2LA/Plugin/process.py ===\n+ 4 lines\n- 4 lines\n\n=== Pages/about.py ===\n+ 1 lines\n- 1 lines\n\n=== Pages/feedback.py ===\n+ 97 lines\n\n=== main.py ===\n+ 4 lines\n- 3 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 8f19c72ba
+          </p>
+        </div>
+
+        <Typography variant="h1" id="2025-08-29">
+          2025.08.29
+        </Typography>
+
+        <div id="2025-08-29-21-40" className="mt-8">
+          <Typography variant="h2" id="title-2025-08-29-21-40">
+            21:40
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： FSleep slightly after telling frontend to enter update mode@
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/bb62432f31b92684b28c0777547a614af12d2567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== main.py ===\n+ 1 lines\n- 1 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: bb62432f3
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 告诉前端进入更新模式后稍微休眠@
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/bb62432f31b92684b28c0777547a614af12d2567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== main.py ===\n+ 1 lines\n- 1 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: bb62432f3
+          </p>
+        </div>
+
         <Typography variant="h1" id="2025-08-28">
           2025.08.28
         </Typography>
-
+        
         <div id="2025-08-28-01-53" className="mt-8">
           <Typography variant="h2" id="title-2025-08-28-01-53">
             01:53
