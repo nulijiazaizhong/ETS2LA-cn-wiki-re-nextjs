@@ -10,7 +10,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
-import { MountainIcon } from "lucide-react"
 import Image from "next/image"
 import { ThemeToggle } from "./ThemeToggle"
 import {

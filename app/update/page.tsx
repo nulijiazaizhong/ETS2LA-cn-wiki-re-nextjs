@@ -79,7 +79,7 @@ export default function UpdatePage() {
               </li>
               <li>
                 I fixed a lot of issues regarding the selection and filtering of
-                lights. I've also made lights wait at the start of their
+                lights. I will also made lights wait at the start of their
                 intersection, instead of at the light itself. This means that
                 lights on the other side of intersections will work as expected.
               </li>
@@ -236,7 +236,7 @@ export default function UpdatePage() {
             </p>
             <ul className="list-disc list-inside">
               <li>
-                Page now correctly filters out plugins that don't have descriptions for whatever reason.
+                Page now correctly filters out plugins that do not have descriptions for whatever reason.
               </li>
               <li>
                 Backend will now send a crash report for failed builds of pages.
@@ -302,10 +302,10 @@ export default function UpdatePage() {
             </p>
             <ul className="list-disc list-inside">
               <li>
-                Many people seem to be getting it, so I'm making it more clear it's happening because of an existing ETS2LA instance.
+                Many people seem to be getting it, so I am making it more clear it is happening because of an existing ETS2LA instance.
               </li>
               <li>
-                If you can't find it anywhere then it's probably open in the background. Closing python from the task manager usually works, or you could just restart your PC.
+                If you can not find it anywhere then it is probably open in the background. Closing python from the task manager usually works, or you could just restart your PC.
               </li>
             </ul>
           </div>
@@ -360,7 +360,7 @@ export default function UpdatePage() {
             02:47
           </Typography>
           <p className="mt-4">
-            <strong>Title</strong>： Remove umami as we've moved over to google analytics.
+            <strong>Title</strong>： Remove umami as we will moved over to google analytics.
           </p>
           <div className="mt-2">
             <p>
@@ -368,7 +368,7 @@ export default function UpdatePage() {
             </p>
             <ul className="list-disc list-inside">
               <li>
-                Originally we used umami since it doesn't need cookies, now analytics is fine as we have google cookies on the site anyway.
+                Originally we used umami since it does not need cookies, now analytics is fine as we have google cookies on the site anyway.
               </li>
             </ul>
           </div>
