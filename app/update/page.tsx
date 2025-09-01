@@ -58,6 +58,609 @@ export default function UpdatePage() {
         </AlertDialogContent>
       </AlertDialog>
       <div className="p-8">
+        <Typography variant="h1" id="2025-09-01">
+          2025.09.01
+        </Typography>
+
+        <div id="2025-09-01-23-51" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-23-51">
+            23:51
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： TTS will now handle the initial case of no
+            closest city.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Previously this would throw an error.</li>
+              <li>TTS will now also log more errors if the happen.</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/7a655b7725ef9c678d1e4c68d7809472db9574e5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={'=== Plugins/TTS/main.py ===\n+ 86 lines\n- 65 lines'}
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 7a655b772
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： TTS 现在将处理没有最近城市的初始情况。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>以前这会抛出错误。</li>
+              <li>如果发生这种情况，TTS 现在还将记录更多错误。</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/7a655b7725ef9c678d1e4c68d7809472db9574e5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={'=== Plugins/TTS/main.py ===\n+ 86 lines\n- 65 lines'}
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 7a655b772
+          </p>
+        </div>
+
+        <div id="2025-09-01-23-12" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-23-12">
+            23:12
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Fix about page crashing when user doesn't
+            have any usage time.
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/d326254b6ad15f9932e64903f1045e0716259ca5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== Pages/about.py ===\n+ 2 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: d326254b6
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 修复用户没有任何使用时间时页面崩溃的问题。
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/d326254b6ad15f9932e64903f1045e0716259ca5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock code={'=== Pages/about.py ===\n+ 2 lines'} />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: d326254b6
+          </p>
+        </div>
+
+        <div id="2025-09-01-23-11" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-23-11">
+            23:11
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Fix ACC not ignoring time spent paused
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/9c321287e1f8cd9cf83bebcdc93328447086e29a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/AdaptiveCruiseControl/main.py ===\n+ 3 lines\n- 2 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 9c321287e
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 修复 ACC 不忽略暂停所花费的时间
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/9c321287e1f8cd9cf83bebcdc93328447086e29a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/AdaptiveCruiseControl/main.py ===\n+ 3 lines\n- 2 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 9c321287e
+          </p>
+        </div>
+
+        <div id="2025-09-01-21-47" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-21-47">
+            21:47
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Update TTS
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Fix speedlimit notifications.</li>
+              <li>Fix closest city notifications.</li>
+              <li>Fix route distance notifications.</li>
+              <li>Add notifications about incoming traffic lights.</li>
+              <li>Add notification when changing headlight status.</li>
+              <li>Increase update rate to 2fps instead of 1fps.</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/b73829f5f1054866b054348b3a9d73eb8d1cdc50"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/Map/route/classes.py ===\n+ 4 lines\n- 11 lines\n\n=== Plugins/TTS/main.py ===\n+ 3 lines\n- 5 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: b73829f5f
+          </p>
+        </div>
+
+        <div id="2025-09-01-21-31" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-21-31">
+            21:31
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Update TTS
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Fix speedlimit notifications.</li>
+              <li>Fix closest city notifications.</li>
+              <li>Fix route distance notifications.</li>
+              <li>Add notifications about incoming traffic lights.</li>
+              <li>Add notification when changing headlight status.</li>
+              <li>Increase update rate to 2fps instead of 1fps.</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/b73829f5f1054866b054348b3a9d73eb8d1cdc50"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/Map/route/classes.py ===\n+ 4 lines\n- 11 lines\n\n=== Plugins/TTS/main.py ===\n+ 3 lines\n- 5 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: b73829f5f
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 更新 TTS
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>修复限速通知。</li>
+              <li>修复最近的城市通知。</li>
+              <li>修复路线距离通知。</li>
+              <li>添加有关传入交通信号灯的通知。</li>
+              <li>更改大灯状态时添加通知。</li>
+              <li>将更新速率提高到 2fps 而不是 1fps。</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/b73829f5f1054866b054348b3a9d73eb8d1cdc50"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/AdaptiveCruiseControl/main.py ===\n+ 6 lines\n- 4 lines\n\n=== Plugins/TTS/main.py ===\n+ 130 lines\n- 49 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: b73829f5f
+          </p>
+        </div>
+
+        <div id="2025-09-01-21-47-2" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-21-47-2">
+            21:47
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Slight tweaks to TTS and Map
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>
+                Fix Map turning indicators on and off constantly causing lag.
+              </li>
+              <li>Tweak TTS route distance notification frequency.</li>
+              <li>
+                TTS will now say distances to cities in game distance (20x
+                higher), not real distance.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/50c10416aed27526bc9103fb2e4b266993fac04e"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/Map/route/classes.py ===\n+ 4 lines\n- 11 lines\n\n=== Plugins/TTS/main.py ===\n+ 3 lines\n- 5 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 50c10416a
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 对 TTS 和地图进行了轻微调整
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>修复地图转向指示灯不断打开和关闭导致滞后的问题。</li>
+              <li>调整 TTS 路由距离通知频率。</li>
+              <li>
+                TTS 现在会以游戏距离（高 20 倍）显示到城市的距离，而不是实际距离。
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/50c10416aed27526bc9103fb2e4b266993fac04e"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/AdaptiveCruiseControl/main.py ===\n+ 6 lines\n- 4 lines\n\n=== Plugins/TTS/main.py ===\n+ 130 lines\n- 49 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 50c10416a
+          </p>
+        </div>
+
+        <div id="2025-09-01-21-31-2" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-21-31-2">
+            21:31
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Update TTS
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Fix speedlimit notifications.</li>
+              <li>Fix closest city notifications.</li>
+              <li>Fix route distance notifications.</li>
+              <li>Add notifications about incoming traffic lights.</li>
+              <li>Add notification when changing headlight status.</li>
+              <li>Increase update rate to 2fps instead of 1fps.</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/b73829f5f1054866b054348b3a9d73eb8d1cdc50"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/Map/route/classes.py ===\n+ 4 lines\n- 11 lines\n\n=== Plugins/TTS/main.py ===\n+ 3 lines\n- 5 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: b73829f5f
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 更新 TTS
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>修复限速通知。</li>
+              <li>修复最近的城市通知。</li>
+              <li>修复路线距离通知。</li>
+              <li>添加有关传入交通信号灯的通知。</li>
+              <li>更改大灯状态时添加通知。</li>
+              <li>将更新速率提高到 2fps 而不是 1fps。</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/b73829f5f1054866b054348b3a9d73eb8d1cdc50"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Plugins/AdaptiveCruiseControl/main.py ===\n+ 6 lines\n- 4 lines\n\n=== Plugins/TTS/main.py ===\n+ 130 lines\n- 49 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: b73829f5f
+          </p>
+        </div>
+
+        <div id="2025-09-01-20-18" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-20-18">
+            20:18
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Add dependencies with uv.
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/efe158298f80d135e19bd53f568340ebd1f3de6d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== .gitignore ===\n+ 2 lines\n\n=== pyproject.toml ===\n+ 46 lines\n- 2 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: efe158298
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 使用 uv 添加依赖项。
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/efe158298f80d135e19bd53f568340ebd1f3de6d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== .gitignore ===\n+ 2 lines\n\n=== pyproject.toml ===\n+ 46 lines\n- 2 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: efe158298
+          </p>
+        </div>
+
+        <div id="2025-09-01-19-58" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-19-58">
+            19:58
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Language can no longer be set to be empty.
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/63587cabe14e53adccc7ecc550fa3ef4b0d1f448"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Pages/global_settings.py ===\n+ 2 lines\n- 1 lines\n\n=== Pages/onboarding.py ===\n+ 2 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 63587cabe
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 语言不能设置为空。
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/63587cabe14e53adccc7ecc550fa3ef4b0d1f448"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '=== Pages/global_settings.py ===\n+ 2 lines\n- 1 lines\n\n=== Pages/onboarding.py ===\n+ 2 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 63587cabe
+          </p>
+        </div>
+
+        <div id="2025-09-01-19-04" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-01-19-04">
+            19:04
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Cleanup codebase.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Remove old unused plugins.</li>
+              <li>
+                ETS2LA is now ruff and black compliant, the linter shows no
+                errors. Before this commit ETS2LA raised around 3500 errors.
+              </li>
+              <li>
+                ETS2LA is now formatted using the ruff formatter. This
+                formatting applies to all files and default plugins. Plugin
+                developers can turn off the formatting if they wish to.
+              </li>
+              <li>
+                Add a pyproject.toml file. We will be transitioning from
+                metadata.json into the standardized pyproject format.
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/3f0f2b67bc1a74b99458a5234dc3efc5a6d851fc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '... 163 files changed ...\n+ 17280 lines\n- 12044 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 3f0f2b67b
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 清理代码库。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>删除旧的未使用的插件。</li>
+              <li>
+                ETS2LA 现在符合 ruff 和 black 标准，linter 没有显示错误。在此提交之前，ETS2LA
+                引发了大约 3500 个错误。
+              </li>
+              <li>
+                ETS2LA 现在使用翻边格式化程序进行格式化。此格式适用于所有文件和默认插件。插件开发人员可以根据需要关闭格式。
+              </li>
+              <li>
+                添加一个 pyproject.toml 文件。我们将从 metadata.json
+                过渡到标准化的 pyproject 格式。
+              </li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/3f0f2b67bc1a74b99458a5234dc3efc5a6d851fc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              修改：查看详细信息
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={
+              '... 163 files changed ...\n+ 17280 lines\n- 12044 lines'
+            }
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>版本号</strong>: 3f0f2b67b
+          </p>
+        </div>
+
         <Typography variant="h1" id="2025-08-31">
           2025.08.31
         </Typography>
