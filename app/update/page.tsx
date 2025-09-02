@@ -58,6 +58,190 @@ export default function UpdatePage() {
         </AlertDialogContent>
       </AlertDialog>
       <div className="p-8">
+        <Typography variant="h1" id="2025-09-03">
+          2025.09.03
+        </Typography>
+
+        <div id="2025-09-03-01-23" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-03-01-23">
+            01:23
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Fix webserver error in rare cases.
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Catalogue now works again.</li>
+              <li>You can no longer set ad preference to a null value, I forgot to take into account the case where a user unselects all preferences.</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/37f35a4e4dc9015ff31cac6fe0b8a1a4396082ab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={'=== ETS2LA/Networking/Servers/webserver.py ===\n+ 1 lines\n- 4 lines'}
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 37f35a4e4
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 在极少数情况下修复网络服务器错误。
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>目录现在又可以工作了。</li>
+              <li>您不能再将广告偏好设置为空值，我忘记考虑用户取消选择所有偏好的情况。</li>
+            </ul>
+          </div>
+        </div>
+
+        <Typography variant="h1" id="2025-09-02">
+          2025.09.02
+        </Typography>
+
+        <div id="2025-09-02-21-57" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-02-21-57">
+            21:57
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： UI Fixes
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>Description</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>Catalogue now works again.</li>
+              <li>You can no longer set ad preference to a null value, I forgot to take into account the case where a user unselects all preferences.</li>
+            </ul>
+          </div>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/98ea5304df40692fa8daab81389f289f0b49580b"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={'=== Pages/catalogue.py ===\n+ 1 lines\n\n=== Pages/global_settings.py ===\n+ 3 lines'}
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 98ea5304d
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： UI 修复
+          </p>
+          <div className="mt-2">
+            <p>
+              <strong>描述</strong>：
+            </p>
+            <ul className="list-disc list-inside">
+              <li>目录现在又可以工作了。</li>
+              <li>您不能再将广告偏好设置为空值，我忘记考虑用户取消选择所有偏好的情况。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="2025-09-02-20-14" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-02-20-14">
+            20:14
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Add information on disabling ads to the about page.
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/8ab8dc5feae6c51cfcecbfb99c035c3c641afaf6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={'=== Pages/about.py ===\n+ 9 lines\n- 1 lines'}
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 8ab8dc5fe
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 在"简介"页面添加有关停用广告的信息。
+          </p>
+        </div>
+
+        <div id="2025-09-02-20-08" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-02-20-08">
+            20:08
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Fix UI crashing constantly.
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/2c4c7ea794c745aa6ced165563308f57635d49cd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={'=== ETS2LA/UI/components.py ===\n+ 61 lines\n- 54 lines\n\n=== ETS2LA/UI/styles.py ===\n+ 43 lines\n- 6 lines\n\n=== Pages/about.py ===\n+ 70 lines\n- 1 lines'}
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 2c4c7ea79
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 修复 UI 不断崩溃的问题。
+          </p>
+        </div>
+
+        <div id="2025-09-02-18-27" className="mt-8">
+          <Typography variant="h2" id="title-2025-09-02-18-27">
+            18:27
+          </Typography>
+          <p className="mt-4">
+            <strong>Title</strong>： Stricter linting, now check for more cases.
+          </p>
+          <Typography variant="p" className="mt-2">
+            <a
+              href="https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist/commit/8b668cbbdb0d45222ed016f7187b66a90f44d834"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Changes: View detailed information
+            </a>
+          </Typography>
+          <UpdateCodeBlock
+            code={'... 83 files changed ...\n+ 607 lines\n- 679 lines'}
+          />
+          <p className="mt-4 text-green-600 dark:text-green-400">
+            <strong>version</strong>: 8b668cbbd
+          </p>
+          <p className="mt-4">
+            <strong>标题</strong>： 更严格的 linting，现在检查更多案例。
+          </p>
+        </div>
+
         <Typography variant="h1" id="2025-09-01">
           2025.09.01
         </Typography>
