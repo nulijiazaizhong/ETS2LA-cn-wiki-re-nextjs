@@ -30,9 +30,40 @@ import ImageZoom from "./ImageZoom"
 export default function Header() {
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [serverStatus, setServerStatus] = useState("loading")
+  const [lastChecked, setLastChecked] = useState(new Date())
 
   useEffect(() => {
     setMounted(true)
+    
+    // 检查服务器状态
+    const checkServerStatus = async () => {
+      try {
+        // 使用 fetch 获取徽章状态
+        const response = await fetch('https://uptime.ets2la.cn/api/badge/ets2la/status')
+        if (response.ok) {
+          // 如果能成功获取徽章，说明服务器在线
+          setServerStatus("up")
+        } else {
+          setServerStatus("down")
+        }
+      } catch (error) {
+        // 如果发生错误，设置为 down
+        setServerStatus("down")
+      }
+      
+      // 更新最后检查时间
+      setLastChecked(new Date())
+    }
+    
+    // 立即检查一次
+    checkServerStatus()
+    
+    // 设置定时器，每分钟检查一次
+    const intervalId = setInterval(checkServerStatus, 60000)
+    
+    // 清理函数
+    return () => clearInterval(intervalId)
   }, [])
 
   return (
@@ -88,6 +119,17 @@ export default function Header() {
       <div className="flex items-center gap-4">
         {mounted && (
           <>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Link href="https://uptime.ets2la.cn/status/ets2la" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm">
+                  <div className={`w-2 h-2 rounded-full ${serverStatus === "up" ? "bg-green-500" : serverStatus === "down" ? "bg-red-500" : "bg-gray-500"}`} />
+                  国内镜像服务状态
+                </Link>
+              </HoverCardTrigger>
+              <HoverCardContent>
+                <p>最新更新时间：{lastChecked.toLocaleString('zh-CN')}</p>
+              </HoverCardContent>
+            </HoverCard>
             <ThemeToggle />
             <Popover>
               <PopoverTrigger asChild>

@@ -182,7 +182,7 @@ export default function UpdatePage() {
             <strong>version</strong>: 8ab8dc5fe
           </p>
           <p className="mt-4">
-            <strong>标题</strong>： 在"简介"页面添加有关停用广告的信息。
+            <strong>标题</strong>： 在”简介“页面添加有关停用广告的信息。
           </p>
         </div>
 
