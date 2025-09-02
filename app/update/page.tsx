@@ -130,7 +130,7 @@ export default function UpdatePage() {
             23:12
           </Typography>
           <p className="mt-4">
-            <strong>Title</strong>： Fix about page crashing when user doesn't
+            <strong>Title</strong>： Fix about page crashing when user does not
             have any usage time.
           </p>
           <Typography variant="p" className="mt-2">
