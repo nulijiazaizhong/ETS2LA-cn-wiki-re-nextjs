@@ -233,6 +233,9 @@ export default function Header() {
                     <div className="grid grid-cols-1 items-center gap-4">
                       <span className="col-span-1">额外说明</span>
                       <p className="text-sm text-muted-foreground">
+                        镜像赞助不接受未成年人赞助
+                      </p>
+                      <p className="text-sm text-muted-foreground">
                         如果你无法打开ko-fi，你也可以赞助镜像提供者由镜像提供者转赠作者，此情况只能使用扫码支付并直接在备注中填写邮箱为回执联系方式（最低3欧，换算汇率为26人民币左右；可多付不可少付）
                       </p>
                     </div>
