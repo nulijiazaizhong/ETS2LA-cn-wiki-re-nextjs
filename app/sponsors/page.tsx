@@ -91,7 +91,7 @@ const SponsorsPage = () => {
             <TableHeader>
               <TableRow>
                 <TableHead className="text-center">Srlily</TableHead>
-                <TableHead className="text-center">BGYdook-镜像服务器3个月</TableHead>
+                <TableHead className="text-center">BGYdook</TableHead>
                 <TableHead className="text-center">XXXX</TableHead>
                 <TableHead className="text-center">XXXX</TableHead>
                 <TableHead className="text-center">XXXX</TableHead>

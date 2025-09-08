@@ -187,7 +187,7 @@ export default function PagesPage() {
           ETS2LA官方不对这些插件的内容以及所引发的问题负责，一切均由用户自己负责
         </p>
         <p>
-          由于该页面检索的是GitHub上的内容，所有有些用户可能会无法访问/显示，请不要着急，我们不提供任何方法来处理，需要您自行寻找解决方法
+          由于该页面检索的是GitHub上的内容，所以有些用户可能会出现无法访问/显示，请不要着急，我们不提供任何方法来处理，需要您自行寻找解决方法
         </p>
       </div>
       <div className="not-prose my-4 rounded-lg border border-l-4 border-red-500 bg-red-500/10 p-4 text-red-700 dark:text-red-300">
@@ -303,13 +303,13 @@ export default function PagesPage() {
 
       <Typography variant="h3">2.控制</Typography>
       <Typography variant="p">
-        这里是设置按键的地方，具体的
+        这里是设置按键的地方，具体的在
         <a href="/docs/usage/basic#1按键更改">基础使用</a>
-        里面有将，可以看看这里只放个图片
+        里面有讲，可以看看这里只放个图片
       </Typography>
       <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/20250803091101.png"
-        alt="Controls"
+        alt="Controls"  
         width={800}
         height={400}
       />
@@ -384,7 +384,7 @@ export default function PagesPage() {
 
       <Typography variant="h3">7.自适应巡航控制系统</Typography>
       <Typography variant="p">
-        可以修改ACC插件的一些设置，比如忽略红路灯、超过道路限速行使（在速度控制中调整速度偏移量即可）
+        可以修改ACC插件的一些设置，比如忽略红绿灯、超过道路限速行使（在速度控制中调整速度偏移量即可）
       </Typography>
 
       <Typography variant="h3">8.HUD</Typography>

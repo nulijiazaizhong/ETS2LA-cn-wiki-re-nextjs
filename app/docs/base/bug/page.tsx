@@ -150,6 +150,23 @@ export default function BugPage() {
         </p>
       </div>
 
+ <Typography variant="h2" id="ffmpeg-failed">4.地图插件运行循环中出错</Typography>
+
+      <Typography variant="p">
+        如果在
+        <strong>控制台</strong>
+        中看到下面这张图中的内容，这时不要紧张和害怕，有解决办法的
+        「MemoryError」表示您的内存或 Windows 虚拟内存出现问题，您应该搜索“如何增加页面文件大小”来获取帮助。我建议页面文件大小约为 16 到 32GB
+      </Typography>
+
+      <ImageZoom
+        src="https://tc.ets2la.cn/d/img/7/386004a97e028bd0ebf4dcde22690e34.png"
+        alt="Error message"
+        width={800}
+        height={400}
+      />
     </div>
-  );
+    
+    
+  )
 }

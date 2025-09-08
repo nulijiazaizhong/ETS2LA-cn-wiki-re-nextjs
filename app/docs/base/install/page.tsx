@@ -27,7 +27,7 @@ export default function InstallPage() {
   return (
     <div className="prose dark:prose-invert max-w-none">
       <Typography variant="h1">安装</Typography>
-      <Typography variant="p">本章节将教你安装ETS2LA。</Typography>
+      <Typography variant="p">本章节将教你安装 ETS2LA。</Typography>
 
       <Typography variant="h2" id="run-installer">1.运行安装程序</Typography>
       <Typography variant="p">
