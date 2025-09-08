@@ -122,7 +122,7 @@ export default function Home() {
                     >
                       晚安
                     </a>
-                    , Srlily, 及{" "}
+                    , Srlily, {" "}
                     <a
                       href="https://space.bilibili.com/357816575"
                       target="_blank"
@@ -130,6 +130,15 @@ export default function Home() {
                       className="underline custom-link"
                     >
                       MR-UIAW
+                    </a>{" "}
+                    ,
+                    <a
+                      href="https://space.bilibili.com/3493113874090879"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline custom-link"
+                    >
+                      BGYdook
                     </a>{" "}
                     共同创作。
                   </p>
