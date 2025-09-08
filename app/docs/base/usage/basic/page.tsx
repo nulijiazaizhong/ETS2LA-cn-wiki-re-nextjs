@@ -130,7 +130,7 @@ export default function BasicUsagePage() {
             <a href="https://www.gyan.dev" target="_blank" rel="noopener noreferrer">
               www.gyan.dev
             </a>
-            的服务器回国路线不行，所以会出现断开连接的情况也就进而导致了下载失败，ETS2LA的控制台报错
+            的服务器的回国路线不行，所以会出现断开连接的情况也就进而导致了下载失败，ETS2LA的控制台报错情况
           </p>
         </TabsContent>
         <TabsContent value="way">
@@ -254,7 +254,7 @@ export default function BasicUsagePage() {
           </TabsContent>
           <TabsContent value="warning">
             <p>
-              如果出现无法安装SDK的情况，在`~ETS2LA\app\ETS2LA\Assets\DLLs`
+              如果出现无法安装SDK的情况，请在`~ETS2LA\app\ETS2LA\Assets\DLLs`
               路径下找到适合你当前游戏版本的文件夹，将文件夹里面的内容全部复制到欧卡根目录下的`bin\win_x64\plugins`文件夹中
             </p>
             <p>示例：</p>
@@ -262,7 +262,7 @@ export default function BasicUsagePage() {
               我将ETS2LA安装在G盘根目录，ETS2LA在安装时会默认创建ETS2LA文件夹，所以我的SDK存放路径就是`G:\ETS2LA\app\ETS2LA\Assets\DLLs`，现在我需要安装1.55版本的SDK，路径就是`G:\ETS2LA\app\ETS2LA\Assets\DLLs\1.55`
             </p>
             <p>
-              我将steam安装在E盘Game文件夹下，同时steam在安装是也创建了名为steam的文件夹，所以我的游戏根目录就是
+              我将steam安装在F盘Game文件夹下，同时steam在安装是也创建了名为steam的文件夹，所以我的游戏根目录就是
               `F:\Game\steam\steamapps\common\Euro Truck Simulator 2`\（可在steam中右键选择`管理-浏览本地文件`）然后我只需要在后面加上`bin\win_x64\plugins`即是我需要粘贴到的文件路径，完整路径就是`F:\Game\steam\steamapps\common\Euro Truck Simulator 2\bin\win_x64\plugins`
             </p>
             <p><strong>复制路径</strong></p>
@@ -341,7 +341,7 @@ export default function BasicUsagePage() {
       <Typography variant="h3" id="window-adjustment">9.窗口调整</Typography>
 
       <Typography variant="p">
-        ETS2LA不支持通过拖动边缘来调整窗口大小，只能通过设置中的串口大小来调整
+        ETS2LA不支持通过拖动边缘来调整窗口大小，只能通过设置中的窗口大小来调整
       </Typography>
 
       <ImageZoom
@@ -498,7 +498,7 @@ export default function BasicUsagePage() {
       <Typography variant="h3" id="launch-ets2la">5.启动ETS2LA</Typography>
 
       <Typography variant="p">
-        然后按键盘上你当初设置的按键即可启用ETS2LA(如没设置默认是N键)；
+        然后按键盘上你当初设置的按键即可启用ETS2LA(如不设置默认是N键)；
       </Typography>
 
       <Typography variant="p">

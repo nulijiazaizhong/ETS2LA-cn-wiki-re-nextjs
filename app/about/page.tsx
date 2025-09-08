@@ -16,7 +16,7 @@ export default function AboutPage() {
         <h2 className="mt-8 text-3xl font-semibold">我们的使命</h2>
         <h3 className="mt-6 text-2xl font-semibold">创新与探索</h3>
         <p>
-          我们相信，游戏的世界拥有无限可能。我们的核心使命是突破《欧洲卡车模拟》和《美国卡车模拟》的界限，通过引入先进的辅助驾驶功能，为玩家提供一种全新的、更轻松的探索虚拟世界的方式。
+          我们相信，游戏的世界拥有无限可能。我们的核心使命是突破《欧洲卡车模拟2》和《美国卡车模拟》的界限，通过引入先进的辅助驾驶功能，为玩家提供一种全新的、更轻松的探索虚拟世界的方式。
         </p>
         <h3 className="mt-6 text-2xl font-semibold">自由与免费</h3>
         <p>

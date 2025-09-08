@@ -59,7 +59,7 @@ export default function IntroductionPage() {
         多语言支持
       </Typography>
       <Typography variant="p">
-        我们提供了一个易于使用的翻译框架，可以将ETS2LA
+        我们提供了一个易于使用的翻译框架，可以将 ETS2LA
         翻译成任何语言。任何人都可以使用，翻译状态完全由社区努力驱动！
       </Typography>
 

@@ -29,11 +29,11 @@ export default function FirefoxPage() {
       <Typography variant="h1">浏览器查看</Typography>
       <Typography variant="h2">简介</Typography>
       <Typography variant="p">
-        如果你只是想在别的设备上查看环境可视化内部的话，那么该方法非常适合你。
+        如果你只是想在其他的设备上查看环境可视化内部的话，那么该方法非常适合你。
       </Typography>
       <Typography variant="h2">准备工作</Typography>
       <Typography variant="p">
-        一台其他设备（不管是手机还是平板，当然平板更好，更方便操作）。
+        一台移动设备（不管是手机还是平板，当然平板更好，更方便操作）。
       </Typography>
       <Typography variant="p">
         火狐浏览器（非必须，你仍然可以使用设备上自带的浏览器，但是你需要确保他不会将http协议自动转换为https，否则你仍然需要使用火狐/firefox浏览器）。
