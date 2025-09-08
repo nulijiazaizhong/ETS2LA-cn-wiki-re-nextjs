@@ -64,7 +64,7 @@ export default function DocsPage() {
           <Image src="https://tc.ets2la.cn/d/img/7/20250721083940.png" alt="Node.js China mirror" width={800} height={400} />
           <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mt-4" role="alert">
             <p className="font-bold">提示</p>
-            <p>仍在使用Windows 8及更低版本系统的用户不建议尝试使用ETS2LA</p>
+            <p>仍在使用Windows 8及更低版本系统的用户不建议使用ETS2LA</p>
           </div>
         </TabsContent>
         <TabsContent value="master">

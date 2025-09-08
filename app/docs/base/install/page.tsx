@@ -141,7 +141,7 @@ export default function InstallPage() {
       <div className="not-prose my-4 rounded-lg border border-l-4 border-green-500 bg-green-500/10 p-4 text-green-700 dark:text-green-300">
         <p className="font-bold">提示</p>
         <p>
-          正在安装用时不一，具体用时根据您的电脑配置而决定，电脑配置好、网络畅通的可能5分钟不到就完成了，电脑配置不高、网络不通畅的可能需要30分钟或以上
+          正在安装用时不一，具体用时根据您的电脑配置和网络环境而决定，电脑配置好、网络畅通的可能5分钟不到就完成了，电脑配置不高、网络不通畅的可能需要30分钟或以上
         </p>
       </div>
 

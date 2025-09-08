@@ -98,7 +98,7 @@ export default function BasicUsagePage() {
 
       <Typography variant="h3">3.语言选择</Typography>
       <Typography variant="p">
-        点击左右侧的`Englisj`，鼠标滚轮往下，找到`Chinese(simplified)`，点击`Chinese(simplified)`即可使用简体中文，然后点击`继续`
+        点击右侧的`English`，鼠标滚轮往下，找到`Chinese(simplified)`，点击`Chinese(simplified)`即可使用简体中文，然后点击`继续`
       </Typography>
       <Image
         src="https://tc.ets2la.cn/d/img/7/20250721084750.png"
@@ -130,7 +130,7 @@ export default function BasicUsagePage() {
             <TabsTrigger value="warning">⚠️警告</TabsTrigger>
           </TabsList>
           <TabsContent value="tip">
-            <p>本步骤不安装SDK无法进行下一步骤</p>
+            <p>本步骤不安装SDK无法进行下一步</p>
             <p>鼠标放置到🟦框上可以看到SDK文件名以及安装情况</p>
             <Image
               src="https://tc.ets2la.cn/d/img/7/20250721085857.png"
@@ -344,12 +344,12 @@ export default function BasicUsagePage() {
 
       <Typography variant="h3">4.游戏准备</Typography>
       <Typography variant="p">
-        进入到游戏之后，先查看有没有导航路线，如果没有，则接一趟货或者手动在地图上标点；然后将车开到路上（不在货场、修理站、火车站、港口即可）
+        进入到游戏之后,接一趟货或者手动在地图上标点；然后将车开到路上（不在货场、修理站、火车站、港口即可）
       </Typography>
 
       <Typography variant="h3">5.启动ETS2LA</Typography>
       <Typography variant="p">
-        然后按键盘上你当初设置的按键即可启用ETS2LA；
+        然后按键盘上你当初设置的按键即可启用ETS2LA(如没设置默认是N键)；
       </Typography>
       <Typography variant="p">
         比如以下是我的按键设置，那么我想启动ETS2LA的时候就需要按下`+`和`-`这两个按键，其中按键`+`控制的是
