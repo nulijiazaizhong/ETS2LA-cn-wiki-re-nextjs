@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { ArrowRightIcon } from "lucide-react";
 import Typewriter from "typewriter-effect";
 import {
   AlertDialog,
@@ -23,6 +24,13 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
+    document.body.classList.add('no-scroll')
+    return () => {
+      document.body.classList.remove('no-scroll')
+    }
+  }, []);
+
+  useEffect(() => {
     const totalDuration = 3000; // Target duration in ms
     const len1 = line1.length;
     const len2 = line2.length;
@@ -41,6 +49,14 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden">
+      <style jsx>{`
+        .custom-link {
+          color:rgb(238, 138, 188);
+        }
+        .dark .custom-link {
+          color: #f9a8d4;
+        }
+      `}</style>
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-75 -z-10" />
       <video
         autoPlay
@@ -76,8 +92,16 @@ export default function Home() {
         </div>
         <AlertDialog>
           <AlertDialogTrigger asChild>
-            <Button variant="outline" className="mt-8">
+            <Button
+              variant="outline"
+              className="mt-8 group text-neutral-900 dark:text-white"
+            >
               快速开始
+              <ArrowRightIcon
+                className="ml-2 -mr-1 opacity-60 transition-transform group-hover:translate-x-0.5"
+                size={16}
+                aria-hidden="true"
+              />
             </Button>
           </AlertDialogTrigger>
           <AlertDialogContent className="max-w-6xl">
@@ -94,7 +118,7 @@ export default function Home() {
                       href="https://space.bilibili.com/525984002"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline"
+                      className="underline custom-link"
                     >
                       晚安
                     </a>
@@ -103,7 +127,7 @@ export default function Home() {
                       href="https://space.bilibili.com/357816575"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline"
+                      className="underline custom-link"
                     >
                       MR-UIAW
                     </a>{" "}
@@ -115,7 +139,7 @@ export default function Home() {
                       href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="underline"
+                      className="underline custom-link"
                     >
                       知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议
                       (CC BY-NC-SA 4.0)

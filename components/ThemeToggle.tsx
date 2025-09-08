@@ -1,28 +1,19 @@
 "use client"
 
 import * as React from "react"
-import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
-
-import { Button } from "@/components/ui/button"
+import { ThemeSwitcher } from "@/components/ui/kibo-ui/theme-switcher"
 
 export function ThemeToggle() {
-  const { setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
 
   return (
-    <Button
-      variant="outline"
-      size="icon"
-      onClick={() => {
-        const currentTheme = document.documentElement.classList.contains("dark") ? "dark" : "light";
-        const newTheme = currentTheme === "light" ? "dark" : "light";
-        console.log("Setting theme to:", newTheme);
-        setTheme(newTheme);
+    <ThemeSwitcher
+      defaultValue={theme as 'light' | 'dark' | 'system'}
+      onChange={(value) => {
+        if (value)
+          setTheme(value as 'light' | 'dark' | 'system')
       }}
-    >
-      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
-    </Button>
+    />
   )
 }
