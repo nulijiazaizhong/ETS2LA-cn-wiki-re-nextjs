@@ -184,16 +184,16 @@ export default function PagesPage() {
       <div className="not-prose my-4 rounded-lg border border-l-4 border-yellow-500 bg-yellow-500/10 p-4 text-yellow-700 dark:text-yellow-300">
         <p className="font-bold">警告</p>
         <p>
-          ETS2LA官方不对这些插件的内容以及所引发的问题负责，一切均有用户自己负责
+          ETS2LA官方不对这些插件的内容以及所引发的问题负责，一切均由用户自己负责
         </p>
         <p>
-          由于该页面检索的是GitHub上的内容，所有有些用户可能会无法访问/显示，请不要着急，我们不提供任何方法来处理，您需要自行寻找解决方法
+          由于该页面检索的是GitHub上的内容，所有有些用户可能会无法访问/显示，请不要着急，我们不提供任何方法来处理，需要您自行寻找解决方法
         </p>
       </div>
       <div className="not-prose my-4 rounded-lg border border-l-4 border-red-500 bg-red-500/10 p-4 text-red-700 dark:text-red-300">
         <p className="font-bold">危险</p>
         <p>
-          小白用户不要轻易使用该页面的内容，因为自己随意使用该页面插件所造成的后果（如ETS2LA无法打开、游戏崩溃/卡死、电脑无法上网等问题）ETS2LA中国区管理组不负责也没有义务帮你解决
+          小白用户不要轻易使用该页面的内容，因为自己随意使用该页面插件所造成的后果（如ETS2LA无法打开、游戏崩溃/卡死、电脑无法上网等问题）ETS2LA中国区管理组不负责，也没有任何义务帮你解决
         </p>
       </div>
 
@@ -360,7 +360,7 @@ export default function PagesPage() {
       <div className="not-prose my-4 rounded-lg border border-l-4 border-green-500 bg-green-500/10 p-4 text-green-700 dark:text-green-300">
         <p className="font-bold">提示</p>
         <p>
-          媒体组件是通过windows api获取的，如果你的播放器不支持windowsapi，则媒体组件不会显示音乐/视频信息
+          媒体组件是通过windows api获取的，如果你的播放器不支持windows api，则媒体组件不会显示音乐/视频信息
         </p>
       </div>
       <Typography variant="h5">渲染器</Typography>
@@ -396,7 +396,7 @@ export default function PagesPage() {
       </Typography>
 
       <Typography variant="h3">10.地图</Typography>
-      <Typography variant="p">所有设置均已完成翻译及解释，不详细讲了</Typography>
+      <Typography variant="p">所有设置均已完成翻译及解释，就不详细讲了</Typography>
 
       <Typography variant="h2" id="login">9.登录</Typography>
       <Typography variant="p">

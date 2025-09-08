@@ -31,7 +31,7 @@ export default function IntroductionPage() {
         >
           ETS2LA
         </a>
-        是一款<strong>开源免费</strong>的适用于欧卡/美卡的辅助驾驶程序
+        是一款<strong>开源免费</strong>的适用于欧卡2/美卡的辅助驾驶程序
       </Typography>
       <Typography variant="p">
         <strong>ETS2LA</strong>
@@ -59,7 +59,7 @@ export default function IntroductionPage() {
         多语言支持
       </Typography>
       <Typography variant="p">
-        我们提供了一个易于使用的翻译框架，可以将 ETS2LA
+        我们提供了一个易于使用的翻译框架，可以将ETS2LA
         翻译成任何语言。任何人都可以使用，翻译状态完全由社区努力驱动！
       </Typography>
 
@@ -76,7 +76,7 @@ export default function IntroductionPage() {
       </Typography>
       <Typography variant="p">
         ETS2LA
-        完全由人工编写，完全不依赖人工智能。这意味着 ETS2LA
+        完全由人工编写，完全不依赖人工智能。这意味着ETS2LA
         比许多同类程序更加轻量级，性能也更高效。我们还深度实现了多处理功能，确保每个插件都有独立的
         CPU 核心运行
       </Typography>
