@@ -69,7 +69,7 @@ const navItems: Record<string, NavItem> = {
   bug: {
     name: '问题总结',
     path: '/docs/bug',
-    children: ['unable-start', 'not-working'],
+    children: ['unable-start', 'not-working', 'game-crashes'],
   },
   'unable-start': {
     name: '无法启动',
@@ -78,6 +78,10 @@ const navItems: Record<string, NavItem> = {
   'not-working': {
     name: '不工作',
     path: '/docs/bug/Not-working',
+  },
+  'game-crashes': {
+    name: '崩溃',
+    path: '/docs/bug/crashes',
   },
   advanced: {
     name: '进阶',
@@ -111,7 +115,7 @@ const indent = 20
 
 function SidebarNav() {
   const router = useRouter()
-  const initialExpandedItems = ['base', 'usage']
+  const initialExpandedItems = ['base', 'usage', 'bug']
   const [state, setState] = useState<Partial<TreeState<NavItem>>>({})
   const [searchValue, setSearchValue] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)

@@ -35,6 +35,12 @@ export default function BugPage() {
         <li>
           <Link href="/docs/bug/Unable-start">无法启动相关问题</Link>
         </li>
+        <li>
+          <Link href="/docs/bug/Not-working">不工作</Link>
+        </li>
+        <li>
+          <Link href="/docs/bug/crashes">崩溃</Link>
+        </li>
       </ul>
     </div>
   )

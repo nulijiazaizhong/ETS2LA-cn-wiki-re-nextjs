@@ -29,7 +29,7 @@ export default function BugPage() {
 return (
   <>
     <div className="prose dark:prose-invert max-w-none">
-      <Typography variant="h1">问题总结</Typography>
+      <Typography variant="h1">无法启动</Typography>
       <Typography variant="p">
         这里总结了可能遇到的问题以及解决方案。
       </Typography>
@@ -120,39 +120,6 @@ return (
       <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/186c815e84e60793a4bc1b89a4010a74.png"
         alt="Slow loading"
-        width={800}
-        height={400} />
-
-      <Typography variant="h2" id="ModuleNotFoundError No module named「...」">4.缺少必要的Python子模块</Typography>
-
-      <Typography variant="p">
-        如果在
-        <strong>控制台</strong>
-        中看到下面这张图中的内容，意味着 ETS2LA 缺少启动所需的 Python 子模块。
-        这通常发生在安装或更新失败后。要修复该错误，只需在 ETS2LA 安装目录中打开文件后运行以下代码即可。
-        activate.bat
-        cd app
-        pip install -r requirements.txt
-      </Typography>
-
-      <ImageZoom
-        src="https://tc.ets2la.cn/d/img/7/20250908191734.png"
-        alt="Error message"
-        width={800}
-        height={400} />
-
-      <Typography variant="h2" id="地图插件运行循环中出错">5.地图插件运行循环中出错</Typography>
-
-      <Typography variant="p">
-        如果在
-        <strong>控制台</strong>
-        中看到下面这张图中的内容，意味着您的内存或 Windows 虚拟内存出现问题，您应该搜索“如何增加页面文件大小”来获取帮助。我建议页面文件大小约为 16 到 32GB
-      
-      </Typography>
-
-      <ImageZoom
-        src="https://tc.ets2la.cn/d/img/7/386004a97e028bd0ebf4dcde22690e34.png"
-        alt="Error message"
         width={800}
         height={400} />
 
