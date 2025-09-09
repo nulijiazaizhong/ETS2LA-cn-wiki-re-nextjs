@@ -79,7 +79,7 @@ export default function CrashesPage() {
       <Typography variant="p">
         如果在
         <strong>控制台</strong>
-        中看到下面这张图中的内容，意味着您的内存或 Windows 虚拟内存出现问题，您应该搜索"如何增加页面文件大小"来获取帮助。我建议页面文件大小约为 16 到 32GB
+        中看到下面这张图中的内容，意味着您的内存或 Windows 虚拟内存出现问题，您应该搜索“如何增加页面文件大小”来获取帮助。我建议页面文件大小约为 16 到 32GB
       
       </Typography>
 
