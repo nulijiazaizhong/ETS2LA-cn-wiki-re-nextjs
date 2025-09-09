@@ -10,35 +10,21 @@ export default function BasicUsagePage() {
   const { setToc } = useTableOfContents()
 
   useEffect(() => {
-    const toc = [
-      { id: 'error-fixing', level: 2, text: '1. 消除错误提示' },
-      { id: 'WebView2', level: 3, text: '1. WebView2 丢失' },
-      { id: 'ffmpeg-download-failed', level: 3, text: '2. ffmpeg下载失败' },
-      { id: 'plugin-load-failed', level: 3, text: '3. 插件无法加载' },
-      { id: 'onboarding', level: 2, text: '2. 新手引导' },
-      { id: 'disclaimer', level: 3, text: '1.免责声明' },
-      { id: 'welcome', level: 3, text: '2.欢迎' },
-      { id: 'language-selection', level: 3, text: '3.语言选择' },
-      { id: 'sdk-installation', level: 3, text: '4.SDK安装' },
-      { id: 'plugins', level: 3, text: '5.插件' },
-      { id: 'high-priority-mode', level: 3, text: '6.高优先级模式' },
-      { id: 'data-loading', level: 3, text: '7.数据加载' },
-      { id: 'map-data', level: 3, text: '8.地图数据' },
-      { id: 'window-adjustment', level: 3, text: '9.窗口调整' },
-      { id: 'window-controls', level: 3, text: '10.窗口控制' },
-      { id: 'setup-complete', level: 3, text: '11.完成' },
-      { id: 'page-usage', level: 2, text: '3. 页面使用' },
-      { id: 'basic-usage', level: 2, text: '4. 基础使用' },
-      { id: 'keybinds', level: 3, text: '1.按键更改' },
-      { id: 'plugin-management', level: 3, text: '2.插件管理' },
-      { id: 'launch-game', level: 3, text: '3.启动游戏' },
-      { id: 'game-prep', level: 3, text: '4.游戏准备' },
-      { id: 'launch-ets2la', level: 3, text: '5.启动ETS2LA' },
-      { id: 'updating', level: 2, text: '5. 更新' },
-      { id: 'conclusion', level: 2, text: '6. 结束语' },
-    ]
-    setToc(toc)
-  }, [setToc])
+    const headingElements = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6')
+    );
+
+    const toc = headingElements.map((heading) => {
+      const level = parseInt(heading.tagName.substring(1), 10);
+      return {
+        id: heading.id,
+        level: level,
+        text: heading.textContent || '',
+      };
+    });
+
+    setToc(toc);
+  }, [setToc]);
 
   return (
     <div className="prose dark:prose-invert max-w-none">
@@ -51,128 +37,13 @@ export default function BasicUsagePage() {
         </p>
       </div>
 
-      <Typography variant="h2" id="error-fixing">1.消除错误提示</Typography>
-      <Typography variant="h3" id="WebView2">1.WebView2 丢失败</Typography>
-
-      <Typography variant="p">
-        如果你在出现了下面这张图中的内容，
-      </Typography>
-
-      <ImageZoom
-        src="https://tc.ets2la.cn/d/img/7/9c1f13f62c16eabef0dc002a30777943.png"
-        alt="Error message"
-        width={800}
-        height={400}
-      />
-
-      <Tabs defaultValue="reason" className="not-prose">
-        <TabsList>
-          <TabsTrigger value="reason">原因</TabsTrigger>
-          <TabsTrigger value="way">办法</TabsTrigger>
-        </TabsList>
-        <TabsContent value="reason">
-          <p>
-            因为系统缺少Microsoft Edge WebView2 Runtime组件导致的，ETS2LA使用WebView2来渲染界面，如果没有这个组件的话就会出现上图中的内容
-          </p>
-        </TabsContent>
-        <TabsContent value="way">
-          <p>
-            从
-            <a href="https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/?form=MA13LH#download" target="_blank" rel="noopener noreferrer">
-              Microsoft Edge WebView2下载页面
-            </a>
-            下载并安装WebView2 Runtime组件，然后重启ETS2LA即可
-            <ImageZoom
-              src="https://tc.ets2la.cn/d/img/7/20250828165606.png"
-              alt="WebView2 download page"
-              width={800}
-              height={400}
-            />
-          </p>
-        </TabsContent>
-      </Tabs>
-      
-      <div className="not-prose my-4 rounded-lg border border-l-4 border-blue-500 bg-blue-500/10 p-4 text-blue-700 dark:text-blue-300">
+      <div className="not-prose my-4 rounded-lg border border-l-4 border-red-500 bg-red-500/10 p-4 text-red-700 dark:text-red-300">
         <p>
-          同样，该问题也可在
-          <a href="/docs/base/bug#WebView2">问题总结-WebView2</a>
-          中找到。
+          如果你在打开ETS2LA时出现错误信息，你可以访问问题总结页面来查看解决方法
         </p>
       </div>
 
-      <Typography variant="h3" id="ffmpeg-download-failed">2.ffmpeg下载失败</Typography>
-
-      <Typography variant="p">
-        如果你在安装完成之后勾选了打开ETS2LA的话你有很大概率会在
-        <strong>控制台</strong>
-        中看到下面这张图中的内容
-      </Typography>
-
-      <ImageZoom
-        src="https://tc.ets2la.cn/d/img/7/20250721084316.png"
-        alt="Error message"
-        width={800}
-        height={400}
-      />
-
-      <Tabs defaultValue="reason" className="not-prose">
-        <TabsList>
-          <TabsTrigger value="reason">原因</TabsTrigger>
-          <TabsTrigger value="way">办法</TabsTrigger>
-        </TabsList>
-        <TabsContent value="reason">
-          <p>
-            因为FFmpeg是从
-            <a href="https://www.gyan.dev" target="_blank" rel="noopener noreferrer">
-              www.gyan.dev
-            </a>
-            位于国外的服务器上下载，加上
-            <a href="https://www.gyan.dev" target="_blank" rel="noopener noreferrer">
-              www.gyan.dev
-            </a>
-            的服务器的回国路线不行，所以会出现断开连接的情况也就进而导致了下载失败，ETS2LA的控制台报错情况
-          </p>
-        </TabsContent>
-        <TabsContent value="way">
-          <p>
-            从
-            <a href="http://files.ets2la.cn/#/?code=L09E9" target="_blank" rel="noopener noreferrer">
-              国内镜像站
-            </a>
-            下载ffmpeg，然后放到ETS2LA的安装目录下，然后重启ETS2LA即可
-          </p>
-        </TabsContent>
-      </Tabs>
-      
-      <div className="not-prose my-4 rounded-lg border border-l-4 border-blue-500 bg-blue-500/10 p-4 text-blue-700 dark:text-blue-300">
-        <p>
-          同样，该问题也可在
-          <a href="/docs/base/bug#ffmpeg-failed">问题总结-ffmpeg</a>
-          中找到。
-        </p>
-      </div>
-      <Typography variant="h3" id="plugin-load-failed">3.插件无法加载</Typography>
-
-      <Typography variant="p">
-        如果你遇到了图片显示的问题，可以前往设置-全局设置-变量，将缓慢加载勾选上
-      </Typography>
-
-      <ImageZoom
-        src="https://tc.ets2la.cn/d/img/7/186c815e84e60793a4bc1b89a4010a74.png"
-        alt="Slow loading"
-        width={800}
-        height={400}
-      />
-      
-      <div className="not-prose my-4 rounded-lg border border-l-4 border-blue-500 bg-blue-500/10 p-4 text-blue-700 dark:text-blue-300">
-        <p>
-          同样，该问题也可在
-          <a href="/docs/base/bug#error-fixing">问题总结-插件无法加载</a>
-          中找到。
-        </p>
-      </div>
-
-      <Typography variant="h2" id="onboarding">2.新手引导</Typography>
+      <Typography variant="h2" id="onboarding">1.新手引导</Typography>
 
       <Typography variant="h3" id="disclaimer">1.免责声明</Typography>
 
@@ -382,7 +253,7 @@ export default function BasicUsagePage() {
         height={400}
       />
 
-      <Typography variant="h2" id="page-usage">3.页面使用</Typography>
+      <Typography variant="h2" id="page-usage">2.页面使用</Typography>
 
       <Typography variant="p">
         完成新手引导后你会看到这样的页面（图1），将鼠标放置到靠近左侧边框的位置鼠标样式会改变，点击即可打开ETS2LA的侧边栏，打开侧边栏之后应该是这样的（图2）
@@ -406,7 +277,7 @@ export default function BasicUsagePage() {
         height={400}
       />
 
-      <Typography variant="h2" id="basic-usage">4.基础使用</Typography>
+      <Typography variant="h2" id="basic-usage">3.基础使用</Typography>
 
       <Typography variant="h3" id="keybinds">1.按键更改</Typography>
 
@@ -514,7 +385,7 @@ export default function BasicUsagePage() {
         height={400}
       />
 
-      <Typography variant="h2" id="updating">5.更新</Typography>
+      <Typography variant="h2" id="updating">4.更新</Typography>
 
       <Tabs defaultValue="software" className="not-prose">
         <TabsList>
@@ -582,7 +453,7 @@ update      # 运行update.bat程序`}
         </TabsContent>
       </Tabs>
 
-      <Typography variant="h2" id="conclusion">6.结束语</Typography>
+      <Typography variant="h2" id="conclusion">5.结束语</Typography>
 
       <Typography variant="p">
         以上就是关于ETS2LA的基础使用教程，如果你想使用`插件管理`中的`高级模式`的话，可以前往

@@ -36,7 +36,7 @@ interface NavItem {
 const navItems: Record<string, NavItem> = {
   root: {
     name: 'Documentation',
-    children: ['intro', 'base', 'advanced', 'develop'],
+    children: ['intro', 'base', 'bug', 'advanced', 'develop'],
   },
   intro: {
     name: '简介',
@@ -45,7 +45,7 @@ const navItems: Record<string, NavItem> = {
   base: {
     name: '基础',
     path: '/docs/base',
-    children: ['prepare', 'install', 'usage', 'bug'],
+    children: ['prepare', 'install', 'usage'],
   },
   prepare: { name: '准备工作', path: '/docs/base/prepare' },
   install: { name: '安装', path: '/docs/base/install' },
@@ -68,7 +68,12 @@ const navItems: Record<string, NavItem> = {
   },
   bug: {
     name: '问题总结',
-    path: '/docs/base/bug',
+    path: '/docs/bug',
+    children: ['unable-start'],
+  },
+  'unable-start': {
+    name: '无法启动',
+    path: '/docs/bug/Unable-start',
   },
   advanced: {
     name: '进阶',

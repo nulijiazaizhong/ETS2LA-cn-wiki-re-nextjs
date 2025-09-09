@@ -10,15 +10,21 @@ export default function BugPage() {
   const { setToc } = useTableOfContents()
 
   useEffect(() => {
-    const toc = [
-      { id: 'WebView2', level: 2, text: '1. WebView2 丢失' },
-      { id: 'ffmpeg-failed', level: 2, text: '2. ffmpeg下载失败' },
-      { id: 'plugin-load-failed', level: 2, text: '3. 插件无法加载' },
-      { id: '地图插件运行循环中出错', level: 2, text: '4.地图插件运行循环中出错' },
-      { id: '5.ModuleNotFoundError No module named', level: 2, text: '5.ModuleNotFoundError No module named' },
-    ]
-    setToc(toc)
-  }, [setToc])
+    const headingElements = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6')
+    );
+
+    const toc = headingElements.map((heading) => {
+      const level = parseInt(heading.tagName.substring(1), 10);
+      return {
+        id: heading.id,
+        level: level,
+        text: heading.textContent || '',
+      };
+    });
+
+    setToc(toc);
+  }, [setToc]);
 
 return (
   <>
@@ -68,14 +74,6 @@ return (
         </TabsContent>
       </Tabs>
 
-      <div className="not-prose my-4 rounded-lg border border-l-4 border-blue-500 bg-blue-500/10 p-4 text-blue-700 dark:text-blue-300">
-        <p>
-          同样，该问题也可在
-          <a href="/docs/base/usage/basic#WebView2">基础使用-消除错误信息-WebView2</a>
-          中找到。
-        </p>
-      </div>
-
       <Typography variant="h2" id="ffmpeg-failed">2.ffmpeg下载失败</Typography>
 
       <Typography variant="p">
@@ -89,16 +87,6 @@ return (
         alt="Error message"
         width={800}
         height={400} />
-
-      <div className="not-prose my-4 rounded-lg border border-l-4 border-blue-500 bg-blue-500/10 p-4 text-blue-700 dark:text-blue-300">
-        <p>
-          同样，该问题通常在
-          <a href="/docs/base/usage/basic#ffmpeg-download-failed">基础使用-消除错误信息-ffmpeg</a>
-          过程中出现。
-        </p>
-      </div>
-
-      <Typography variant="h3" id="plugin-load-failed">3.插件无法加载</Typography>
 
       <Tabs defaultValue="reason" className="not-prose">
         <TabsList>
@@ -129,11 +117,7 @@ return (
         </TabsContent>
       </Tabs>
 
-      <Typography variant="p">
-        该问题同样主要出现在
-        <a href="/docs/base/usage/basic#error-fixing">基础使用</a>
-        的初次配置阶段。如果你遇到了图片显示的问题，可以前往设置-全局设置-变量，将缓慢加载勾选上
-      </Typography>
+      <Typography variant="h3" id="plugin-load-failed">3.插件无法加载</Typography>
 
       <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/186c815e84e60793a4bc1b89a4010a74.png"
@@ -141,37 +125,12 @@ return (
         width={800}
         height={400} />
 
-      <div className="not-prose my-4 rounded-lg border border-l-4 border-blue-500 bg-blue-500/10 p-4 text-blue-700 dark:text-blue-300">
-        <p>
-          同样，该问题通常在
-          <a href="/docs/base/usage/basic#plugin-load-failed">基础使用-消除错误信息-插件无法加载</a>
-          过程中出现。
-        </p>
-      </div>
-
-      <Typography variant="h2" id="地图插件运行循环中出错">4.地图插件运行循环中出错</Typography>
+      <Typography variant="h2" id="ModuleNotFoundError No module named「...」">4.缺少必要的Python子模块</Typography>
 
       <Typography variant="p">
         如果在
         <strong>控制台</strong>
-        中看到下面这张图中的内容，这时不要紧张和害怕，有解决办法的
-        「MemoryError」表示您的内存或 Windows 虚拟内存出现问题，您应该搜索“如何增加页面文件大小”来获取帮助。我建议页面文件大小约为 16 到 32GB
-      
-      </Typography>
-
-      <ImageZoom
-        src="https://tc.ets2la.cn/d/img/7/386004a97e028bd0ebf4dcde22690e34.png"
-        alt="Error message"
-        width={800}
-        height={400} />
-
-      <Typography variant="h2" id="5.ModuleNotFoundError No module named">5.ModuleNotFoundError No module named「...」</Typography>
-
-      <Typography variant="p">
-        如果在
-        <strong>控制台</strong>
-        中看到下面这张图中的内容，这时不要紧张和害怕，有解决办法的
-        此错误意味着 ETS2LA 缺少启动所需的 Python 子模块。
+        中看到下面这张图中的内容，意味着 ETS2LA 缺少启动所需的 Python 子模块。
         这通常发生在安装或更新失败后。要修复该错误，只需在 ETS2LA 安装目录中打开文件后运行以下代码即可。
         activate.bat
         cd app
@@ -183,6 +142,22 @@ return (
         alt="Error message"
         width={800}
         height={400} />
+
+      <Typography variant="h2" id="地图插件运行循环中出错">5.地图插件运行循环中出错</Typography>
+
+      <Typography variant="p">
+        如果在
+        <strong>控制台</strong>
+        中看到下面这张图中的内容，意味着您的内存或 Windows 虚拟内存出现问题，您应该搜索“如何增加页面文件大小”来获取帮助。我建议页面文件大小约为 16 到 32GB
+      
+      </Typography>
+
+      <ImageZoom
+        src="https://tc.ets2la.cn/d/img/7/386004a97e028bd0ebf4dcde22690e34.png"
+        alt="Error message"
+        width={800}
+        height={400} />
+
     </div>
   </>
 )
