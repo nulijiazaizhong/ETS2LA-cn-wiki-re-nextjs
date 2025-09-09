@@ -8,15 +8,19 @@ export default function IntroductionPage() {
   const { setToc } = useTableOfContents()
 
   useEffect(() => {
-    const toc = [
-      { id: 'features', level: 2, text: '特征' },
-      { id: 'data-access', level: 3, text: '完全访问模拟器数据' },
-      { id: 'multi-language', level: 3, text: '多语言支持' },
-      { id: 'seamless-navigation', level: 3, text: '无缝导航' },
-      { id: 'no-ai', level: 3, text: '无需昂贵的 AI 模型' },
-      { id: 'dev-experience', level: 3, text: '丰富的开发经验' },
-      { id: 'ui', level: 3, text: '美观而现代的用户界面' },
-    ]
+    const headingElements = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6')
+    );
+
+    const toc = headingElements.map((heading) => {
+      const level = parseInt(heading.tagName.substring(1), 10);
+      return {
+        id: heading.id,
+        level: level,
+        text: heading.textContent || '',
+      };
+    });
+
     setToc(toc)
   }, [setToc])
 

@@ -1,15 +1,29 @@
 'use client'
 
+import { useEffect } from 'react'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Typography } from '@/components/Typography'
+import { useTableOfContents } from '@/contexts/TableOfContentsContext'
+import ImageZoom from '@/components/ImageZoom'
+
 export default function DocsPage() {
   const { setToc } = useTableOfContents()
 
   useEffect(() => {
-    const toc = [
-      { id: 'install-cpp', level: 2, text: '1. 下载并安装C++ runtime' },
-      { id: 'install-nodejs', level: 2, text: '2. 下载并安装Node.js' },
-      { id: 'download-ets2la', level: 2, text: '3. 下载ETS2LA安装文件' },
-    ]
-    setToc(toc)
+    const headingElements = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6')
+    );
+
+    const toc = headingElements.map((heading) => {
+      const level = parseInt(heading.tagName.substring(1), 10);
+      return {
+        id: heading.id,
+        level: level,
+        text: heading.textContent || '',
+      };
+    });
+
+    setToc(toc);
   }, [setToc])
 
   return (
@@ -26,7 +40,7 @@ export default function DocsPage() {
         </a>
         下载C++ runtime
       </Typography>
-      <Image src="https://tc.ets2la.cn/d/img/7/20250721083818.png" alt="Download C++ runtime" width={800} height={400} />
+      <ImageZoom src="https://tc.ets2la.cn/d/img/7/20250721083818.png" alt="Download C++ runtime" width={800} height={400} />
 
       <Typography variant="p"><strong>2. 安装C++ runtime</strong></Typography>
       <Typography variant="p">双击下载下来的文件，会出现以下两种结果，根据自己情况选择。</Typography>
@@ -37,11 +51,11 @@ export default function DocsPage() {
         </TabsList>
         <TabsContent value="not-installed">
           <p>勾选`我同意许可条款和条件`，点击`安装`即可。</p>
-          <Image src="https://tc.ets2la.cn/d/img/7/20250721083842.png" alt="Install C++ runtime" width={600} height={400} />
+          <ImageZoom src="https://tc.ets2la.cn/d/img/7/20250721083842.png" alt="Install C++ runtime" width={600} height={400} />
         </TabsContent>
         <TabsContent value="installed">
           <p>如果安装了则会出现以下页面，直接点击`关闭`即可</p>
-          <Image src="https://tc.ets2la.cn/d/img/7/20250721083908.png" alt="C++ runtime already installed" width={600} height={400} />
+          <ImageZoom src="https://tc.ets2la.cn/d/img/7/20250721083908.png" alt="C++ runtime already installed" width={600} height={400} />
         </TabsContent>
       </Tabs>
 
@@ -53,9 +67,9 @@ export default function DocsPage() {
         </TabsList>
         <TabsContent value="newbie">
           <p>前往<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener noreferrer">官网</a>下载安装包，安装时一路NEXT即可；</p>
-          <Image src="https://tc.ets2la.cn/d/img/7/20250721083921.png" alt="Node.js website" width={800} height={400} />
+          <ImageZoom src="https://tc.ets2la.cn/d/img/7/20250721083921.png" alt="Node.js website" width={800} height={400} />
           <p>如<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener noreferrer">官网</a>速度过慢，可访问<a href="https://nodejs.cn/download/" target="_blank" rel="noopener noreferrer">nodejs中文网</a>下载安装包</p>
-          <Image src="https://tc.ets2la.cn/d/img/7/20250721083940.png" alt="Node.js China mirror" width={800} height={400} />
+          <ImageZoom src="https://tc.ets2la.cn/d/img/7/20250721083940.png" alt="Node.js China mirror" width={800} height={400} />
           <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mt-4" role="alert">
             <p className="font-bold">提示</p>
             <p>仍在使用Windows 8及更低版本系统的用户不建议使用ETS2LA</p>

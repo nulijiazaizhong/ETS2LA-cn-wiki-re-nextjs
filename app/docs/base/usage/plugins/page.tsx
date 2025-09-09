@@ -17,11 +17,20 @@ export default function PluginsPage() {
   const { setToc } = useTableOfContents()
 
   useEffect(() => {
-    const toc = [
-      { id: 'basic-mode', level: 2, text: '基础模式' },
-      { id: 'advanced-mode', level: 2, text: '高级模式' },
-    ]
-    setToc(toc)
+    const headingElements = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6')
+    );
+
+    const toc = headingElements.map((heading) => {
+      const level = parseInt(heading.tagName.substring(1), 10);
+      return {
+        id: heading.id,
+        level: level,
+        text: heading.textContent || '',
+      };
+    });
+
+    setToc(toc);
   }, [setToc])
 
   return (

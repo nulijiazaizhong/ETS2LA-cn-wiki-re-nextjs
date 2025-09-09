@@ -18,18 +18,20 @@ export default function PagesPage() {
   const { setToc } = useTableOfContents()
 
   useEffect(() => {
-    const toc = [
-      { id: 'overview', level: 2, text: '1. 概览' },
-      { id: 'visualization', level: 2, text: '2. 环境可视化' },
-      { id: 'plugin-management', level: 2, text: '3. 插件管理' },
-      { id: 'catalogue', level: 2, text: '4. Catalogue' },
-      { id: 'performance', level: 2, text: '5. 性能' },
-      { id: 'wiki', level: 2, text: '6. Wiki' },
-      { id: 'roadmap', level: 2, text: '7. Roadmap' },
-      { id: 'settings', level: 2, text: '8. 设置' },
-      { id: 'login', level: 2, text: '9. 登录' },
-    ]
-    setToc(toc)
+    const headingElements = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6')
+    );
+
+    const toc = headingElements.map((heading) => {
+      const level = parseInt(heading.tagName.substring(1), 10);
+      return {
+        id: heading.id,
+        level: level,
+        text: heading.textContent || '',
+      };
+    });
+
+    setToc(toc);
   }, [setToc])
 
   return (

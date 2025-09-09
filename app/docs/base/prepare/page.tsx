@@ -20,12 +20,20 @@ export default function PreparePage() {
   const [isAlertOpen, setIsAlertOpen] = useState(true)
 
   useEffect(() => {
-    const toc = [
-      { id: 'install-cpp', level: 2, text: '1. 下载并安装C++ runtime' },
-      { id: 'install-nodejs', level: 2, text: '2. 下载并安装Node.js' },
-      { id: 'download-ets2la', level: 2, text: '3. 下载ETS2LA安装文件' },
-    ]
-    setToc(toc)
+    const headingElements = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6')
+    );
+
+    const toc = headingElements.map((heading) => {
+      const level = parseInt(heading.tagName.substring(1), 10);
+      return {
+        id: heading.id,
+        level: level,
+        text: heading.textContent || '',
+      };
+    });
+
+    setToc(toc);
   }, [setToc])
 
   return (
