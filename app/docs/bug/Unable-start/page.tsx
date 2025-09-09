@@ -31,9 +31,7 @@ return (
     <div className="prose dark:prose-invert max-w-none">
       <Typography variant="h1">问题总结</Typography>
       <Typography variant="p">
-        这里总结了可能遇到的问题以及解决方案。这些问题主要出现在
-        <a href="/docs/base/usage/basic">基础使用</a>
-        过程中的安装和初次配置阶段，本文档将对此进行详细说明。
+        这里总结了可能遇到的问题以及解决方案。
       </Typography>
 
       <Typography variant="h3" id="WebView2">1.WebView2 丢失</Typography>

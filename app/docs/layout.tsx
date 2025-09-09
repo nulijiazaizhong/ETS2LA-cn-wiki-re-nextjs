@@ -69,11 +69,15 @@ const navItems: Record<string, NavItem> = {
   bug: {
     name: '问题总结',
     path: '/docs/bug',
-    children: ['unable-start'],
+    children: ['unable-start', 'not-working'],
   },
   'unable-start': {
     name: '无法启动',
     path: '/docs/bug/Unable-start',
+  },
+  'not-working': {
+    name: '不工作',
+    path: '/docs/bug/Not-working',
   },
   advanced: {
     name: '进阶',
