@@ -1,13 +1,49 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Typography } from '@/components/Typography'
 import { useTableOfContents } from '@/contexts/TableOfContentsContext'
 import ImageZoom from '@/components/ImageZoom'
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from '@/components/ui/alert-dialog'
+import { Button } from '@/components/ui/button'
 
 export default function DocsPage() {
   const { setToc } = useTableOfContents()
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const [showGuide, setShowGuide] = useState(false)
+
+  useEffect(() => {
+    // 检查是否从快速开始跳转过来或者是直接访问文档页面
+    const shouldShowGuide = searchParams.get('showGuide') === 'true' || window.location.pathname === '/docs'
+    setShowGuide(shouldShowGuide)
+  }, [searchParams])
+
+  const handleCancel = () => {
+    router.push('/')
+  }
+
+  const handleGoToBase = () => {
+    router.push('/docs/base')
+    setShowGuide(false)
+  }
+
+  const handleGoToBug = () => {
+    router.push('/docs/bug')
+    setShowGuide(false)
+  }
 
   useEffect(() => {
     const headingElements = Array.from(
@@ -28,6 +64,31 @@ export default function DocsPage() {
 
   return (
     <div className="prose dark:prose-invert max-w-none">
+      {showGuide && (
+        <AlertDialog open={showGuide} onOpenChange={setShowGuide}>
+          <AlertDialogContent className="max-w-6xl">
+            <AlertDialogHeader>
+              <AlertDialogTitle>阅读指引</AlertDialogTitle>
+              <AlertDialogDescription asChild>
+                <div className="max-h-[60vh] overflow-y-auto pr-4">
+                   <div className="space-y-4">
+                     <p>
+                       如果您是首次安装访问的此页面，请前往 <button onClick={handleGoToBase} className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 font-semibold cursor-pointer">基础</button> 查看详细内容
+                     </p>
+                     <p>
+                       如果您是因为安装/使用过程中出现问题访问的此页面，请根据不同的阶段前往 <button onClick={handleGoToBug} className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300 font-semibold cursor-pointer">问题总结</button> 下的不同阶段查看详细内容
+                     </p>
+                   </div>
+                 </div>
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel onClick={handleCancel}>否</AlertDialogCancel>
+              <AlertDialogAction onClick={() => setShowGuide(false)}>是</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      )}
       <Typography variant="h1">准备工作</Typography>
       <Typography variant="p">本章节将教您如何完成安装ETS2LA之前的准备工作。</Typography>
 

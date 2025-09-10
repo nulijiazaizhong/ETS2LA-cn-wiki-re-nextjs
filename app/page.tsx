@@ -44,7 +44,7 @@ export default function Home() {
   }, [line1, line2]);
 
   const handleConfirm = () => {
-    router.push("/docs/Introduction");
+    router.push("/docs?showGuide=true");
   };
 
   return (
