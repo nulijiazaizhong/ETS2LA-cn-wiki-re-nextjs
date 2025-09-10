@@ -51,11 +51,11 @@ export default function Page() {
         </Link>
         ；当然如果你有一些 <i>特殊手段</i> 也是可以的
       </Typography>
-      <Typography variant="h3" id="fatal-destination-exists"><code>fatal: destination path '.' already exists and is not an empty directory.</code></Typography>
+      <Typography variant="h3" id="fatal-destination-exists"><code>fatal: destination path ‘.’ already exists and is not an empty directory.</code></Typography>
       <Typography>
         这意味着您尝试将 ETS2LA 安装到的目录不为空。如果您没有更改任何设置，则应删除 <code>C：\ETS2LA</code> 文件夹并重试
       </Typography>
-      <Typography variant="h3" id="fatal-unable-access"><code>fatal: unable to access '...'</code></Typography>
+      <Typography variant="h3" id="fatal-unable-access"><code>fatal: unable to access ‘...’</code></Typography>
       <Typography>
         这意味着安装程序无法连接到您选择的下载镜像。请检查您的互联网连接并确保您可以访问至少一个镜像。通常，国内用户可以通过选择CNB仓库来解决这个问题
       </Typography>
