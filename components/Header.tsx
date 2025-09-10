@@ -89,17 +89,21 @@ export default function Header() {
               <Link href="/docs/Introduction">文档</Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
-          {/* <NavigationMenuItem>
+          {/* 
+          <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href="/update">更新日志</Link>
             </NavigationMenuLink>
-          </NavigationMenuItem> */}
+          </NavigationMenuItem> 
+          */}
+          {/* 
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href="/status">服务器状态</Link>
             </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
+          </NavigationMenuItem> 
+          */}
+          <NavigationMenuItem> 
             <NavigationMenuLink asChild>
               <Link href="/author">作者</Link>
             </NavigationMenuLink>
