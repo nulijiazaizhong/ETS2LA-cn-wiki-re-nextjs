@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Typography } from '@/components/Typography'
@@ -17,7 +17,7 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog'
 
-export default function DocsPage() {
+function DocsContent() {
   const { setToc } = useTableOfContents()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -163,5 +163,13 @@ nvm use 版本号        #切换nodejs版本`}
         </TabsContent>
       </Tabs>
     </div>
+  );
+}
+
+export default function DocsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <DocsContent />
+    </Suspense>
   );
 }
