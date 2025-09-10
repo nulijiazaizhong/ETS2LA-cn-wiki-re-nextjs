@@ -33,6 +33,9 @@ export default function BugPage() {
       </Typography>
       <ul>
         <li>
+          <Link href="/docs/bug/Unable-install">无法安装</Link>
+        </li>
+        <li>
           <Link href="/docs/bug/Unable-start">无法启动相关问题</Link>
         </li>
         <li>
