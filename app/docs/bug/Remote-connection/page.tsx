@@ -1,11 +1,33 @@
+'use client'
+
 import { Typography } from '@/components/Typography';
 import Link from 'next/link';
+import { useEffect } from 'react';
+import { useTableOfContents } from '@/contexts/TableOfContentsContext';
 
 export default function Page() {
+  const { setToc } = useTableOfContents()
+
+  useEffect(() => {
+    const headingElements = Array.from(
+      document.querySelectorAll('.prose h2, .prose h3, .prose h4, .prose h5, .prose h6')
+    );
+
+    const toc = headingElements.map((heading) => {
+      const level = parseInt(heading.tagName.substring(1), 10);
+      return {
+        id: heading.id,
+        level: level,
+        text: heading.textContent || '',
+      };
+    });
+
+    setToc(toc);
+  }, [setToc]);
   return (
-    <>
+    <div className="prose dark:prose-invert max-w-none">
       <Typography variant="h1">远程连接</Typography>
-      <Typography variant="h2">可视化</Typography>
+      <Typography variant="h2" id="visualization">可视化</Typography>
       <Typography>
         您可以使用外部设备（如平板电脑）连接到本地计算机上运行的 ETS2LA 实例
       </Typography>
@@ -42,7 +64,7 @@ export default function Page() {
           此 IP 地址在&nbsp;<code>可视化</code>&nbsp;插件设置中提供，您也可以通过在终端中运行&nbsp;<code>ipconfig</code>&nbsp;来找到它
         </li>
       </ol>
-      <Typography variant="h2">网络前端</Typography>
+      <Typography variant="h2" id="web-frontend">网络前端</Typography>
       <Typography>
         您还可以从外部设备控制计算机上的 ETS2LA 实例。这确实有一些限制，但大多数设置应该可用
       </Typography>
@@ -63,6 +85,6 @@ export default function Page() {
         <br />
         WebUI 无法手动选择 IP 地址。如果您无法访问 WebUI，请在 Discord 上联系我们
       </Typography>
-    </>
+    </div>
   );
 }
