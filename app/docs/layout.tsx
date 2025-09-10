@@ -69,7 +69,13 @@ const navItems: Record<string, NavItem> = {
   bug: {
     name: '问题总结',
     path: '/docs/bug',
-    children: ['unable-install', 'unable-start', 'not-working', 'game-crashes'],
+    children: [
+      'unable-install',
+      'unable-start',
+      'not-working',
+      'game-crashes',
+      'remote-connection',
+    ],
   },
   'unable-install': {
     name: '无法安装',
@@ -86,6 +92,10 @@ const navItems: Record<string, NavItem> = {
   'game-crashes': {
     name: '崩溃',
     path: '/docs/bug/crashes',
+  },
+  'remote-connection': {
+    name: '远程连接',
+    path: '/docs/bug/Remote-connection',
   },
   advanced: {
     name: '进阶',
