@@ -150,7 +150,7 @@ export default function Page() {
                 如果你无法通过 <code className="bg-red-100 dark:bg-red-800 px-1 py-0.5 rounded text-xs">git clone https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist.git</code> 拉取数据
               </p>
               <p className="mt-2">
-                可尝试使用 <code className="bg-red-100 dark:bg-red-800 px-1 py-0.5 rounded text-xs">git clone https://proxy-github.ets2la.cn/github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist.git</code> 来拉取数据
+                可尝试使用 <code className="bg-red-100 dark:bg-red-800 px-1 py-0.5 rounded text-xs">git clone https://proxy-gh.ets2la.cn/github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist.git</code> 来拉取数据
               </p>
               <p className="mt-2">
                 PS：该方法拉取的数据较慢，需要耐心等待，但保证可以拉取到数据
