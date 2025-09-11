@@ -100,7 +100,11 @@ const navItems: Record<string, NavItem> = {
   advanced: {
     name: '进阶',
     path: '/docs/advanced',
-    children: ['firefox', 'third'],
+    children: ['firefox', 'third', 'manual-installation'],
+  },
+  'manual-installation': {
+    name: '手动安装',
+    path: '/docs/advanced/manual-installation',
   },
   firefox: {
     name: '浏览器',

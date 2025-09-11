@@ -47,7 +47,7 @@ export default function Header() {
         } else {
           setServerStatus("down")
         }
-      } catch (error) {
+      } catch {
         // 如果发生错误，设置为 down
         setServerStatus("down")
       }

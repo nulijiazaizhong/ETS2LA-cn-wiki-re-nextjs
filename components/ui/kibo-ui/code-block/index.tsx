@@ -374,7 +374,11 @@ export const CodeBlockFiles = ({
       className={cn('flex grow flex-row items-center gap-2', className)}
       {...props}
     >
-      {data.map(children)}
+      {data.map((item, index) => (
+        <div key={`${item.language}-${index}`}>
+          {children(item)}
+        </div>
+      ))}
     </div>
   );
 };
@@ -456,7 +460,11 @@ export const CodeBlockSelectContent = ({
 }: CodeBlockSelectContentProps) => {
   const { data } = useContext(CodeBlockContext);
 
-  return <SelectContent {...props}>{data.map(children)}</SelectContent>;
+  return <SelectContent {...props}>{data.map((item, index) => (
+    <div key={`${item.language}-${index}`}>
+      {children(item)}
+    </div>
+  ))}</SelectContent>;
 };
 
 export type CodeBlockSelectItemProps = ComponentProps<typeof SelectItem>;
@@ -555,7 +563,11 @@ export type CodeBlockBodyProps = Omit<
 export const CodeBlockBody = ({ children, ...props }: CodeBlockBodyProps) => {
   const { data } = useContext(CodeBlockContext);
 
-  return <div {...props}>{data.map(children)}</div>;
+  return <div {...props}>{data.map((item, index) => (
+    <div key={`${item.language}-${index}`}>
+      {children(item)}
+    </div>
+  ))}</div>;
 };
 
 export type CodeBlockItemProps = HTMLAttributes<HTMLDivElement> & {
