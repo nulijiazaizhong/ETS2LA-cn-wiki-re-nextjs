@@ -100,19 +100,24 @@ const navItems: Record<string, NavItem> = {
   advanced: {
     name: '进阶',
     path: '/docs/advanced',
-    children: ['firefox', 'third', 'manual-installation'],
+    children: ['manual-installation', 'mobile-settings-access'],
   },
   'manual-installation': {
     name: '手动安装',
     path: '/docs/advanced/manual-installation',
   },
+  'mobile-settings-access': {
+    name: '移动设置访问',
+    path: '/docs/advanced/mobile',
+    children: ['firefox', 'third'],
+  },
   firefox: {
     name: '浏览器',
-    path: '/docs/advanced/firefox',
+    path: '/docs/advanced/mobile/firefox',
   },
   third: {
     name: '第三方软件',
-    path: '/docs/advanced/third',
+    path: '/docs/advanced/mobile/third',
   },
   develop: {
     name: '开发',

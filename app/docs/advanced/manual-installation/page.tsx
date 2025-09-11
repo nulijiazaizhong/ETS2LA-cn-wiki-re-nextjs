@@ -134,6 +134,32 @@ export default function Page() {
         </CodeBlockBody>
       </CodeBlock>
 
+      <div className="my-6 p-4 border-l-4 border-red-500 bg-red-50 dark:bg-red-900/20">
+        <div className="flex">
+          <div className="flex-shrink-0">
+            <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <div className="ml-3">
+            <h3 className="text-sm font-medium text-red-800 dark:text-red-200">
+              错误
+            </h3>
+            <div className="mt-2 text-sm text-red-700 dark:text-red-300">
+              <p>
+                如果你无法通过 <code className="bg-red-100 dark:bg-red-800 px-1 py-0.5 rounded text-xs">git clone https://github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist.git</code> 拉取数据
+              </p>
+              <p className="mt-2">
+                可尝试使用 <code className="bg-red-100 dark:bg-red-800 px-1 py-0.5 rounded text-xs">git clone https://proxy-github.ets2la.cn/github.com/ETS2LA/Euro-Truck-Simulator-2-Lane-Assist.git</code> 来拉取数据
+              </p>
+              <p className="mt-2">
+                PS：该方法拉取的数据较慢，需要耐心等待，但保证可以拉取到数据
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Typography variant="h2" id="simplify-startup">4. 简化启动</Typography>
       <Typography>
         可以通过创建批处理文件简化启动流程
