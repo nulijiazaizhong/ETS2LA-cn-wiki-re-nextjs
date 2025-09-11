@@ -36,7 +36,7 @@ interface NavItem {
 const navItems: Record<string, NavItem> = {
   root: {
     name: 'Documentation',
-    children: ['intro', 'base', 'bug', 'advanced', 'develop'],
+    children: ['intro', 'base', 'bug', 'advanced'],
   },
   intro: {
     name: '简介',
