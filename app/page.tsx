@@ -193,7 +193,7 @@ export default function Home() {
                       ETS2LA 中国区安装与使用指南 by
                       ETS2LA中国区管理团队,采用CC BY-NC-SA
                       4.0许可。任何人可在相同条款下自由分享和修改本文档。”
-                      https://wili.ets2la.cn
+                      https://wiki.ets2la.cn
                     </p>
                   </div>
                   <div className="p-2 mt-2 border rounded bg-red-100 dark:bg-red-900/30 text-red-900 dark:text-red-200">
@@ -222,8 +222,8 @@ export default function Home() {
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
-              <AlertDialogCancel>否</AlertDialogCancel>
-              <AlertDialogAction onClick={handleConfirm}>是</AlertDialogAction>
+              <AlertDialogCancel>不同意</AlertDialogCancel>
+              <AlertDialogAction onClick={handleConfirm}>同意</AlertDialogAction>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
