@@ -34,7 +34,7 @@ return (
         这里总结了可能遇到的问题以及解决方案。
       </Typography>
 
-      <Typography variant="h3" id="WebView2">1.WebView2 丢失</Typography>
+      <Typography variant="h2" id="WebView2">1.WebView2 丢失</Typography>
 
       <Typography variant="p">
         如果你在出现了下面这张图中的内容，
@@ -115,13 +115,30 @@ return (
         </TabsContent>
       </Tabs>
 
-      <Typography variant="h3" id="plugin-load-failed">3.插件无法加载</Typography>
+      <Typography variant="h2" id="plugin-load-failed">3.插件无法加载</Typography>
 
       <ImageZoom
         src="https://tc.ets2la.cn/d/img/7/186c815e84e60793a4bc1b89a4010a74.png"
         alt="Slow loading"
         width={800}
         height={400} />
+
+      <Tabs defaultValue="reason" className="not-prose">
+        <TabsList>
+          <TabsTrigger value="reason">原因</TabsTrigger>
+          <TabsTrigger value="way">办法</TabsTrigger>
+        </TabsList>
+        <TabsContent value="reason">
+          <p>
+            插件加载失败通常是由于系统资源不足或启动过程中的时序问题导致的。
+          </p>
+        </TabsContent>
+        <TabsContent value="way">
+          <p>
+            在 <strong>设置-全局设置-变量</strong> 中勾选上 <strong>缓慢启动</strong>，如已勾选上 <strong>缓慢启动</strong> 后仍然无法加载插件，请设置 <strong>32~64GB</strong> 的虚拟内存
+          </p>
+        </TabsContent>
+      </Tabs>
 
     </div>
   </>
