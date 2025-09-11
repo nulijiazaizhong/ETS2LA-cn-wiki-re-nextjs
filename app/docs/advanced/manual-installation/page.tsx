@@ -31,6 +31,22 @@ export default function Page() {
     <div>
       <Typography variant="h1">手动安装</Typography>
 
+      <Typography variant="h2" id="video-tutorial">视频教程</Typography>
+      <Typography>
+        以下视频演示了完整的手动安装过程，建议先观看视频了解整体流程：
+      </Typography>
+      <div className="my-6">
+        <video 
+          controls 
+          autoPlay
+          muted
+          className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+        >
+          <source src="/videos/manual-installation.mp4" type="video/mp4" />
+          您的浏览器不支持视频播放。
+        </video>
+      </div>
+
       <Typography variant="h2" id="install-git">1. 安装git</Typography>
       <Typography>
         从<a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">git官网</a>下载并安装git，安装时默认一直 `next` 即可
