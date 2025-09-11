@@ -56,23 +56,23 @@ export default function PluginsPage() {
           <TableRow>
             <TableCell>转向控制</TableCell>
             <TableCell>使得车辆可以自动转向</TableCell>
-            <TableCell>✔</TableCell>
+            <TableCell>❌</TableCell>
             <TableCell>无法自动转向</TableCell>
-            <TableCell></TableCell>
+            <TableCell>这是必开插件</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>速度控制</TableCell>
             <TableCell>使得车辆可以自动加减速</TableCell>
-            <TableCell>✔</TableCell>
+            <TableCell>❌</TableCell>
             <TableCell>无法自动加减速</TableCell>
-            <TableCell></TableCell>
+            <TableCell>这是必开插件</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>环境可视化</TableCell>
             <TableCell>能够在环境可视化页面查看信息</TableCell>
-            <TableCell>✔</TableCell>
+            <TableCell>❌</TableCell>
             <TableCell>无法在环境可视化中查看信息</TableCell>
-            <TableCell></TableCell>
+            <TableCell>这是必开插件</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>HUD</TableCell>
@@ -114,9 +114,9 @@ export default function PluginsPage() {
           <TableRow>
             <TableCell>自适应巡航控制系统</TableCell>
             <TableCell>根据道路信息自动控制加减速</TableCell>
-            <TableCell>✔</TableCell>
+            <TableCell>❌</TableCell>
             <TableCell>无法自动控制加减速</TableCell>
-            <TableCell></TableCell>
+            <TableCell>这是必开插件</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>导航</TableCell>
@@ -135,9 +135,9 @@ export default function PluginsPage() {
           <TableRow>
             <TableCell>可视化</TableCell>
             <TableCell>能够在环境可视化页面查看信息</TableCell>
-            <TableCell>✔</TableCell>
+            <TableCell>❌</TableCell>
             <TableCell>无法在环境可视化中查看信息</TableCell>
-            <TableCell></TableCell>
+            <TableCell>这是必开插件</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>HUD</TableCell>
