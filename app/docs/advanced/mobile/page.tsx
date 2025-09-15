@@ -6,13 +6,13 @@ import Link from 'next/link'
 const articles = [
   {
     title: '浏览器',
-    href: '/docs/advanced/移动设置访问/firefox',
+    href: '/docs/advanced/mobile/firefox',
     description: '使用自带方案在其他设备查看环境可视化',
     icon: <FileText className="w-6 h-6" />,
   },
   {
     title: '第三方',
-    href: '/docs/advanced/移动设置访问/third',
+    href: '/docs/advanced/mobile/third',
     description: '通过安装第三方软件在其他设备查看环境可视化',
     icon: <FileText className="w-6 h-6" />,
   },
