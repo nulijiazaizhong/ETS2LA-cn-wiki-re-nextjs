@@ -88,11 +88,17 @@ export default function PluginsPage() {
             <TableCell>提示信息无法语音播报</TableCell>
             <TableCell></TableCell>
           </TableRow>
+          <TableRow>
+            <TableCell>Collision Avoidance</TableCell>
+            <TableCell>在十字路口避免碰撞</TableCell>
+            <TableCell>✔</TableCell>
+            <TableCell>无法在十字路口避免碰撞</TableCell>
+          </TableRow>
         </TableBody>
       </Table>
       <div className="my-6">
         <ImageZoom
-          src="https://tc.ets2la.cn/d/img/7/20250730100942.png"
+          src="https://tc.ets2la.cn/d/img/7/20250915143658.png"
           alt="Basic Mode Plugins"
           width={800}
           height={400}
@@ -167,11 +173,17 @@ export default function PluginsPage() {
             <TableCell>Discord上不显示ETS2LA状态</TableCell>
             <TableCell>需网络支持</TableCell>
           </TableRow>
+          <TableRow>
+            <TableCell>Collision Avoidance</TableCell>
+            <TableCell>在十字路口避免碰撞</TableCell>
+            <TableCell>✔</TableCell>
+            <TableCell>无法在十字路口避免碰撞</TableCell>
+          </TableRow>
         </TableBody>
       </Table>
       <div className="my-6">
         <ImageZoom
-          src="https://tc.ets2la.cn/d/img/7/20250730101016.png"
+          src="https://tc.ets2la.cn/d/img/7/20250915143136.png"
           alt="Advanced Mode Plugins"
           width={800}
           height={400}
