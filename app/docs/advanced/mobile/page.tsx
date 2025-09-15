@@ -18,11 +18,7 @@ const articles = [
   },
 ]
 
-export default function MobileSettingsAccessLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function MobileSettingsAccessPage() {
   return (
     <div className="prose dark:prose-invert max-w-none">
       <Typography variant="h1">移动设置访问</Typography>
@@ -47,8 +43,6 @@ export default function MobileSettingsAccessLayout({
           </Link>
         ))}
       </div>
-      
-      {children}
     </div>
   )
 }
