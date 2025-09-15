@@ -57,11 +57,11 @@ export default function AboutPage() {
           </Link>
         </div>
         <p>
-          同时我们也有专门对应中国用户的社区——云湖
+          同时我们也有专门对应中国用户的社区——kook
         </p>
         <div className="flex items-center gap-4 my-4">
-          <Link href="https://yhfx.jwznb.com/share?key=QttDhwXmNE3Q&ts=1754577012" target="_blank" rel="noopener noreferrer" className="inline-block">
-            <Image src="/imgs/yunhu.png" alt="云湖社区" width={128} height={40} className="rounded-md" />
+          <Link href="https://kook.vip/VZaUPP" target="_blank" rel="noopener noreferrer" className="inline-block">
+            <Image src="/imgs/kook.png" alt="kook社区" width={128} height={80} className="rounded-md" />
           </Link>
         </div>
 

@@ -89,8 +89,8 @@ export default function CrashesPage() {
         width={800}
         height={400} />
         
-      <Typography variant="p">
-        如果以上方法都无法解决您的问题，请通过 <a href="https://ets2la.com/discord" target="_blank" rel="noopener noreferrer">Discord</a>或者<a href="https://yhfx.jwznb.com/share?key=3gn9gaH3qMps&ts=1754318808" target="_blank" rel="noopener noreferrer">云湖</a>联系我们。
+        <Typography variant="p">
+          如果以上方法都无法解决您的问题，请通过 <a href="https://ets2la.com/discord" target="_blank" rel="noopener noreferrer">Discord</a>或者<a href="https://kook.vip/VZaUPP" target="_blank" rel="noopener noreferrer">kook</a>联系我们。
       </Typography>
     </div>
   )

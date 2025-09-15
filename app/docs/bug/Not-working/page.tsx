@@ -67,7 +67,7 @@ export default function NotWorkingPage() {
         </li>
       </ol>
       <Typography variant="p">
-        线是蓝色的，但仍然没有转向？你在这里没有弄清楚你的问题吗？请通过 <a href="https://ets2la.com/discord" target="_blank" rel="noopener noreferrer">Discord</a>或者<a href="https://yhfx.jwznb.com/share?key=3gn9gaH3qMps&ts=1754318808" target="_blank" rel="noopener noreferrer">云湖</a>联系我们。
+        线是蓝色的，但仍然没有转向？你在这里没有弄清楚你的问题吗？请通过 <a href="https://ets2la.com/discord" target="_blank" rel="noopener noreferrer">Discord</a>或者<a href="https://kook.vip/VZaUPP" target="_blank" rel="noopener noreferrer">kook</a>联系我们。
       </Typography>
 
       <Typography variant="h2" id="ets2la-not-controlling-speed">3. ETS2LA 不自动控制速度</Typography>

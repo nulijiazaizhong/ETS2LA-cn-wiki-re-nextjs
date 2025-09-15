@@ -78,8 +78,8 @@ export default function Page() {
           Discord 服务器
         </Link>
         （ets2la.com）或
-        <Link href="https://yhfx.jwznb.com/share?key=3gn9gaH3qMps&ts=1754318808">
-          云湖
+        <Link href="https://kook.vip/VZaUPP">
+          kook
         </Link>
         联系我们与我们联系。我们会尽快修复它。安装程序崩溃永远不会发生。
       </Typography>
