@@ -144,7 +144,7 @@ export default function PagesPage() {
         <a href="/docs/usage/plugins#高级模式">高级模式</a>
         两种页面布局，这里就不给各位讲基础和高级模式中插件多少之间的区别了，这个可以点击相对应的文字跳转查看，就给各位讲讲两个模式逻辑的区别；
       </Typography>
-      <Typography variant="h3">基础模式</Typography>
+      <Typography variant="h3" id="basic-mode">基础模式</Typography>
       <Typography variant="p">
         基础模式分为三块，最左边上方的为启用和关闭插件的位置，左侧下方为已启用插件显示的位置，右边为整个插件可选择区；右边整个插件可选择区域又需要讲一下他的逻辑；在右边你会看到每个插件的右上角会显示`已启用`或`禁用`的文字，这里的就是关键所在，`已启用`的就表示已勾选上，只要点击左侧的`启用插件`就会启用，反之`禁用`则表示未勾选上，点击就会显示`已启用`；
       </Typography>
@@ -158,7 +158,7 @@ export default function PagesPage() {
         height={400}
       />
 
-      <Typography variant="h3">高级模式</Typography>
+      <Typography variant="h3" id="advanced-mode">高级模式</Typography>
       <Typography variant="p">
         反观高级模式的逻辑就很清晰，点击哪个插件就启用哪个插件，根本没有选择一说，这里简单举个例子，`自适应巡航控制系统、HUD`两个插件是勾选上的，现在再随机点击一个插件他就会在上方的运行插件中显示（我这里点了`下一代HUD`）
       </Typography>
@@ -257,8 +257,8 @@ export default function PagesPage() {
         所有有关ETS2LA的设置都在这个页面，这个页面也是一个比较重要的页面，接下来我们就来详细介绍介绍设置页面
       </Typography>
 
-      <Typography variant="h3">1.全局设置</Typography>
-      <Typography variant="h4">1.用户界面</Typography>
+      <Typography variant="h3" id="settings-global">1.全局设置</Typography>
+      <Typography variant="h4" id="settings-ui">1.用户界面</Typography>
       <Typography variant="p">
         该位置的设置主要用来调整页面的大小、透明度的多少以及修改语言，ETS2LA无法通过拖动软件边框来实现大小的调整，只能通过设置里面进行调整
       </Typography>
@@ -268,7 +268,7 @@ export default function PagesPage() {
         width={800}
         height={400}
       />
-      <Typography variant="h4">2.音频</Typography>
+      <Typography variant="h4" id="settings-audio">2.音频</Typography>
       <Typography variant="p">
         在这里主要就是调整声音的大小以及软件启动声音的开关
       </Typography>
@@ -278,7 +278,7 @@ export default function PagesPage() {
         width={800}
         height={400}
       />
-      <Typography variant="h4">3.变量</Typography>
+      <Typography variant="h4" id="settings-variables">3.变量</Typography>
       <Typography variant="p">
         这里主要就是一些插件问题的解决办法，比如加速缓慢可以将`回退到旧的加速方式`勾选上，在比如插件无法显示，就可以将`缓慢加载`勾选上
       </Typography>
@@ -292,7 +292,7 @@ export default function PagesPage() {
         <p className="font-bold">危险</p>
         <p>在该页面做任何修改都需要先关闭ETS2LA再重新打开才能生效</p>
       </div>
-      <Typography variant="h4">4.杂项</Typography>
+      <Typography variant="h4" id="settings-misc">4.杂项</Typography>
       <Typography variant="p">
         这里就是一些修改项，各位可以自行查看每个修改项的作用
       </Typography>
@@ -303,7 +303,7 @@ export default function PagesPage() {
         height={400}
       />
 
-      <Typography variant="h3">2.控制</Typography>
+      <Typography variant="h3" id="settings-controls">2.控制</Typography>
       <Typography variant="p">
         这里是设置按键的地方，具体的在
         <a href="/docs/usage/basic#1按键更改">基础使用</a>
@@ -316,7 +316,7 @@ export default function PagesPage() {
         height={400}
       />
 
-      <Typography variant="h3">3.SDK</Typography>
+      <Typography variant="h3" id="settings-sdk">3.SDK</Typography>
       <Typography variant="p">
         ETS2LA整个程序都是基于SDK来运行，没有SDK就无法获得任何游戏内的行为，也无法发送任何行为到游戏内，这一步在
         <a href="/docs/usage/basic#4sdk安装">新手引导</a>
@@ -338,8 +338,8 @@ export default function PagesPage() {
         height={400}
       />
 
-      <Typography variant="h3">4.NGHUD</Typography>
-      <Typography variant="h4">位置</Typography>
+      <Typography variant="h3" id="settings-nghud">4.NGHUD</Typography>
+      <Typography variant="h4" id="nghud-position">位置</Typography>
       <Typography variant="p">
         通过自行调整修改X、Y、Z轴的偏移值来修改NGHUD在AR上的位置，同时也可以通过修改L、C、R值的信息来修改单个组件的大小；当然也可以设置NGHUD的背景
       </Typography>
@@ -350,14 +350,14 @@ export default function PagesPage() {
         height={400}
       />
 
-      <Typography variant="h4">元素</Typography>
-      <Typography variant="h5">启用的组件</Typography>
+      <Typography variant="h4" id="nghud-elements">元素</Typography>
+      <Typography variant="h5" id="nghud-enabled-components">启用的组件</Typography>
       <Typography variant="p">
         在`启用的组件`中点击组件可已将组件禁用，如果下方显示的顺序不是你想到的，目前你只能通过取消组件再启用组件来修改顺序，当前仍然
         <strong>无法</strong>
         通过直接拖动组件名称来修改组件位置
       </Typography>
-      <Typography variant="h5">可用的组件</Typography>
+      <Typography variant="h5" id="nghud-available-components">可用的组件</Typography>
       <Typography variant="p">通过点击`启用`按钮来将其添加到排序上</Typography>
       <div className="not-prose my-4 rounded-lg border border-l-4 border-green-500 bg-green-500/10 p-4 text-green-700 dark:text-green-300">
         <p className="font-bold">提示</p>
@@ -365,7 +365,7 @@ export default function PagesPage() {
           媒体组件是通过windows api获取的，如果你的播放器不支持windows api，则媒体组件不会显示音乐/视频信息
         </p>
       </div>
-      <Typography variant="h5">渲染器</Typography>
+      <Typography variant="h5" id="nghud-renderer">渲染器</Typography>
       <Typography variant="p">
         这里的所有选项都建议开启（如果你只有一个屏幕的话），其余按个人需求开启
       </Typography>
@@ -376,28 +376,28 @@ export default function PagesPage() {
         height={400}
       />
 
-      <Typography variant="h3">5.AR</Typography>
+      <Typography variant="h3" id="settings-ar">5.AR</Typography>
       <Typography variant="p">修改AR插件的设置</Typography>
 
-      <Typography variant="h3">6.可视化</Typography>
+      <Typography variant="h3" id="settings-visualization">6.可视化</Typography>
       <Typography variant="p">
         可以在同一局域网下使用移动设备查看环境可视化左侧内容
       </Typography>
 
-      <Typography variant="h3">7.自适应巡航控制系统</Typography>
+      <Typography variant="h3" id="settings-acc">7.自适应巡航控制系统</Typography>
       <Typography variant="p">
         可以修改ACC插件的一些设置，比如忽略红绿灯、超过道路限速行使（在速度控制中调整速度偏移量即可）
       </Typography>
 
-      <Typography variant="h3">8.HUD</Typography>
+      <Typography variant="h3" id="settings-hud">8.HUD</Typography>
       <Typography variant="p">NGHUD已足够完善，所以不做过多介绍</Typography>
 
-      <Typography variant="h3">9.TTS</Typography>
+      <Typography variant="h3" id="settings-tts">9.TTS</Typography>
       <Typography variant="p">
         文本转语音，可以将ETS2LA的提示信息通过语音的方式播报出来，可以适当减缓因为看不到信息而造成的翻车
       </Typography>
 
-      <Typography variant="h3">10.地图</Typography>
+      <Typography variant="h3" id="settings-map">10.地图</Typography>
       <Typography variant="p">所有设置均已完成翻译及解释，就不详细讲了</Typography>
 
       <Typography variant="h2" id="login">9.登录</Typography>
