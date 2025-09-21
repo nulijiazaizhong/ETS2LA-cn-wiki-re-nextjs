@@ -93,6 +93,7 @@ export default function PluginsPage() {
             <TableCell>在十字路口避免碰撞</TableCell>
             <TableCell>✔</TableCell>
             <TableCell>无法在十字路口避免碰撞</TableCell>
+            <TableCell>实验性功能</TableCell>
           </TableRow>
         </TableBody>
       </Table>
@@ -178,6 +179,7 @@ export default function PluginsPage() {
             <TableCell>在十字路口避免碰撞</TableCell>
             <TableCell>✔</TableCell>
             <TableCell>无法在十字路口避免碰撞</TableCell>
+            <TableCell>实验性功能</TableCell>
           </TableRow>
         </TableBody>
       </Table>

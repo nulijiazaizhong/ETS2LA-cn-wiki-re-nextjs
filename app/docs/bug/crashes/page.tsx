@@ -61,7 +61,10 @@ export default function CrashesPage() {
       <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md overflow-x-auto">
         <code>
           cd app{"\n"}
-          pip install -r requirements.txt
+          pip install -r requirements.txt{"\n"}
+          {"\n"}
+          如果上面的命令卡住/失败，可尝试使用下面的命令{"\n"}
+          pip install -r requirements.txt -i https://pypi.mirrors.ustc.edu.cn/simple{"\n"}
         </code>
       </pre>
       

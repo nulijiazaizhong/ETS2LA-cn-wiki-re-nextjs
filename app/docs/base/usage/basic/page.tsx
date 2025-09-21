@@ -39,7 +39,7 @@ export default function BasicUsagePage() {
 
       <div className="not-prose my-4 rounded-lg border border-l-4 border-red-500 bg-red-500/10 p-4 text-red-700 dark:text-red-300">
         <p>
-          如果你在打开ETS2LA时出现错误信息，你可以访问问题总结页面来查看解决方法
+          如果你在打开ETS2LA时出现错误信息，你可以访问 问题总结 页面来查看解决方法
         </p>
       </div>
 
