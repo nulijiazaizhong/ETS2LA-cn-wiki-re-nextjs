@@ -26,7 +26,7 @@ export default function Page() {
   }, [setToc]);
   return (
     <div className="prose dark:prose-invert max-w-none">
-      <Typography variant="h1">远程连接</Typography>
+      <Typography variant="h1">远程连接(使用该功能需安装最新版本，之前安装过的需要卸载重新安装)</Typography>
       <Typography variant="h2" id="visualization">可视化</Typography>
       <Typography>
         您可以使用外部设备（如平板电脑）连接到本地计算机上运行的 ETS2LA 实例

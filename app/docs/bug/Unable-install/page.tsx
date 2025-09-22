@@ -34,7 +34,7 @@ export default function Page() {
           官方存储库
         </Link>
         （github.com）或
-        <Link href="https://downloads.ets2la.cn/public/share/M7sjeYENhGbNcauzgmftBA">
+        <Link href="https://downloads.ets2la.cn/download?code=wWbdhs8S">
           国内镜像
         </Link>
         (ets2la.cn) 下载安装程序
@@ -45,11 +45,7 @@ export default function Page() {
       </Typography>
       <Typography variant="h3" id="warning-retrying"><code>WARNING: Retrying (Retry(total=4...</code></Typography>
       <Typography>
-        这意味着安装程序在连接到 python 服务器时遇到问题。请检查您的互联网连接并确保您可以访问 python。通常，再安装时勾选 <code>aliyun mirror</code>可以解决这个问题，如果你勾选了仍然没有解决这个问题，可以尝试使用我 <i>修改过</i> 的包含 <i>我自建的</i>  python 加速选项的
-        <Link href="https://downloads.ets2la.cn/public/share/5-kQkZQ4kiMCd1RtmBZMkg">
-          安装包
-        </Link>
-        ；当然如果你有一些 <i>特殊手段</i> 也是可以的
+        这意味着安装程序在连接到 python 服务器时遇到问题。请检查您的互联网连接并确保您可以访问 python。通常，再安装时勾选 <code>aliyun mirror/USTC（china）</code>；当然如果你有一些 <i>特殊手段</i> 也是可以的
       </Typography>
       <Typography variant="h3" id="fatal-destination-exists"><code>fatal: destination path ‘.’ already exists and is not an empty directory.</code></Typography>
       <Typography>
@@ -66,7 +62,7 @@ export default function Page() {
           官方存储库
         </Link>
         （github.com）或
-        <Link href="https://downloads.ets2la.cn/public/share/M7sjeYENhGbNcauzgmftBA">
+        <Link href="https://downloads.ets2la.cn/download?code=wWbdhs8S">
           国内镜像
         </Link>
         (ets2la.cn) 下载最新版本的安装程序
