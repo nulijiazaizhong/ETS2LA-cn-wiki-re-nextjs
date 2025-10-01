@@ -255,13 +255,13 @@ nvm use 版本号        #切换nodejs版本`}
           <p>
             前往
             <a
-              href="http://files.ets2la.cn/#/?code=8590F"
+              href="https://downloads.ets2la.cn/download?code=wWbdhs8S"
               target="_blank"
               rel="noopener noreferrer"
             >
               镜像
             </a>
-            下载站并下载括号内日期最近的文件。
+            下载站进行下载即可。
           </p>
         </TabsContent>
       </Tabs>
