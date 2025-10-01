@@ -101,7 +101,7 @@ return (
             <a href="https://www.gyan.dev" target="_blank" rel="noopener noreferrer">
               www.gyan.dev
             </a>
-            的服务器回国路线不行，所以会出现断开连接的情况也就进而导致了下载失败，ETS2LA的控制台报错
+            到国内的网络连接不稳定、经常中断，导致下载失败，因此你才会在ETS2LA的控制台中看到报错信息。
           </p>
         </TabsContent>
         <TabsContent value="way">

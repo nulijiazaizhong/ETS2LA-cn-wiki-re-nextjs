@@ -91,9 +91,9 @@ export default function PluginsPage() {
           <TableRow>
             <TableCell>Collision Avoidance</TableCell>
             <TableCell>在十字路口避免碰撞</TableCell>
-            <TableCell>✔</TableCell>
-            <TableCell>无法在十字路口避免碰撞</TableCell>
-            <TableCell>实验性功能</TableCell>
+            <TableCell>❌</TableCell>
+            <TableCell>无法在十字路口避免碰撞，可视化中右侧地图无法显示</TableCell>
+            <TableCell>这是必开插件</TableCell>
           </TableRow>
         </TableBody>
       </Table>
@@ -177,9 +177,9 @@ export default function PluginsPage() {
           <TableRow>
             <TableCell>Collision Avoidance</TableCell>
             <TableCell>在十字路口避免碰撞</TableCell>
-            <TableCell>✔</TableCell>
-            <TableCell>无法在十字路口避免碰撞</TableCell>
-            <TableCell>实验性功能</TableCell>
+            <TableCell>❌</TableCell>
+            <TableCell>无法在十字路口避免碰撞，可视化中右侧地图无法显示</TableCell>
+            <TableCell>这是必开插件</TableCell>
           </TableRow>
         </TableBody>
       </Table>
