@@ -79,7 +79,7 @@ export default function PagesPage() {
             <TableHead>显示内容</TableHead>
             <TableHead>性能消耗</TableHead>
             <TableHead>mod地图</TableHead>
-            <TableHead>镜像</TableHead>
+            <TableHead>Goodnight Mirror镜像</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -142,7 +142,7 @@ export default function PagesPage() {
         插件管理页面的布局分为
         <a href="/docs/usage/plugins#基础模式">基础模式</a>和
         <a href="/docs/usage/plugins#高级模式">高级模式</a>
-        两种页面布局，这里就不给各位讲基础和高级模式中插件多少之间的区别了，这个可以点击相对应的文字跳转查看，就给各位讲讲两个模式逻辑的区别；
+        两种页面布局，这里就不给各位讲基础和高级模式中插件多少之间的区别了，这个可以点击相对应的文字跳转查看，这里就给各位讲讲两个模式逻辑的区别；
       </Typography>
       <Typography variant="h3" id="basic-mode">基础模式</Typography>
       <Typography variant="p">
