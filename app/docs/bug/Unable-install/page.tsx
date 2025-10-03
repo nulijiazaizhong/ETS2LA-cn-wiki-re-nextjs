@@ -34,7 +34,7 @@ export default function Page() {
           官方存储库
         </Link>
         （github.com）或
-        <Link href="https://downloads.ets2la.cn/download?code=wWbdhs8S">
+        <Link href="https://download.ets2la.cn/s/fnMcjr">
           国内镜像
         </Link>
         (ets2la.cn) 下载安装程序
@@ -62,7 +62,7 @@ export default function Page() {
           官方存储库
         </Link>
         （github.com）或
-        <Link href="https://downloads.ets2la.cn/download?code=wWbdhs8S">
+        <Link href="https://download.ets2la.cn/s/fnMcjr">
           国内镜像
         </Link>
         (ets2la.cn) 下载最新版本的安装程序

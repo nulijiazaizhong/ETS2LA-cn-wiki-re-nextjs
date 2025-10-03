@@ -107,7 +107,7 @@ return (
         <TabsContent value="way">
           <p>
             从
-            <a href="https://downloads.ets2la.cn/download?code=oLP5Wnrf" target="_blank" rel="noopener noreferrer">
+            <a href="https://download.ets2la.cn/s/K4kHPS" target="_blank" rel="noopener noreferrer">
               国内镜像站
             </a>
             下载ffmpeg，然后放到ETS2LA的安装目录下，然后重启ETS2LA即可

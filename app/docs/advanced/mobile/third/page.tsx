@@ -105,7 +105,7 @@ export default function ThirdPartyPage() {
       <ol>
         <li>
           <a
-            href="https://downloads.ets2la.cn/download?code=zQ9E7SoO"
+            href="https://download.ets2la.cn/s/LODfBw"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -114,7 +114,7 @@ export default function ThirdPartyPage() {
         </li>
         <li>
           <a
-            href="https://downloads.ets2la.cn/download?code=Rhv4XJqx"
+            href="https://download.ets2la.cn/s/KXw9tq"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -123,7 +123,7 @@ export default function ThirdPartyPage() {
         </li>
         <li>
           <a
-            href="https://downloads.ets2la.cn/download?code=PUJ1TfZo"
+            href="https://download.ets2la.cn/s/hPb3aO"
             target="_blank"
             rel="noopener noreferrer"
           >
