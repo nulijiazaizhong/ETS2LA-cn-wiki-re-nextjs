@@ -159,7 +159,7 @@ nvm use 版本号        #切换nodejs版本`}
           <p>前往<a href="https://ets2la.com" target="_blank" rel="noopener noreferrer">官方</a>安装程序在<a href="https://github.com/ETS2LA/installer/releases" target="_blank" rel="noopener noreferrer">GitHub上的发布页</a>,找到最新的安装包并下载即可。</p>
         </TabsContent>
         <TabsContent value="mirror">
-          <p>前往<a href="https://download.ets2la.cn/s/fnMcjr" target="_blank" rel="noopener noreferrer">镜像下载页</a>下载安装包。</p>
+          <p>前往<a href="https://download.ets2la.cn/s/Of0rWo" target="_blank" rel="noopener noreferrer">镜像下载页</a>下载安装包。</p>
         </TabsContent>
       </Tabs>
     </div>

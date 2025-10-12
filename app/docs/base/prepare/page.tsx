@@ -255,7 +255,7 @@ nvm use 版本号        #切换nodejs版本`}
           <p>
             前往
             <a
-              href="https://download.ets2la.cn/s/fnMcjr"
+              href="https://download.ets2la.cn/s/Of0rWo"
               target="_blank"
               rel="noopener noreferrer"
             >
