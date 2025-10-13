@@ -49,7 +49,7 @@ export default function GitHubStar() {
         alt="GitHub"
         width={20}
         height={20}
-        className={theme === 'dark' ? 'dark:invert' : ''}
+        className="h-5 w-5 dark:invert"
       />
       {stars !== null && <span>{formatStars(stars)}</span>}
     </Link>

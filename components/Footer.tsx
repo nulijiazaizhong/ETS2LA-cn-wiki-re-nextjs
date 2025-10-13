@@ -4,9 +4,50 @@ import { Button } from "@/components/ui/button";
 export default function Footer() {
   return (
     <footer className="w-full border-t bg-background">
-      <div className="flex w-full flex-col items-center justify-between gap-4 px-10 py-10 md:h-24 md:flex-row md:px-38.5">
-        <div className="flex flex-col items-center gap-4 px-7 md:flex-row md:gap-2 md:px-0">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+      <div className="flex w-full flex-col gap-0.5 px-6 py-3 md:px-38.5">
+        {/* 顶部行：中间备案信息，右侧作者/交流；两者同一水平线 */}
+        <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center gap-4">
+          <div />
+          <div className="flex items-center gap-4 text-sm text-muted-foreground justify-self-center">
+            <Button variant="link" asChild>
+              <Link href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
+                苏ICP备2025160641号-3
+              </Link>
+            </Button>
+            <span className="hidden md:inline">|</span>
+            <Button variant="link" asChild>
+              <Link href="https://beian.mps.gov.cn/#/" target="_blank" rel="noreferrer">
+                苏公网安备32120202010796号
+              </Link>
+            </Button>
+          </div>
+          <div className="flex items-center gap-6 justify-self-end">
+            <nav className="flex gap-4 md:gap-6">
+              <Link
+                href="/author"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                作者
+              </Link>
+              <Link
+                href="https://kook.vip/VZaUPP"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                交流
+              </Link>
+            </nav>
+          </div>
+        </div>
+
+        {/* 底部行：中间版权信息，右侧 Built with；两者同一水平线 */}
+        <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center gap-4">
+          <div />
+          <p className="text-center text-sm text-muted-foreground justify-self-center">
+            &copy; {new Date().getFullYear()} ETS2LA CN Team. All rights reserved.
+          </p>
+          <p className="text-sm leading-loose text-muted-foreground justify-self-end">
             Built with{" "}
             <Link
               href="https://nextjs.org"
@@ -27,47 +68,6 @@ export default function Footer() {
             </Link>
             .
           </p>
-        </div>
-        <div className="flex flex-col items-center">
-          <div className="flex flex-col items-center gap-4 text-sm text-muted-foreground md:flex-row">
-            <Button variant="link" asChild>
-              <Link href="https://beian.miit.gov.cn/" target="_blank">
-                苏ICP备2025160641号-3
-              </Link>
-            </Button>
-            <span className="hidden md:inline">|</span>
-            <Button variant="link" asChild>
-              <Link href="https://beian.mps.gov.cn/#/" target="_blank">
-                苏公网安备32120202010796号
-              </Link>
-            </Button>
-          </div>
-          <p className="text-center text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} ETS2LA CN Team. All rights reserved.
-          </p>
-        </div>
-        <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
-          <nav className="flex gap-4 md:gap-6">
-            <Link
-              href="/author"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Author
-            </Link>
-            <Link
-              href="https://yhfx.jwznb.com/share?key=3gn9gaH3qMps&ts=1754318808"
-              target="_blank"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Communication
-            </Link>
-            <Link
-              href="mailto:goodnightan@ets2la.cn"
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Email
-            </Link>
-          </nav>
         </div>
       </div>
     </footer>

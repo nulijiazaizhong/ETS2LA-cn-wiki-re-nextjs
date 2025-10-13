@@ -143,9 +143,7 @@ export default function Header() {
                     alt="Sponsor"
                     width={24}
                     height={24}
-                    className={`h-6 w-6 ${
-                      resolvedTheme === "dark" ? "invert" : ""
-                    }`}
+                    className="h-6 w-6 dark:invert"
                   />
                 </Button>
               </PopoverTrigger>
@@ -258,9 +256,20 @@ export default function Header() {
                 alt="Discord"
                 width={20}
                 height={20}
-                className={`h-5 w-5 ${
-                  resolvedTheme === "dark" ? "invert" : ""
-                }`}
+                className="h-5 w-5 dark:invert"
+              />
+            </Link>
+            <Link
+              href="https://kook.vip/VZaUPP"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/svg/kook.svg"
+                alt="KOOK"
+                width={20}
+                height={20}
+                className="h-5 w-5 grayscale dark:invert"
               />
             </Link>
           </>
