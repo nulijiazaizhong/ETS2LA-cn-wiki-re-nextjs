@@ -9,7 +9,11 @@ export default function Footer() {
         {/* 顶部行：左侧统计数据标题，中间备案信息，右侧作者/交流；三者同一水平线 */}
         <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center gap-4">
           <div className="justify-self-start self-start">
-            <div className="text-sm font-medium text-muted-foreground">统计数据</div>
+            <Button variant="link" asChild className="text-sm font-medium text-primary">
+              <Link href="https://umami.is/" target="_blank" rel="noreferrer">
+                统计数据
+              </Link>
+            </Button>
           </div>
           <div className="flex items-center gap-4 text-sm text-muted-foreground justify-self-center">
             <Button variant="link" asChild>
@@ -26,20 +30,24 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-6 justify-self-end">
             <nav className="flex gap-4 md:gap-6">
-              <Link
-                href="/author"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                作者
-              </Link>
-              <Link
-                href="https://kook.vip/VZaUPP"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              >
-                交流
-              </Link>
+              <Button variant="link" asChild>
+                <Link
+                  href="/author"
+                  className="text-sm text-muted-foreground"
+                >
+                  作者
+                </Link>
+              </Button>
+              <Button variant="link" asChild>
+                <Link
+                  href="https://kook.vip/VZaUPP"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm text-muted-foreground"
+                >
+                  交流
+                </Link>
+              </Button>
             </nav>
           </div>
         </div>

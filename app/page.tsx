@@ -64,9 +64,13 @@ export default function Home() {
         muted
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover -z-20"
-        poster="/images/poster.webp"
+        poster="/imgs/ets2la-cn.ico"
+        onError={(e) => {
+          // 视频加载失败时隐藏视频元素，不显示错误
+          e.currentTarget.style.display = 'none';
+          console.log('视频加载失败，已隐藏视频元素');
+        }}
       >
-        <source src="/videos/background.webm" type="video/webm" />
         <source src="/videos/background.mp4" type="video/mp4" />
       </video>
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white">
