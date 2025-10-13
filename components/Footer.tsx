@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import UmamiStats from "@/components/UmamiStats";
 
 export default function Footer() {
   return (
@@ -7,7 +8,9 @@ export default function Footer() {
       <div className="flex w-full flex-col gap-0.5 px-6 py-3 md:px-38.5">
         {/* 顶部行：中间备案信息，右侧作者/交流；两者同一水平线 */}
         <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center gap-4">
-          <div />
+          <div className="justify-self-start">
+            <UmamiStats />
+          </div>
           <div className="flex items-center gap-4 text-sm text-muted-foreground justify-self-center">
             <Button variant="link" asChild>
               <Link href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
