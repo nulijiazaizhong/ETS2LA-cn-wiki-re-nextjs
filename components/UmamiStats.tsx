@@ -28,8 +28,8 @@ export default function UmamiStats() {
   const [loading, setLoading] = useState(true);
 
   // 定义标签文本
+  const visitorsLabel = "访问次数";
   const viewsLabel = "　浏览量";  // 添加全角空格使"浏"字与"统"字对齐
-  const visitorsLabel = "访问数据";
   const timeLabel = "耗费时间";
 
   // Umami API信息
