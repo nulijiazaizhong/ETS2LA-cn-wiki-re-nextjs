@@ -174,12 +174,17 @@ export default function PluginsPage() {
             <TableCell>Discord上不显示ETS2LA状态</TableCell>
             <TableCell>需网络支持</TableCell>
           </TableRow>
-          <TableRow>
             <TableCell>Collision Avoidance</TableCell>
             <TableCell>在十字路口避免碰撞</TableCell>
             <TableCell>❌</TableCell>
             <TableCell>无法在十字路口避免碰撞，可视化中右侧地图无法显示</TableCell>
             <TableCell>这是必开插件</TableCell>
+             <TableRow>
+            <TableCell>Event Listener</TableCell>
+            <TableCell>监听游戏 SDK 和日志文件提供的事件</TableCell>
+            <TableCell>❌</TableCell>
+            <TableCell>/</TableCell>
+            <TableCell>这是启动是默认开启的插件，请勿关闭</TableCell>
           </TableRow>
         </TableBody>
       </Table>
